@@ -9,15 +9,16 @@ import org.scalajs.dom
 import scalatags.JsDom.all._
 import formidable._
 import formidable.Implicits._
+import formidable.Validation._
 import Framework._
 
 object Demo1 {
 
-  case class UserPass(name: String, password: String)
+  case class UserPass(firstname: String, pass : String)
 
   trait UserPassLayout {
-    val name = input(`type`:="text").render
-    val password = input(`type`:="password").render
+    val firstname = input(`type`:="text").render
+    val pass = input(`type`:="password").render
   }
 }
 
@@ -66,8 +67,6 @@ object Demo3 {
 
 object Demo4 {
 
-  case object Unitialized extends Throwable("Unitialized Field")
-
   //Example of a Typesafe values that can be used on both client and server
   case class OnlyA private (value: String) extends AnyVal
 
@@ -90,42 +89,12 @@ object Demo4 {
 
   case class Example(a: OnlyA, b: Size5, c: Int)
 
-  import scala.util.{Try,Success,Failure}
-  import rx._
-
-  class Validate[T]
-    (check: String => Try[T], asString: T => String, mods: Modifier*)
-    (rxMods: (Var[Try[T]] => Modifier)*) extends Formidable[T] {
-
-    val current: Var[Try[T]] = Var(Failure(Unitialized))
-
-    lazy val input: HTMLInputElement = scalatags.JsDom.all.input(
-      `type`:="text",
-      onkeyup := { () => current() = check(input.value) },
-      mods,
-      rxMods.map(_(current))
-    ).render
-
-    override def build(): Try[T] = current()
-    override def unbuild(inp: T) = {
-      current() = Success(inp)
-      input.value = asString(inp)
-    }
-  }
-
-  object Validate {
-    def apply[T](check: String => Try[T], zzz: T => String,mods: Modifier*)(rxMods: (Var[Try[T]] => Modifier)*)  = new Validate(check,zzz,mods:_*)(rxMods:_*)
-  }
-
   def withClasses[T](valid: String, invalid: String) = (v:Var[Try[T]]) => cls := v.map { t => if(t.isSuccess) valid else invalid }
 
   trait LayoutExample {
-    val a = Validate[OnlyA](OnlyA.fromString,_.value)(
-      c => backgroundColor := c.map { t => if(t.isSuccess) "green" else "red" },
-      withClasses("valid","invalid")
-    )
+    val a = Validate[OnlyA](OnlyA.fromString,_.value)(withClasses("valid","invalid"))
     val b = Validate[Size5](Size5.fromString,_.value)(withClasses("valid","invalid"))
-    val c = input(`type`:="text").render
+    val c = Validate[Int](str => Try { str.toInt },_.toString)()
   }
 }
 
@@ -145,17 +114,61 @@ object Demo5 {
   }
 }
 
+object todosparkle {
+  def row: HtmlTag = div(cls:="row")
+  def row(classes: String): HtmlTag = div(cls:=s"row $classes")
+
+  def column(classes: String): HtmlTag = div(cls:=s"column $classes")
+
+  def sparkle[T](labelTxt: String, field: Validate[T]) = {
+    val successColor = "#3c763d"
+    val failedColor = "#a94442"
+    val normalColor = "#4d4d4d"
+
+    def colorize = {
+      color := field.current.map {
+        case Success(_)           => successColor
+        case Failure(Unitialized) => normalColor
+        case _                    => failedColor
+      }
+    }
+
+    def icon = {
+      field.current.map {
+        case Success(_)           => span(cls:="fa fa-check postfix", color := successColor)
+        case Failure(Unitialized) => span(cls:="fa fa-beer postfix", color := normalColor)
+        case _                    => span(cls:="fa fa-close postfix", color := failedColor)
+      }
+    }
+
+    def labelrx = {
+      field.current.map {
+        case Failure(Unitialized) => { labelTxt }
+        case Failure(err) => s"$labelTxt (${err.getMessage})"
+        case Success(_) => labelTxt
+      }
+    }
+
+    row("collapse")(
+      label(labelrx,colorize),
+      column("small-9 large-11")(field.input),
+      column("small-3 large-1")(icon)
+    ).render
+  }
+}
+
 @JSExport
 object ScalaJSExample {
 
   def row: HtmlTag = div(cls:="row")
+  def row(classes: String): HtmlTag = div(cls:=s"row $classes")
 
   def column(classes: String): HtmlTag = div(cls:=s"column $classes")
 
   def template[T]
-  (title: String, description: String)
-  (formidable: Formidable[T], defaultTxt: String, default: T)
-  (formTag: HtmlTag): HtmlTag = {
+      (title: String, description: String)
+      (formidable: Formidable[T], defaultTxt: String, default: T)
+      (formTag: HtmlTag): HtmlTag = {
     val created = div("Not created yet").render
     row(
       column("small-3")(
@@ -184,12 +197,12 @@ object ScalaJSExample {
   }
 
   def first: HtmlTag = {
-    val form1 = Formidable[Demo1.UserPassLayout,Demo1.UserPass]
+    val form1  = Formidable[Demo1.UserPassLayout,Demo1.UserPass]
     val default = Demo1.UserPass("Bob!","supersecretbob")
     template("Example 1","Basic User/Password form")(form1,"Bob",default) {
       form(
-        form1.name,
-        form1.password
+        form1.firstname,
+        form1.pass
       )
     }
   }
@@ -227,27 +240,15 @@ object ScalaJSExample {
   val fourth: HtmlTag = {
     import Demo4._
     import scala.util.{Try,Success,Failure}
+    import todosparkle._
     val form4 = Formidable[LayoutExample,Example]
     val default = Example(OnlyA.fromString("AAA").get,Size5.fromString("12345").get,42)
 
-    def validatingTag[T](field: Validate[T]) = {
-      div(
-        field.input,
-        Rx {
-          field.current() match {
-            case Failure(Unitialized) => span
-            case Failure(err) => small(err.getMessage)
-            case Success(_) => span
-          }
-        }
-      ).render
-    }
-
     template("Example 4", "Basic Validating fields")(form4,"Default",default) {
       form(
-        validatingTag(form4.a),
-        validatingTag(form4.b),
-        form4.c
+        sparkle("My A Field",form4.a),
+        sparkle("My B Field",form4.b),
+        sparkle("My C Field",form4.c)
       )
     }
   }
