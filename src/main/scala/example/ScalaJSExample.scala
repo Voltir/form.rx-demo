@@ -13,33 +13,12 @@ import formidable.Validation._
 import Framework._
 
 object Demo1 {
-
   case class UserPass(firstname: String, pass : String)
-
-  trait UserPassLayout {
-    val firstname = input(`type`:="text").render
-    val pass = input(`type`:="password").render
-  }
 }
 
 object Demo2 {
   case class Inner(foo: String, bar: Int)
   case class Nested(top: String, inner: Inner, other: Inner)
-
-  trait InnerLayout {
-    val foo = input(`type`:="text").render
-    val bar = SelectionOf[Int]()(
-      Opt(1)(value:="One","One"),
-      Opt(2)(value:="Two","twwo"),
-      Opt(42)(value:="Life","Fizzle"),
-      Opt(5)(value:="Five","5ive")
-    )
-  }
-  trait NestedLayout {
-    val top = input(`type`:="text").render
-    val inner = Formidable[InnerLayout,Inner]
-    val other = Formidable[InnerLayout,Inner]
-  }
 }
 
 object Demo3 {
@@ -52,21 +31,9 @@ object Demo3 {
   case class FakeId(id: Long)
 
   case class Info(fid: FakeId, doit: Boolean, title: String, colors: Set[Color])
-
-  trait InfoLayout {
-    val fid = Ignored(FakeId(-1))
-    val doit = CheckboxBool()
-    val title = input(`type`:="text").render
-    val colors = CheckboxOf.set[Color]("color")(
-      Chk(Red)(value:="Red"),
-      Chk(Green)(value:="Grn"),
-      Chk(Blue)(value:="Blue")
-    )
-  }
 }
 
 object Demo4 {
-
   //Example of a Typesafe values that can be used on both client and server
   case class OnlyA private (value: String) extends AnyVal
 
@@ -88,14 +55,6 @@ object Demo4 {
   }
 
   case class Example(a: OnlyA, b: Size5, c: Int)
-
-  def withClasses[T](valid: String, invalid: String) = (v:Var[Try[T]]) => cls := v.map { t => if(t.isSuccess) valid else invalid }
-
-  trait LayoutExample {
-    val a = Validate[OnlyA](OnlyA.fromString,_.value)(withClasses("valid","invalid"))
-    val b = Validate[Size5](Size5.fromString,_.value)(withClasses("valid","invalid"))
-    val c = Validate[Int](str => Try { str.toInt },_.toString)()
-  }
 }
 
 object Demo5 {
@@ -197,7 +156,14 @@ object ScalaJSExample {
   }
 
   def first: HtmlTag = {
-    val form1  = Formidable[Demo1.UserPassLayout,Demo1.UserPass]
+    import Demo1._
+
+    trait UserPassLayout {
+      val firstname = input(`type`:="text").render
+      val pass = input(`type`:="password").render
+    }
+
+    val form1  = Formidable[UserPassLayout,UserPass]
     val default = Demo1.UserPass("Bob!","supersecretbob")
     template("Example 1","Basic User/Password form")(form1,"Bob",default) {
       form(
@@ -209,6 +175,22 @@ object ScalaJSExample {
 
   def second: HtmlTag = {
     import Demo2._
+
+    trait InnerLayout {
+      val foo = input(`type`:="text").render
+      val bar = SelectionOf[Int]()(
+        Opt(1)(value:="One","One"),
+        Opt(2)(value:="Two","twwo"),
+        Opt(42)(value:="Life","Fizzle"),
+        Opt(5)(value:="Five","5ive")
+      )
+    }
+    trait NestedLayout {
+      val top = input(`type`:="text").render
+      val inner = Formidable[InnerLayout,Inner]
+      val other = Formidable[InnerLayout,Inner]
+    }
+
     val form2 = Formidable[NestedLayout,Nested]
     val default = Nested("This is top",Inner("This is foo",2),Inner("Other foo",5))
     template("Example 2", "Formidable can nest")(form2,"Default",default) {
@@ -226,6 +208,18 @@ object ScalaJSExample {
 
   def third: HtmlTag = {
     import Demo3._
+
+    trait InfoLayout {
+      val fid = Ignored(FakeId(-1))
+      val doit = CheckboxBool()
+      val title = input(`type`:="text").render
+      val colors = CheckboxOf.set[Color]("color")(
+        Chk(Red)(value:="Red"),
+        Chk(Green)(value:="Grn"),
+        Chk(Blue)(value:="Blue")
+      )
+    }
+
     val form3 = Formidable[InfoLayout,Info]
     val default = Info(FakeId(-1),true,"My Color Choices",Set(Red,Green))
     template("Example 3", "Example with checkboxes")(form3,"Default",default) {
@@ -241,6 +235,15 @@ object ScalaJSExample {
     import Demo4._
     import scala.util.{Try,Success,Failure}
     import todosparkle._
+
+    def withClasses[T](valid: String, invalid: String) = (v:Var[Try[T]]) => cls := v.map { t => if(t.isSuccess) valid else invalid }
+
+    trait LayoutExample {
+      val a = Validate[OnlyA](OnlyA.fromString,_.value)(withClasses("valid","invalid"))
+      val b = Validate[Size5](Size5.fromString,_.value)(withClasses("valid","invalid"))
+      val c = Validate[Int](str => Try { str.toInt },_.toString)()
+    }
+    
     val form4 = Formidable[LayoutExample,Example]
     val default = Example(OnlyA.fromString("AAA").get,Size5.fromString("12345").get,42)
 
