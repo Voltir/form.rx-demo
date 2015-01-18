@@ -28,7 +28,7 @@ object Demo2 {
 
   trait InnerLayout {
     val foo = input(`type`:="text").render
-    val bar = SelectionOf[Int](
+    val bar = SelectionOf[Int]()(
       Opt(1)(value:="One","One"),
       Opt(2)(value:="Two","twwo"),
       Opt(42)(value:="Life","Fizzle"),
@@ -57,7 +57,7 @@ object Demo3 {
     val fid = Ignored(FakeId(-1))
     val doit = CheckboxBool()
     val title = input(`type`:="text").render
-    val colors = CheckboxSet[Color]("color")(
+    val colors = CheckboxOf.set[Color]("color")(
       Chk(Red)(value:="Red"),
       Chk(Green)(value:="Grn"),
       Chk(Blue)(value:="Blue")
