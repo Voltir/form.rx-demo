@@ -19,6 +19,20 @@ object Demo1 {
 object Demo2 {
   case class Inner(foo: String, bar: Int)
   case class Nested(top: String, inner: Inner, other: Inner)
+  trait InnerLayout {
+    val foo = input(`type`:="text").render
+    val bar = SelectionRx[Int]()(
+      Opt(1)(value:="One","One"),
+      Opt(2)(value:="Two","twwo"),
+      Opt(42)(value:="Life","Fizzle"),
+      Opt(5)(value:="Five","5ive")
+    )
+  }
+  trait NestedLayout {
+    val top = input(`type`:="text").render
+    val inner = FormidableRx[InnerLayout,Inner]
+    val other = FormidableRx[InnerLayout,Inner]
+  }
 }
 
 object Demo3 {
@@ -31,6 +45,17 @@ object Demo3 {
   case class FakeId(id: Long)
 
   case class Info(fid: FakeId, doit: Boolean, title: String, colors: Set[Color])
+
+  trait InfoLayout {
+    val fid = Ignored(FakeId(-1))
+    val doit = CheckboxRx.bool(false)
+    val title = input(`type`:="text").render
+    val colors = CheckboxRx.set[Color]("color")(
+      Chk(Red)(value:="Red"),
+      Chk(Green)(value:="Grn"),
+      Chk(Blue)(value:="Blue")
+    )
+  }
 }
 
 object Demo4 {
@@ -67,21 +92,69 @@ object Demo4 {
   case class Example(a: OnlyA, b: Size5, c: Int)
 }
 
-object Demo5 {
-  case class ValidationDemo(
-    firstName: String,
-    lastName: String,
-    userName: String,
-    emailAddress: String,
-    website: String,
-    age: Int,
-    bio: String
-  )
+object DemoRx2 {
+  case class Inner(foo: String, bar: Int)
+  case class Nested(top: String, inner: Inner, other: Inner)
 
-  trait ValidationLayout {
-
+  trait InnerLayout {
+    val foo = input(`type`:="text").render
+    val bar = SelectionRx[Int]()(
+      Opt(1)(value:="One","One"),
+      Opt(2)(value:="Two","twwo"),
+      Opt(42)(value:="Life","Fizzle"),
+      Opt(5)(value:="Five","5ive")
+    )
+  }
+  trait NestedLayout {
+    val top = input(`type`:="text").render
+    val inner = FormidableRx[InnerLayout,Inner]
+    val other = FormidableRx[InnerLayout,Inner]
   }
 }
+
+object DemoImg {
+  import scalajs.js.Dynamic.{global => g}
+
+  case class MediaPath(path: String)
+
+  class MediaPathLayout extends FormidableRx[MediaPath] {
+    val path: Var[String] = Var("")
+    val filez: Var[Option[dom.File]] = Var(None)
+
+    val fileInput: dom.html.Input =
+      input(`type`:="file",
+        accept:="image/*"
+        //onchange:={ () => path() = fileInput.value }
+      ).render
+
+    private def fizzlepop(file: dom.File): String = {
+      g.URL.createObjectURL(file).asInstanceOf[String]
+    }
+
+    override val current: Rx[Try[MediaPath]] = Rx{Try{MediaPath(
+      if(filez().isDefined) fizzlepop(filez.now.get) else path()
+    )}}
+
+    def set(inp: MediaPath) = {
+      filez() = None
+      path() = inp.path
+    }
+
+    override def reset() = {
+      path() = ""
+      filez() = None
+    }
+  }
+
+  case class Game(id: String, title: String, img: MediaPath)
+
+  trait GameLayout {
+    val id = input(`type`:="text").render
+    val title = input(`type`:="text").render
+    val img = new MediaPathLayout()
+  }
+}
+
 
 object todosparkle {
   def row: HtmlTag = div(cls:="row")
@@ -243,7 +316,7 @@ object ScalaJSExample {
 
   val fourth: HtmlTag = {
     import Demo4._
-    import scala.util.{Try,Success,Failure}
+    import scala.util.{Try, Success, Failure}
     import todosparkle._
 
     trait LayoutExample {
@@ -252,15 +325,53 @@ object ScalaJSExample {
       val c = InputRx.validate[Int](true)(placeholder:="c")
     }
 
-    val form4 = FormidableRx[LayoutExample,Example]
-    val default = Example(OnlyA.fromString("AAA").get,Size5.fromString("12345").get,42)
-
+    val form4 = FormidableRx[LayoutExample, Example]
+    val default = Example(OnlyA.fromString("AAA").get, Size5.fromString("12345").get, 42)
     template("Example 4", "Basic Validating fields")(form4,"Default",default) {
       form(
         sparkle("My A Field",form4.a),
         sparkle("My B Field",form4.b),
         sparkle("My C Field",form4.c)
       )
+    }
+  }
+
+
+  val imgRx: HtmlTag = {
+    import DemoImg._
+    val imgForm  = FormidableRx[GameLayout,Game]
+    val default = Game("GAMEID","OMG YOLO",MediaPath("http://placekitten.com/350/350"))
+    template("Example Img Upload","Basic User/Password form")(imgForm,"Wurt",default) {
+      val gameMediaSection = {
+        div(
+          imgForm.id,
+          imgForm.title,
+          Droppable.droppable(imgForm.img),
+          Rx {
+            imgForm.img.filez().map{ _ =>
+              div("grid--collapse")(
+                div()(
+                  a(cls:="button small secondary expand", onclick:={ () => imgForm.img.filez() = None})(
+                    i(cls:="fa fa-times fa-lg"),
+                    " Discard"
+                  )
+                ),
+                div()(
+                  div(cls:=imgForm.current.map{ g => s"button small expand ${if(g.isSuccess) "" else "disabled"}"},
+                    onclick:={ () => println("Test")
+                    })(
+                      i(cls:="fa fa-check fa-lg"),
+                      " Upload"
+                    )
+                )
+              )
+            }.getOrElse{
+              p(cls:="form-hint")("No Files..")
+            }
+          }
+        )
+      }
+      gameMediaSection
     }
   }
 
@@ -272,5 +383,6 @@ object ScalaJSExample {
     content.appendChild(Seq(second,hr).render)
     content.appendChild(Seq(third,hr).render)
     content.appendChild(Seq(fourth,hr).render)
+    //content.appendChild(Seq(imgRx,hr).render)
   }
 }

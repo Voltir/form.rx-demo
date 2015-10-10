@@ -47,5 +47,4 @@ object Framework {
       Obs(r){ implicitly[StyleValue[T]].apply(t, s, r.now)}
     }
   }
-
 }
