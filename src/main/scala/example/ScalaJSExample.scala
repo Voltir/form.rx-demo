@@ -1,6 +1,7 @@
 package example
 
-import org.scalajs.dom.HTMLInputElement
+import formidable.Typeclasses.StringConstructable
+import org.scalajs.dom.html.Input
 import scala.util._
 import rx._
 import rx.ops._
@@ -8,8 +9,7 @@ import scala.scalajs.js.annotation.JSExport
 import org.scalajs.dom
 import scalatags.JsDom.all._
 import formidable._
-import formidable.Implicits._
-import formidable.Validation._
+import formidable.implicits.all._
 import Framework._
 
 object Demo1 {
@@ -45,6 +45,11 @@ object Demo4 {
     }
   }
 
+  implicit val OnlyAConstruct: StringConstructable[OnlyA] = new StringConstructable[OnlyA] {
+    override def asString(inp: OnlyA) = inp.value
+    override def parse(inp: String) = OnlyA.fromString(inp)
+  }
+
   case class Size5 private (value: String) extends AnyVal
 
   object Size5 {
@@ -52,6 +57,11 @@ object Demo4 {
       if(str.length == 5) { Success(new Size5(str)) }
       else Failure(new IllegalArgumentException("Requires exactly 5 characters!"))
     }
+  }
+
+  implicit val Size5Construct: StringConstructable[Size5] = new StringConstructable[Size5] {
+    override def asString(inp: Size5) = inp.value
+    override def parse(inp: String) = Size5.fromString(inp)
   }
 
   case class Example(a: OnlyA, b: Size5, c: Int)
@@ -87,7 +97,7 @@ object todosparkle {
     def colorize = {
       color := field.current.map {
         case Success(_)           => successColor
-        case Failure(Unitialized) => normalColor
+        case Failure(FormidableUninitialized) => normalColor
         case _                    => failedColor
       }
     }
@@ -95,14 +105,14 @@ object todosparkle {
     def icon = {
       field.current.map {
         case Success(_)           => span(cls:="fa fa-check postfix", color := successColor)
-        case Failure(Unitialized) => span(cls:="fa fa-beer postfix", color := normalColor)
+        case Failure(FormidableUninitialized) => span(cls:="fa fa-beer postfix", color := normalColor)
         case _                    => span(cls:="fa fa-close postfix", color := failedColor)
       }
     }
 
     def labelrx = {
       field.current.map {
-        case Failure(Unitialized) => { labelTxt }
+        case Failure(FormidableUninitialized) => { labelTxt }
         case Failure(err) => s"$labelTxt (${err.getMessage})"
         case Success(_) => labelTxt
       }
@@ -126,7 +136,7 @@ object ScalaJSExample {
 
   def template[T]
       (title: String, description: String)
-      (formidable: Formidable[T], defaultTxt: String, default: T)
+      (formidable: FormidableRx[T], defaultTxt: String, default: T)
       (formTag: HtmlTag): HtmlTag = {
     val created = div("Not created yet").render
     row(
@@ -136,7 +146,7 @@ object ScalaJSExample {
         row(column("small-12")("Auto fill with ")(a(
           href:="javascript:void(0)",
           defaultTxt,
-          onclick := {() => formidable.unbuild(default)}
+          onclick := {() => formidable.set(default)}
         ))),
         row(column("small-12")(created))
       ),
@@ -144,7 +154,7 @@ object ScalaJSExample {
         formTag(
           input(`type`:="Submit"),
           onsubmit := {() =>
-            formidable.build() match {
+            formidable.current.now match {
               case Success(thing) => created.innerHTML = s"$thing"
               case Failure(err) => created.innerHTML = s"FAILED!: ${err.getMessage}"
             }
@@ -163,7 +173,7 @@ object ScalaJSExample {
       val pass = input(`type`:="password").render
     }
 
-    val form1  = Formidable[UserPassLayout,UserPass]
+    val form1  = FormidableRx[UserPassLayout,UserPass]
     val default = Demo1.UserPass("Bob!","supersecretbob")
     template("Example 1","Basic User/Password form")(form1,"Bob",default) {
       form(
@@ -178,7 +188,7 @@ object ScalaJSExample {
 
     trait InnerLayout {
       val foo = input(`type`:="text").render
-      val bar = SelectionOf[Int]()(
+      val bar = SelectionRx[Int]()(
         Opt(1)(value:="One","One"),
         Opt(2)(value:="Two","twwo"),
         Opt(42)(value:="Life","Fizzle"),
@@ -187,11 +197,11 @@ object ScalaJSExample {
     }
     trait NestedLayout {
       val top = input(`type`:="text").render
-      val inner = Formidable[InnerLayout,Inner]
-      val other = Formidable[InnerLayout,Inner]
+      val inner = FormidableRx[InnerLayout,Inner]
+      val other = FormidableRx[InnerLayout,Inner]
     }
 
-    val form2 = Formidable[NestedLayout,Nested]
+    val form2 = FormidableRx[NestedLayout,Nested]
     val default = Nested("This is top",Inner("This is foo",2),Inner("Other foo",5))
     template("Example 2", "Formidable can nest")(form2,"Default",default) {
       form(
@@ -211,16 +221,16 @@ object ScalaJSExample {
 
     trait InfoLayout {
       val fid = Ignored(FakeId(-1))
-      val doit = CheckboxBool()
+      val doit = CheckboxRx.bool(false)
       val title = input(`type`:="text").render
-      val colors = CheckboxOf.set[Color]("color")(
+      val colors = CheckboxRx.set[Color]("color")(
         Chk(Red)(value:="Red"),
         Chk(Green)(value:="Grn"),
         Chk(Blue)(value:="Blue")
       )
     }
 
-    val form3 = Formidable[InfoLayout,Info]
+    val form3 = FormidableRx[InfoLayout,Info]
     val default = Info(FakeId(-1),true,"My Color Choices",Set(Red,Green))
     template("Example 3", "Example with checkboxes")(form3,"Default",default) {
       form(
@@ -236,15 +246,13 @@ object ScalaJSExample {
     import scala.util.{Try,Success,Failure}
     import todosparkle._
 
-    def withClasses[T](valid: String, invalid: String) = (v:Var[Try[T]]) => cls := v.map { t => if(t.isSuccess) valid else invalid }
-
     trait LayoutExample {
-      val a = Validate[OnlyA](OnlyA.fromString,_.value)(withClasses("valid","invalid"))
-      val b = Validate[Size5](Size5.fromString,_.value)(withClasses("valid","invalid"))
-      val c = Validate[Int](str => Try { str.toInt },_.toString)()
+      val a = InputRx.validate[OnlyA](true)(placeholder:="a")
+      val b = InputRx.validate[Size5](true)(placeholder:="b")
+      val c = InputRx.validate[Int](true)(placeholder:="c")
     }
-    
-    val form4 = Formidable[LayoutExample,Example]
+
+    val form4 = FormidableRx[LayoutExample,Example]
     val default = Example(OnlyA.fromString("AAA").get,Size5.fromString("12345").get,42)
 
     template("Example 4", "Basic Validating fields")(form4,"Default",default) {
@@ -257,7 +265,7 @@ object ScalaJSExample {
   }
 
   @JSExport
-  def main(content: dom.HTMLDivElement): Unit = {
+  def main(content: dom.html.Div): Unit = {
     content.innerHTML = ""
     content.appendChild(row(column("small-12 text-center")(h1("Example Forms"))).render)
     content.appendChild(Seq(first,hr).render)
