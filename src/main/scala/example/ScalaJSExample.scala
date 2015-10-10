@@ -4,7 +4,6 @@ import formidable.Typeclasses.StringConstructable
 import org.scalajs.dom.html.Input
 import scala.util._
 import rx._
-import rx.ops._
 import scala.scalajs.js.annotation.JSExport
 import org.scalajs.dom
 import scalatags.JsDom.all._

@@ -1,21 +1,9 @@
 import com.lihaoyi.workbench.Plugin._
 
 enablePlugins(ScalaJSPlugin)
-//=======
-//import sbt._
-//import Keys._
-//import org.scalajs.sbtplugin.ScalaJSPlugin
-//import org.scalajs.sbtplugin.ScalaJSPlugin._
-//import org.scalajs.sbtplugin.ScalaJSPlugin.autoImport._
-//
-//<<<<<<< HEAD
-//import com.lihaoyi.workbench.Plugin._
-//=======
-////import com.lihaoyi.workbench.Plugin._
-//
-//
 
 workbenchSettings
+//URL: http://localhost:12345/target/scala-2.11/classes/index-dev.html
 
 lazy val root = project.in(file(".")).enablePlugins(ScalaJSPlugin)
 
@@ -27,7 +15,7 @@ scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.8.2",
-  "com.lihaoyi" %%% "scalarx" % "0.2.9-SNAPSHOT",
+  "com.lihaoyi" %%% "scalarx" % "0.3.1-SNAPSHOT",
   "com.lihaoyi" %%% "scalatags" % "0.5.2",
   "com.stabletech" %%% "formidable" % "0.0.10-SNAPSHOT"
 )
