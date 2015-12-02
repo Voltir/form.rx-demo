@@ -17,7 +17,7 @@ libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.8.2",
   "com.lihaoyi" %%% "scalarx" % "0.2.8",
   "com.lihaoyi" %%% "scalatags" % "0.5.2",
-  "com.stabletech" %%% "formidable" % "0.0.10-SNAPSHOT"
+  "com.stabletechs" %%% "formidable" % "0.0.10"
 )
 
 bootSnippet := "ScalaJSExample().main(document.getElementById('content'));"
