@@ -377,7 +377,7 @@ object ScalaJSExample {
   @JSExport
   def main(content: dom.html.Div): Unit = {
     content.innerHTML = ""
-    content.appendChild(row(column("small-12 text-center")(h1("Example Forms"))).render)
+    content.appendChild(row(column("small-12 text-center")(h1("Formidable"))).render)
     content.appendChild(Seq(first,hr).render)
     content.appendChild(Seq(second,hr).render)
     content.appendChild(Seq(third,hr).render)
