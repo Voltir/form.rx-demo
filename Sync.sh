@@ -7,6 +7,6 @@ git checkout gh-pages
 mv /tmp/formidable_demo/* .
 echo "Syncing gh-pages"
 git commit -am "Sync to gh-pages"
-git push origin gh-pages
-git checkout master
-echo "Done"
+#git push origin gh-pages
+#git checkout master
+#echo "Done"
