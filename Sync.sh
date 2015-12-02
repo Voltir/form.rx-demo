@@ -9,8 +9,8 @@ if [ $? -eq 0 ]; then
   echo "Syncing gh-pages"
   git commit -am "Sync to gh-pages"
   git push origin gh-pages
-  rm -rf /tmp/formidable_demo/
-  git checkout master
+  #rm -rf /tmp/formidable_demo/
+  #git checkout master
   echo "Done"
 else 
   echo "FAILED TO CHECKOUT GH-PAGES!"
