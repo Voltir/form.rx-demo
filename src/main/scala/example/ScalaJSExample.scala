@@ -1,6 +1,6 @@
 package example
 
-import formidable.Typeclasses.StringConstructable
+import likelib.StringTryLike
 import org.scalajs.dom.html.Input
 import scala.util._
 import rx._
@@ -17,8 +17,12 @@ object Demo1 {
 }
 
 object Demo2 {
+  case class User(id: String) extends AnyVal
+  object User {
+    implicit val like = likelib.like[String,User]
+  }
   case class Inner(foo: String, bar: Int)
-  case class Nested(top: String, inner: Inner, other: Inner)
+  case class Nested(top: String, uid: User, inner: Inner, other: Inner)
   trait InnerLayout {
     val foo = input(`type`:="text").render
     val bar = SelectionRx[Int]()(
@@ -30,6 +34,7 @@ object Demo2 {
   }
   trait NestedLayout {
     val top = input(`type`:="text").render
+    val uid = input(`type`:="text").render
     val inner = FormidableRx[InnerLayout,Inner]
     val other = FormidableRx[InnerLayout,Inner]
   }
@@ -63,30 +68,30 @@ object Demo4 {
   case class OnlyA private (value: String) extends AnyVal
 
   object OnlyA {
+
     private def valid(inp: String): Boolean = { inp.forall(_ == 'A') }
-    def fromString(str: String): Try[OnlyA] = {
-      if(valid(str)) { Success(new OnlyA(str)) }
-      else Failure(new IllegalArgumentException("Requries only A!"))
+
+    implicit val like: StringTryLike[OnlyA] = new StringTryLike[OnlyA] {
+      override def to(inp: OnlyA) = inp.value
+      override def from(str: String): Try[OnlyA] = {
+        if(valid(str)) { Success(new OnlyA(str)) }
+        else Failure(new IllegalArgumentException("Requries only A!"))
+      }
     }
   }
 
-  implicit val OnlyAConstruct: StringConstructable[OnlyA] = new StringConstructable[OnlyA] {
-    override def asString(inp: OnlyA) = inp.value
-    override def parse(inp: String) = OnlyA.fromString(inp)
-  }
+
 
   case class Size5 private (value: String) extends AnyVal
 
   object Size5 {
-    def fromString(str: String): Try[Size5] = {
-      if(str.length == 5) { Success(new Size5(str)) }
-      else Failure(new IllegalArgumentException("Requires exactly 5 characters!"))
+    implicit val like: StringTryLike[Size5] = new StringTryLike[Size5] {
+      override def to(inp: Size5) = inp.value
+      override def from(str: String): Try[Size5] = {
+        if (str.length == 5) Success(new Size5(str))
+        else Failure(new IllegalArgumentException("Requires exactly 5 characters!"))
+      }
     }
-  }
-
-  implicit val Size5Construct: StringConstructable[Size5] = new StringConstructable[Size5] {
-    override def asString(inp: Size5) = inp.value
-    override def parse(inp: String) = Size5.fromString(inp)
   }
 
   case class Example(a: OnlyA, b: Size5, c: Int)
@@ -270,15 +275,17 @@ object ScalaJSExample {
     }
     trait NestedLayout {
       val top = input(`type`:="text").render
+      val uid = input(`type`:="text").render
       val inner = FormidableRx[InnerLayout,Inner]
       val other = FormidableRx[InnerLayout,Inner]
     }
 
     val form2 = FormidableRx[NestedLayout,Nested]
-    val default = Nested("This is top",Inner("This is foo",2),Inner("Other foo",5))
+    val default = Nested("This is top",User("fiz@foo.com"),Inner("This is foo",2),Inner("Other foo",5))
     template("Example 2", "Formidable can nest")(form2,"Default",default) {
       form(
         form2.top,
+        form2.uid,
         label("Inner:"),
         form2.inner.foo,
         form2.inner.bar.select,
@@ -326,7 +333,7 @@ object ScalaJSExample {
     }
 
     val form4 = FormidableRx[LayoutExample, Example]
-    val default = Example(OnlyA.fromString("AAA").get, Size5.fromString("12345").get, 42)
+    val default = Example(OnlyA.like.from("AAA").get, Size5.like.from("12345").get, 42)
     template("Example 4", "Basic Validating fields")(form4,"Default",default) {
       form(
         sparkle("My A Field",form4.a),
