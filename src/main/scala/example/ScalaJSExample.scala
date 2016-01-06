@@ -1,10 +1,8 @@
 package example
 
 import likelib.StringTryLike
-import org.scalajs.dom.html.Input
 import scala.util._
 import rx._
-import rx.ops._
 import scala.scalajs.js.annotation.JSExport
 import org.scalajs.dom
 import scalatags.JsDom.all._
@@ -95,26 +93,6 @@ object Demo4 {
   }
 
   case class Example(a: OnlyA, b: Size5, c: Int)
-}
-
-object DemoRx2 {
-  case class Inner(foo: String, bar: Int)
-  case class Nested(top: String, inner: Inner, other: Inner)
-
-  trait InnerLayout {
-    val foo = input(`type`:="text").render
-    val bar = SelectionRx[Int]()(
-      Opt(1)(value:="One","One"),
-      Opt(2)(value:="Two","twwo"),
-      Opt(42)(value:="Life","Fizzle"),
-      Opt(5)(value:="Five","5ive")
-    )
-  }
-  trait NestedLayout {
-    val top = input(`type`:="text").render
-    val inner = FormidableRx[InnerLayout,Inner]
-    val other = FormidableRx[InnerLayout,Inner]
-  }
 }
 
 object DemoImg {
@@ -323,7 +301,6 @@ object ScalaJSExample {
 
   val fourth: HtmlTag = {
     import Demo4._
-    import scala.util.{Try, Success, Failure}
     import todosparkle._
 
     trait LayoutExample {

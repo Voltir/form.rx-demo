@@ -27,7 +27,7 @@ object Framework {
       case Failure(e) => span(e.toString, backgroundColor := "red").render
     }
     var last = rSafe
-    Obs(r, skipInitial = true){
+    r.triggerLater {
       val newLast = rSafe
       if(last.parentElement != null) {
         last.parentElement.replaceChild(newLast, last)
@@ -38,12 +38,12 @@ object Framework {
   }
   implicit def RxAttrValue[T: AttrValue] = new AttrValue[Rx[T]]{
     def apply(t: Element, a: Attr, r: Rx[T]): Unit = {
-      Obs(r){ implicitly[AttrValue[T]].apply(t, a, r.now)}
+      r.trigger { implicitly[AttrValue[T]].apply(t, a, r.now)}
     }
   }
   implicit def RxStyleValue[T: StyleValue] = new StyleValue[Rx[T]]{
     def apply(t: Element, s: Style, r: Rx[T]): Unit = {
-      Obs(r){ implicitly[StyleValue[T]].apply(t, s, r.now)}
+      r.trigger { implicitly[StyleValue[T]].apply(t, s, r.now)}
     }
   }
 }
