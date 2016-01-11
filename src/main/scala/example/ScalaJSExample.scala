@@ -12,6 +12,19 @@ import Framework._
 
 object Demo1 {
   case class UserPass(firstname: String, pass : String)
+
+  //The form layout
+  class UserPassLayout(implicit ctx: RxCtx) extends LayoutFor[UserPass] {
+    val firstname = input(`type`:="text").render
+    val pass = input(`type`:="password").render
+  }
+
+  //The form instance
+  val form = FormidableRx.apply2[UserPass,UserPassLayout]
+
+  //The Html
+  val default = UserPass("Bob!","supersecretbob")
+
 }
 
 object Demo2 {
@@ -221,24 +234,6 @@ object ScalaJSExample {
     )
   }
 
-  def first: HtmlTag = {
-    import Demo1._
-
-    trait UserPassLayout {
-      val firstname = input(`type`:="text").render
-      val pass = input(`type`:="password").render
-    }
-
-    val form1  = FormidableRx[UserPassLayout,UserPass]
-    val default = Demo1.UserPass("Bob!","supersecretbob")
-    template("Example 1","Basic User/Password form")(form1,"Bob",default) {
-      form(
-        form1.firstname,
-        form1.pass
-      )
-    }
-  }
-
   def second: HtmlTag = {
     import Demo2._
 
@@ -359,11 +354,19 @@ object ScalaJSExample {
     }
   }
 
+
+//  val demo1 = template("Example 1","Basic User/Password form")(Demo1.form,"Bob",Demo1.default) {
+//    form(
+//      Demo1.form.firstname,
+//      Demo1.form.pass
+//    )
+//  }
+
   @JSExport
   def main(content: dom.html.Div): Unit = {
     content.innerHTML = ""
     content.appendChild(row(column("small-12 text-center")(h1("Formidable"))).render)
-    content.appendChild(Seq(first,hr).render)
+    //content.appendChild(Seq(demo1,hr).render)
     content.appendChild(Seq(second,hr).render)
     content.appendChild(Seq(third,hr).render)
     content.appendChild(Seq(fourth,hr).render)
