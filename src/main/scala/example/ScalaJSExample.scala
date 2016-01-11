@@ -28,7 +28,7 @@ object Demo2 {
       Opt(2)(value:="Two","twwo"),
       Opt(42)(value:="Life","Fizzle"),
       Opt(5)(value:="Five","5ive")
-    )
+    )(RxCtx.Unsafe)
   }
   trait NestedLayout {
     val top = input(`type`:="text").render
@@ -50,14 +50,14 @@ object Demo3 {
   case class Info(fid: FakeId, doit: Boolean, title: String, colors: Set[Color])
 
   trait InfoLayout {
-    val fid = Ignored(FakeId(-1))
-    val doit = CheckboxRx.bool(false)
+    val fid = Ignored(FakeId(-1))(RxCtx.Unsafe)
+    val doit = CheckboxRx.bool(false)(RxCtx.Unsafe)
     val title = input(`type`:="text").render
     val colors = CheckboxRx.set[Color]("color")(
       Chk(Red)(value:="Red"),
       Chk(Green)(value:="Grn"),
       Chk(Blue)(value:="Blue")
-    )
+    )(RxCtx.Unsafe)
   }
 }
 
@@ -100,7 +100,7 @@ object DemoImg {
 
   case class MediaPath(path: String)
 
-  class MediaPathLayout extends FormidableRx[MediaPath] {
+  class MediaPathLayout()(implicit ctx: RxCtx) extends FormidableRx[MediaPath] {
     val path: Var[String] = Var("")
     val filez: Var[Option[dom.File]] = Var(None)
 
@@ -134,7 +134,7 @@ object DemoImg {
   trait GameLayout {
     val id = input(`type`:="text").render
     val title = input(`type`:="text").render
-    val img = new MediaPathLayout()
+    val img = new MediaPathLayout()(RxCtx.Unsafe)
   }
 }
 
@@ -249,7 +249,7 @@ object ScalaJSExample {
         Opt(2)(value:="Two","twwo"),
         Opt(42)(value:="Life","Fizzle"),
         Opt(5)(value:="Five","5ive")
-      )
+      )(RxCtx.Unsafe)
     }
     trait NestedLayout {
       val top = input(`type`:="text").render
@@ -278,14 +278,14 @@ object ScalaJSExample {
     import Demo3._
 
     trait InfoLayout {
-      val fid = Ignored(FakeId(-1))
-      val doit = CheckboxRx.bool(false)
+      val fid = Ignored(FakeId(-1))(RxCtx.Unsafe)
+      val doit = CheckboxRx.bool(false)(RxCtx.Unsafe)
       val title = input(`type`:="text").render
       val colors = CheckboxRx.set[Color]("color")(
         Chk(Red)(value:="Red"),
         Chk(Green)(value:="Grn"),
         Chk(Blue)(value:="Blue")
-      )
+      )(RxCtx.Unsafe)
     }
 
     val form3 = FormidableRx[InfoLayout,Info]
@@ -302,7 +302,7 @@ object ScalaJSExample {
   val fourth: HtmlTag = {
     import Demo4._
     import todosparkle._
-
+    implicit val ctx = RxCtx.Unsafe
     trait LayoutExample {
       val a = InputRx.validate[OnlyA](true)(placeholder:="a")
       val b = InputRx.validate[Size5](true)(placeholder:="b")
