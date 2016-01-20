@@ -13,7 +13,7 @@ object Droppable {
   def zoomcrop(path: String, divCls: String = "") = {
     div(cls:=s"zc $divCls", style:=s"background-image: url($path); height: 200px")
   }
-  def droppable(layout: MediaPathLayout): HtmlTag = {
+  def droppable(layout: MediaPathLayout)(implicit owner: Ctx.Owner): HtmlTag = {
     val somenum = scala.util.Random.nextInt()
 
     // possible rx leak :(

@@ -14,7 +14,7 @@ object Demo1 {
   case class UserPass(firstname: String, pass : String)
 
   //The form layout
-  class UserPassLayout(implicit ctx: RxCtx) extends LayoutFor[UserPass] {
+  class UserPassLayout(implicit ctx: Ctx.Owner) extends LayoutFor[UserPass] {
     val firstname = input(`type`:="text").render
     val pass = input(`type`:="password").render
   }
@@ -41,7 +41,7 @@ object Demo2 {
       Opt(2)(value:="Two","twwo"),
       Opt(42)(value:="Life","Fizzle"),
       Opt(5)(value:="Five","5ive")
-    )(RxCtx.Unsafe)
+    )(Ctx.Owner.Unsafe)
   }
   trait NestedLayout {
     val top = input(`type`:="text").render
@@ -63,14 +63,14 @@ object Demo3 {
   case class Info(fid: FakeId, doit: Boolean, title: String, colors: Set[Color])
 
   trait InfoLayout {
-    val fid = Ignored(FakeId(-1))(RxCtx.Unsafe)
-    val doit = CheckboxRx.bool(false)(RxCtx.Unsafe)
+    val fid = Ignored(FakeId(-1))(Ctx.Owner.Unsafe)
+    val doit = CheckboxRx.bool(false)(Ctx.Owner.Unsafe)
     val title = input(`type`:="text").render
     val colors = CheckboxRx.set[Color]("color")(
       Chk(Red)(value:="Red"),
       Chk(Green)(value:="Grn"),
       Chk(Blue)(value:="Blue")
-    )(RxCtx.Unsafe)
+    )(Ctx.Owner.Unsafe)
   }
 }
 
@@ -113,7 +113,7 @@ object DemoImg {
 
   case class MediaPath(path: String)
 
-  class MediaPathLayout()(implicit ctx: RxCtx) extends FormidableRx[MediaPath] {
+  class MediaPathLayout()(implicit ctx: Ctx.Owner) extends FormidableRx[MediaPath] {
     val path: Var[String] = Var("")
     val filez: Var[Option[dom.File]] = Var(None)
 
@@ -147,7 +147,7 @@ object DemoImg {
   trait GameLayout {
     val id = input(`type`:="text").render
     val title = input(`type`:="text").render
-    val img = new MediaPathLayout()(RxCtx.Unsafe)
+    val img = new MediaPathLayout()(Ctx.Owner.Unsafe)
   }
 }
 
@@ -158,7 +158,7 @@ object todosparkle {
 
   def column(classes: String): HtmlTag = div(cls:=s"column $classes")
 
-  def sparkle[T](labelTxt: String, field: Validate[T]) = {
+  def sparkle[T](labelTxt: String, field: Validate[T])(implicit owner: Ctx.Owner) = {
     val successColor = "#3c763d"
     val failedColor = "#a94442"
     val normalColor = "#4d4d4d"
@@ -244,7 +244,7 @@ object ScalaJSExample {
         Opt(2)(value:="Two","twwo"),
         Opt(42)(value:="Life","Fizzle"),
         Opt(5)(value:="Five","5ive")
-      )(RxCtx.Unsafe)
+      )(Ctx.Owner.Unsafe)
     }
     trait NestedLayout {
       val top = input(`type`:="text").render
@@ -273,14 +273,14 @@ object ScalaJSExample {
     import Demo3._
 
     trait InfoLayout {
-      val fid = Ignored(FakeId(-1))(RxCtx.Unsafe)
-      val doit = CheckboxRx.bool(false)(RxCtx.Unsafe)
+      val fid = Ignored(FakeId(-1))(Ctx.Owner.Unsafe)
+      val doit = CheckboxRx.bool(false)(Ctx.Owner.Unsafe)
       val title = input(`type`:="text").render
       val colors = CheckboxRx.set[Color]("color")(
         Chk(Red)(value:="Red"),
         Chk(Green)(value:="Grn"),
         Chk(Blue)(value:="Blue")
-      )(RxCtx.Unsafe)
+      )(Ctx.Owner.Unsafe)
     }
 
     val form3 = FormidableRx[InfoLayout,Info]
@@ -297,7 +297,7 @@ object ScalaJSExample {
   val fourth: HtmlTag = {
     import Demo4._
     import todosparkle._
-    implicit val ctx = RxCtx.Unsafe
+    implicit val ctx = Ctx.Owner.Unsafe
     trait LayoutExample {
       val a = InputRx.validate[OnlyA](true)(placeholder:="a")
       val b = InputRx.validate[Size5](true)(placeholder:="b")
