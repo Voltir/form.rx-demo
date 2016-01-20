@@ -1179,7 +1179,7 @@ function $s_Lexample_DemoImg$GameLayout$class__$$init$__Lexample_DemoImg$GameLay
   var this$2 = $m_Lscalatags_JsDom$all$().type$1;
   var ev$1 = $m_Lscalatags_JsDom$all$().stringAttr$1;
   $$this.title$1 = jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$2, "text", ev$1)])).render__Lorg_scalajs_dom_raw_Element();
-  $$this.img$1 = new $c_Lexample_DemoImg$MediaPathLayout().init___()
+  $$this.img$1 = new $c_Lexample_DemoImg$MediaPathLayout().init___Lrx_Ctx$Owner($m_Lrx_Ctx$Owner$Unsafe$())
 }
 /** @constructor */
 function $c_Lexample_Droppable$() {
@@ -1192,71 +1192,6 @@ function $h_Lexample_Droppable$() {
   /*<skip>*/
 }
 $h_Lexample_Droppable$.prototype = $c_Lexample_Droppable$.prototype;
-$c_Lexample_Droppable$.prototype.droppable__Lexample_DemoImg$MediaPathLayout__Lscalatags_JsDom$TypedTag = (function(layout) {
-  var this$1 = $m_s_util_Random$();
-  var this$2 = this$1.self$1;
-  this$2.next__I__I(32);
-  var jsx$7 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().form$1);
-  var this$3 = $m_Lscalatags_JsDom$all$().cls$1;
-  var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  var jsx$6 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$3, "image-select", ev);
-  var this$4 = $m_Lscalatags_JsDom$all$().action$1;
-  var ev$1 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  var jsx$5 = jsx$7.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$6, new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$4, "", ev$1)]));
-  var this$5 = $m_Lscalatags_JsDom$all$();
-  var e = layout.fileInput$1;
-  var jsx$4 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$5, e);
-  var jsx$3 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().i$1);
-  var this$6 = $m_Lscalatags_JsDom$all$().cls$1;
-  var ev$2 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  var jsx$2 = jsx$3.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$6, "fa fa-camera fa-2x image-select__icon", ev$2)]));
-  var jsx$1 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div$1);
-  var this$7 = $m_Lscalatags_JsDom$all$().cls$1;
-  var ev$3 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  var formy = jsx$5.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$2, jsx$1.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$7, "image-select__message", ev$3)])), $m_Lexample_Framework$().rxMod__Lrx_Rx__Lscalatags_generic_Modifier($m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(layout$1) {
-    return (function(rxctx$macro$1$2) {
-      var rxctx$macro$1 = $as_Lrx_RxCtx(rxctx$macro$1$2);
-      var jsx$8 = $m_Lexample_Droppable$();
-      var this$9 = layout$1.current$1;
-      return jsx$8.zoomcrop__T__T__Lscalatags_JsDom$TypedTag($as_Lexample_DemoImg$MediaPath($as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$9, rxctx$macro$1)).get__O()).path$1, "zc--square")
-    })
-  })(layout)), $m_Lrx_RxCtx$Dummy$()))])).render__Lorg_scalajs_dom_raw_Element();
-  formy["ondragover"] = this.example$Droppable$$fileHover$1__Lorg_scalajs_dom_raw_HTMLFormElement__sjs_js_Function1(formy);
-  formy["ondragleave"] = this.example$Droppable$$fileHover$1__Lorg_scalajs_dom_raw_HTMLFormElement__sjs_js_Function1(formy);
-  formy["ondrop"] = this.fileSelect$1__p1__Lexample_DemoImg$MediaPathLayout__Lorg_scalajs_dom_raw_HTMLFormElement__sjs_js_Function1(layout, formy);
-  var this$11 = $m_s_Console$();
-  var this$12 = this$11.outVar$2;
-  $as_Ljava_io_PrintStream(this$12.tl$1.get__O()).println__O__V(layout);
-  var x = layout.fileInput$1;
-  var this$14 = $m_s_Console$();
-  var this$15 = this$14.outVar$2;
-  $as_Ljava_io_PrintStream(this$15.tl$1.get__O()).println__O__V(x);
-  var x$1 = layout.fileInput$1["onchange"];
-  var this$17 = $m_s_Console$();
-  var this$18 = this$17.outVar$2;
-  $as_Ljava_io_PrintStream(this$18.tl$1.get__O()).println__O__V(x$1);
-  layout.fileInput$1["onchange"] = (function(layout$1$1) {
-    return (function(ev$2$1) {
-      var this$20 = $m_s_Console$();
-      var this$21 = this$20.outVar$2;
-      $as_Ljava_io_PrintStream(this$21.tl$1.get__O()).println__O__V(ev$2$1);
-      ev$2$1["stopPropagation"]();
-      ev$2$1["preventDefault"]();
-      layout$1$1.filez$1.update__O__V($m_s_Option$().apply__O__s_Option(layout$1$1.fileInput$1["files"][0]));
-      var this$23 = $m_s_Console$();
-      var this$24 = this$23.outVar$2;
-      $as_Ljava_io_PrintStream(this$24.tl$1.get__O()).println__O__V("OMG LAYOUT!");
-      var x$2 = layout$1$1.current$1;
-      var this$26 = $m_s_Console$();
-      var this$27 = this$26.outVar$2;
-      $as_Ljava_io_PrintStream(this$27.tl$1.get__O()).println__O__V(x$2);
-      layout$1$1.current$1.recalc__V()
-    })
-  })(layout);
-  var jsx$9 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().label$1);
-  var this$28 = $m_Lscalatags_JsDom$all$();
-  return jsx$9.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$28, formy)]))
-});
 $c_Lexample_Droppable$.prototype.fileSelect$1__p1__Lexample_DemoImg$MediaPathLayout__Lorg_scalajs_dom_raw_HTMLFormElement__sjs_js_Function1 = (function(layout$1, formy$1) {
   return (function(layout$1$1, formy$1$1) {
     return (function(ev$2) {
@@ -1290,6 +1225,72 @@ $c_Lexample_Droppable$.prototype.example$Droppable$$fileHover$1__Lorg_scalajs_do
       }
     })
   })(formy$1)
+});
+$c_Lexample_Droppable$.prototype.droppable__Lexample_DemoImg$MediaPathLayout__Lrx_Ctx$Owner__Lscalatags_JsDom$TypedTag = (function(layout, owner) {
+  var this$1 = $m_s_util_Random$();
+  var this$2 = this$1.self$1;
+  this$2.next__I__I(32);
+  var jsx$7 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().form$1);
+  var this$3 = $m_Lscalatags_JsDom$all$().cls$1;
+  var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
+  var jsx$6 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$3, "image-select", ev);
+  var this$4 = $m_Lscalatags_JsDom$all$().action$1;
+  var ev$1 = $m_Lscalatags_JsDom$all$().stringAttr$1;
+  var jsx$5 = jsx$7.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$6, new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$4, "", ev$1)]));
+  var this$5 = $m_Lscalatags_JsDom$all$();
+  var e = layout.fileInput$1;
+  var jsx$4 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$5, e);
+  var jsx$3 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().i$1);
+  var this$6 = $m_Lscalatags_JsDom$all$().cls$1;
+  var ev$2 = $m_Lscalatags_JsDom$all$().stringAttr$1;
+  var jsx$2 = jsx$3.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$6, "fa fa-camera fa-2x image-select__icon", ev$2)]));
+  var jsx$1 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div$1);
+  var this$7 = $m_Lscalatags_JsDom$all$().cls$1;
+  var ev$3 = $m_Lscalatags_JsDom$all$().stringAttr$1;
+  var formy = jsx$5.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$2, jsx$1.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$7, "image-select__message", ev$3)])), $m_Lexample_Framework$().rxMod__Lrx_Rx__Lscalatags_generic_Modifier($m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(layout$1) {
+    return (function(rxOwnerCtx$macro$2$2, rxDataCtx$macro$1$2) {
+      $as_Lrx_Ctx$Owner(rxOwnerCtx$macro$2$2);
+      var rxDataCtx$macro$1 = $as_Lrx_Ctx$Data(rxDataCtx$macro$1$2);
+      var jsx$8 = $m_Lexample_Droppable$();
+      var this$8 = layout$1.current$1;
+      return jsx$8.zoomcrop__T__T__Lscalatags_JsDom$TypedTag($as_Lexample_DemoImg$MediaPath($as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$8, rxDataCtx$macro$1)).get__O()).path$1, "zc--square")
+    })
+  })(layout)), owner))])).render__Lorg_scalajs_dom_raw_Element();
+  formy["ondragover"] = this.example$Droppable$$fileHover$1__Lorg_scalajs_dom_raw_HTMLFormElement__sjs_js_Function1(formy);
+  formy["ondragleave"] = this.example$Droppable$$fileHover$1__Lorg_scalajs_dom_raw_HTMLFormElement__sjs_js_Function1(formy);
+  formy["ondrop"] = this.fileSelect$1__p1__Lexample_DemoImg$MediaPathLayout__Lorg_scalajs_dom_raw_HTMLFormElement__sjs_js_Function1(layout, formy);
+  var this$10 = $m_s_Console$();
+  var this$11 = this$10.outVar$2;
+  $as_Ljava_io_PrintStream(this$11.tl$1.get__O()).println__O__V(layout);
+  var x = layout.fileInput$1;
+  var this$13 = $m_s_Console$();
+  var this$14 = this$13.outVar$2;
+  $as_Ljava_io_PrintStream(this$14.tl$1.get__O()).println__O__V(x);
+  var x$1 = layout.fileInput$1["onchange"];
+  var this$16 = $m_s_Console$();
+  var this$17 = this$16.outVar$2;
+  $as_Ljava_io_PrintStream(this$17.tl$1.get__O()).println__O__V(x$1);
+  layout.fileInput$1["onchange"] = (function(layout$1$1) {
+    return (function(ev$2$1) {
+      var this$19 = $m_s_Console$();
+      var this$20 = this$19.outVar$2;
+      $as_Ljava_io_PrintStream(this$20.tl$1.get__O()).println__O__V(ev$2$1);
+      ev$2$1["stopPropagation"]();
+      ev$2$1["preventDefault"]();
+      layout$1$1.filez$1.update__O__V($m_s_Option$().apply__O__s_Option(layout$1$1.fileInput$1["files"][0]));
+      var this$22 = $m_s_Console$();
+      var this$23 = this$22.outVar$2;
+      $as_Ljava_io_PrintStream(this$23.tl$1.get__O()).println__O__V("OMG LAYOUT!");
+      var x$2 = layout$1$1.current$1;
+      var this$25 = $m_s_Console$();
+      var this$26 = this$25.outVar$2;
+      $as_Ljava_io_PrintStream(this$26.tl$1.get__O()).println__O__V(x$2);
+      layout$1$1.current$1.recalc__V()
+    })
+  })(layout);
+  var jsx$9 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().label$1);
+  var this$27 = $m_Lscalatags_JsDom$all$();
+  return jsx$9.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$27, formy)]))
 });
 var $d_Lexample_Droppable$ = new $TypeData().initClass({
   Lexample_Droppable$: 0
@@ -1336,6 +1337,15 @@ $c_Lexample_Framework$.prototype.example$Framework$$rSafe$1__Lrx_Rx__Lorg_scalaj
     throw new $c_s_MatchError().init___O(x1)
   }
 });
+$c_Lexample_Framework$.prototype.RxStr__Lrx_Rx__F1__Lrx_Ctx$Owner__Lscalatags_generic_Modifier = (function(r, f, owner) {
+  return this.rxMod__Lrx_Rx__Lscalatags_generic_Modifier($m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(r$2, f$1) {
+    return (function(rxOwnerCtx$macro$4$2, rxDataCtx$macro$3$2) {
+      $as_Lrx_Ctx$Owner(rxOwnerCtx$macro$4$2);
+      var rxDataCtx$macro$3 = $as_Lrx_Ctx$Data(rxDataCtx$macro$3$2);
+      return $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span$1).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_generic_Modifier(f$1.apply__O__O($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(r$2, rxDataCtx$macro$3)))]))
+    })
+  })(r, f)), owner))
+});
 $c_Lexample_Framework$.prototype.rxMod__Lrx_Rx__Lscalatags_generic_Modifier = (function(r) {
   var elem = this.example$Framework$$rSafe$1__Lrx_Rx__Lorg_scalajs_dom_raw_HTMLElement(r);
   var last = new $c_sr_ObjectRef().init___O(elem);
@@ -1352,14 +1362,6 @@ $c_Lexample_Framework$.prototype.rxMod__Lrx_Rx__Lscalatags_generic_Modifier = (f
   var this$2 = $m_Lscalatags_JsDom$all$();
   var e = last.elem$1;
   return new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$2, e)
-});
-$c_Lexample_Framework$.prototype.RxStr__Lrx_Rx__F1__Lscalatags_generic_Modifier = (function(r, f) {
-  return this.rxMod__Lrx_Rx__Lscalatags_generic_Modifier($m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(r$2, f$1) {
-    return (function(rxctx$macro$2$2) {
-      var rxctx$macro$2 = $as_Lrx_RxCtx(rxctx$macro$2$2);
-      return $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span$1).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_generic_Modifier(f$1.apply__O__O($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(r$2, rxctx$macro$2)))]))
-    })
-  })(r, f)), $m_Lrx_RxCtx$Dummy$()))
 });
 var $d_Lexample_Framework$ = new $TypeData().initClass({
   Lexample_Framework$: 0
@@ -1390,20 +1392,21 @@ function $h_Lexample_ScalaJSExample$() {
 $h_Lexample_ScalaJSExample$.prototype = $c_Lexample_ScalaJSExample$.prototype;
 $c_Lexample_ScalaJSExample$.prototype.init___ = (function() {
   $n_Lexample_ScalaJSExample$ = this;
-  var form4 = new $c_Lexample_ScalaJSExample$$anon$11().init___();
+  var ctx = $m_Lrx_Ctx$Owner$Unsafe$();
+  var form4 = new $c_Lexample_ScalaJSExample$$anon$11().init___Lrx_Ctx$Owner$Unsafe$(ctx);
   var this$1 = $m_Lexample_Demo4$OnlyA$().like$1;
   var jsx$1 = $as_Lexample_Demo4$OnlyA(this$1.from__T__s_util_Try("AAA").get__O()).value$1;
   var this$2 = $m_Lexample_Demo4$Size5$().like$1;
   var $default = new $c_Lexample_Demo4$Example().init___T__T__I(jsx$1, $as_Lexample_Demo4$Size5(this$2.from__T__s_util_Try("12345").get__O()).value$1, 42);
   var jsx$4 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().form$1);
   var this$3 = $m_Lscalatags_JsDom$all$();
-  var e = $m_Lexample_todosparkle$().sparkle__T__Lformidable_implicits_Input$Validate__Lorg_scalajs_dom_raw_HTMLElement("My A Field", form4.a$1);
+  var e = $m_Lexample_todosparkle$().sparkle__T__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__Lorg_scalajs_dom_raw_HTMLElement("My A Field", form4.a$1, ctx);
   var jsx$3 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$3, e);
   var this$4 = $m_Lscalatags_JsDom$all$();
-  var e$1 = $m_Lexample_todosparkle$().sparkle__T__Lformidable_implicits_Input$Validate__Lorg_scalajs_dom_raw_HTMLElement("My B Field", form4.b$1);
+  var e$1 = $m_Lexample_todosparkle$().sparkle__T__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__Lorg_scalajs_dom_raw_HTMLElement("My B Field", form4.b$1, ctx);
   var jsx$2 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$4, e$1);
   var this$5 = $m_Lscalatags_JsDom$all$();
-  var e$2 = $m_Lexample_todosparkle$().sparkle__T__Lformidable_implicits_Input$Validate__Lorg_scalajs_dom_raw_HTMLElement("My C Field", form4.c$1);
+  var e$2 = $m_Lexample_todosparkle$().sparkle__T__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__Lorg_scalajs_dom_raw_HTMLElement("My C Field", form4.c$1, ctx);
   this.fourth$1 = this.template__T__T__Lformidable_FormidableRx__T__O__Lscalatags_JsDom$TypedTag__Lscalatags_JsDom$TypedTag("Example 4", "Basic Validating fields", form4, "Default", $default, jsx$4.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, jsx$2, new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$5, e$2)])));
   var imgForm = new $c_Lexample_ScalaJSExample$$anon$12().init___();
   var default$2 = new $c_Lexample_DemoImg$Game().init___T__T__Lexample_DemoImg$MediaPath("GAMEID", "OMG YOLO", new $c_Lexample_DemoImg$MediaPath().init___T("http://placekitten.com/350/350"));
@@ -1413,32 +1416,28 @@ $c_Lexample_ScalaJSExample$.prototype.init___ = (function() {
   var jsx$5 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$6, e$3);
   var this$7 = $m_Lscalatags_JsDom$all$();
   var e$4 = imgForm.title$1;
-  this.imgRx$1 = this.template__T__T__Lformidable_FormidableRx__T__O__Lscalatags_JsDom$TypedTag__Lscalatags_JsDom$TypedTag("Example Img Upload", "Basic User/Password form", imgForm, "Wurt", default$2, jsx$6.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5, new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$7, e$4), $m_Lexample_Droppable$().droppable__Lexample_DemoImg$MediaPathLayout__Lscalatags_JsDom$TypedTag(imgForm.img$1), $m_Lexample_Framework$().rxMod__Lrx_Rx__Lscalatags_generic_Modifier($m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anonfun$11().init___Lexample_DemoImg$GameLayout(imgForm), $m_Lrx_RxCtx$Dummy$()))])));
+  this.imgRx$1 = this.template__T__T__Lformidable_FormidableRx__T__O__Lscalatags_JsDom$TypedTag__Lscalatags_JsDom$TypedTag("Example Img Upload", "Basic User/Password form", imgForm, "Wurt", default$2, jsx$6.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5, new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$7, e$4), $m_Lexample_Droppable$().droppable__Lexample_DemoImg$MediaPathLayout__Lrx_Ctx$Owner__Lscalatags_JsDom$TypedTag(imgForm.img$1, $m_Lrx_Ctx$Owner$Unsafe$()), $m_Lexample_Framework$().rxMod__Lrx_Rx__Lscalatags_generic_Modifier($m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anonfun$11().init___Lexample_DemoImg$GameLayout(imgForm), $m_Lrx_Ctx$Owner$Unsafe$()))])));
   return this
 });
 $c_Lexample_ScalaJSExample$.prototype.main__Lorg_scalajs_dom_raw_HTMLDivElement__V = (function(content) {
   content["innerHTML"] = "";
   content["appendChild"](this.row__Lscalatags_JsDom$TypedTag().apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.column__T__Lscalatags_JsDom$TypedTag("small-12 text-center").apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().h1$1).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T("Formidable"))]))]))])).render__Lorg_scalajs_dom_raw_Element());
   var this$2 = $m_Lscalatags_JsDom$all$();
-  var xs = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.first__Lscalatags_JsDom$TypedTag(), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().hr$1)])));
+  var xs = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.second__Lscalatags_JsDom$TypedTag(), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().hr$1)])));
   var evidence$1 = $m_s_Predef$().singleton$und$less$colon$less$2;
   content["appendChild"](new $c_Lscalatags_JsDom$Cap$SeqFrag().init___Lscalatags_JsDom$Cap__sc_Seq__F1(this$2, xs, evidence$1).render__Lorg_scalajs_dom_raw_Node());
   var this$3 = $m_Lscalatags_JsDom$all$();
-  var xs$1 = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.second__Lscalatags_JsDom$TypedTag(), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().hr$1)])));
+  var xs$1 = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.third__Lscalatags_JsDom$TypedTag(), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().hr$1)])));
   var evidence$1$1 = $m_s_Predef$().singleton$und$less$colon$less$2;
   content["appendChild"](new $c_Lscalatags_JsDom$Cap$SeqFrag().init___Lscalatags_JsDom$Cap__sc_Seq__F1(this$3, xs$1, evidence$1$1).render__Lorg_scalajs_dom_raw_Node());
   var this$4 = $m_Lscalatags_JsDom$all$();
-  var xs$2 = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.third__Lscalatags_JsDom$TypedTag(), $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().hr$1)])));
+  var xs$2 = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.fourth$1, $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().hr$1)])));
   var evidence$1$2 = $m_s_Predef$().singleton$und$less$colon$less$2;
   content["appendChild"](new $c_Lscalatags_JsDom$Cap$SeqFrag().init___Lscalatags_JsDom$Cap__sc_Seq__F1(this$4, xs$2, evidence$1$2).render__Lorg_scalajs_dom_raw_Node());
   var this$5 = $m_Lscalatags_JsDom$all$();
-  var xs$3 = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.fourth$1, $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().hr$1)])));
+  var xs$3 = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.imgRx$1, $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().hr$1)])));
   var evidence$1$3 = $m_s_Predef$().singleton$und$less$colon$less$2;
-  content["appendChild"](new $c_Lscalatags_JsDom$Cap$SeqFrag().init___Lscalatags_JsDom$Cap__sc_Seq__F1(this$5, xs$3, evidence$1$3).render__Lorg_scalajs_dom_raw_Node());
-  var this$6 = $m_Lscalatags_JsDom$all$();
-  var xs$4 = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.imgRx$1, $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().hr$1)])));
-  var evidence$1$4 = $m_s_Predef$().singleton$und$less$colon$less$2;
-  content["appendChild"](new $c_Lscalatags_JsDom$Cap$SeqFrag().init___Lscalatags_JsDom$Cap__sc_Seq__F1(this$6, xs$4, evidence$1$4).render__Lorg_scalajs_dom_raw_Node())
+  content["appendChild"](new $c_Lscalatags_JsDom$Cap$SeqFrag().init___Lscalatags_JsDom$Cap__sc_Seq__F1(this$5, xs$3, evidence$1$3).render__Lorg_scalajs_dom_raw_Node())
 });
 $c_Lexample_ScalaJSExample$.prototype.template__T__T__Lformidable_FormidableRx__T__O__Lscalatags_JsDom$TypedTag__Lscalatags_JsDom$TypedTag = (function(title, description, formidable, defaultTxt, $default, formTag) {
   var created = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div$1).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T("Not created yet"))])).render__Lorg_scalajs_dom_raw_Element();
@@ -1509,17 +1508,6 @@ $c_Lexample_ScalaJSExample$.prototype.template__T__T__Lformidable_FormidableRx__
   }));
   var ev$3 = new $c_Lscalatags_LowPriorityImplicits$$anon$2().init___Lscalatags_LowPriorityImplicits__F1(this$11, evidence$2$1);
   return jsx$16.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([formTag.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$12, v$1, ev$3)]))]))]))
-});
-$c_Lexample_ScalaJSExample$.prototype.first__Lscalatags_JsDom$TypedTag = (function() {
-  var form1 = new $c_Lexample_ScalaJSExample$$anon$6().init___();
-  var $default = new $c_Lexample_Demo1$UserPass().init___T__T("Bob!", "supersecretbob");
-  var jsx$2 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().form$1);
-  var this$1 = $m_Lscalatags_JsDom$all$();
-  var e = form1.firstname$1;
-  var jsx$1 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$1, e);
-  var this$2 = $m_Lscalatags_JsDom$all$();
-  var e$1 = form1.pass$1;
-  return this.template__T__T__Lformidable_FormidableRx__T__O__Lscalatags_JsDom$TypedTag__Lscalatags_JsDom$TypedTag("Example 1", "Basic User/Password form", form1, "Bob", $default, jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$2, e$1)])))
 });
 $c_Lexample_ScalaJSExample$.prototype.second__Lscalatags_JsDom$TypedTag = (function() {
   var form2 = new $c_Lexample_ScalaJSExample$$anon$9().init___();
@@ -1628,8 +1616,8 @@ function $m_Lexample_ScalaJSExample$() {
 $e["example"] = ($e["example"] || {});
 $e["example"]["ScalaJSExample"] = $m_Lexample_ScalaJSExample$;
 function $s_Lexample_ScalaJSExample$InfoLayout$1$class__$$init$__Lexample_ScalaJSExample$InfoLayout$1__V($$this) {
-  $$this.fid$1 = $m_Lformidable_implicits_all$().Ignored__Lformidable_implicits_Common$Ignored$().apply__O__Lformidable_implicits_Common$Ignored(new $c_Lexample_Demo3$FakeId().init___J(new $c_sjsr_RuntimeLong().init___I__I__I(4194303, 4194303, 1048575)));
-  $$this.doit$1 = $m_Lformidable_implicits_all$().CheckboxRx__Lformidable_implicits_Checkbox$CheckboxRx$().bool__Z__sc_Seq__Lformidable_implicits_Checkbox$CheckboxBoolRx(false, new $c_sjs_js_WrappedArray().init___sjs_js_Array([]));
+  $$this.fid$1 = $m_Lformidable_implicits_all$().Ignored__Lformidable_implicits_Common$Ignored$().apply__O__Lrx_Ctx$Owner__Lformidable_implicits_Common$Ignored(new $c_Lexample_Demo3$FakeId().init___J(new $c_sjsr_RuntimeLong().init___I__I__I(4194303, 4194303, 1048575)), $m_Lrx_Ctx$Owner$Unsafe$());
+  $$this.doit$1 = $m_Lformidable_implicits_all$().CheckboxRx__Lformidable_implicits_Checkbox$CheckboxRx$().bool__Z__sc_Seq__Lrx_Ctx$Owner__Lformidable_implicits_Checkbox$CheckboxBoolRx(false, new $c_sjs_js_WrappedArray().init___sjs_js_Array([]), $m_Lrx_Ctx$Owner$Unsafe$());
   var jsx$1 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input$1);
   var this$1 = $m_Lscalatags_JsDom$all$().type$1;
   var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
@@ -1653,7 +1641,7 @@ function $s_Lexample_ScalaJSExample$InfoLayout$1$class__$$init$__Lexample_ScalaJ
   var jsx$2 = $m_s_Predef$();
   var this$4 = $m_Lscalatags_JsDom$all$().value$1;
   var ev$3 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  $$this.colors$1 = jsx$14.set__T__sc_Seq__Lformidable_implicits_Checkbox$CheckboxBaseRx("color", jsx$13.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lformidable_implicits_Checkbox$Chk.getArrayOf(), [jsx$9, jsx$5, jsx$4.apply__O__sc_Seq__Lformidable_implicits_Checkbox$Chk(jsx$3, jsx$2.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$4, "Blue", ev$3)])))])))
+  $$this.colors$1 = jsx$14.set__T__sc_Seq__Lrx_Ctx$Owner__Lformidable_implicits_Checkbox$CheckboxBaseRx("color", jsx$13.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lformidable_implicits_Checkbox$Chk.getArrayOf(), [jsx$9, jsx$5, jsx$4.apply__O__sc_Seq__Lformidable_implicits_Checkbox$Chk(jsx$3, jsx$2.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$4, "Blue", ev$3)])))])), $m_Lrx_Ctx$Owner$Unsafe$())
 }
 function $s_Lexample_ScalaJSExample$InnerLayout$1$class__$$init$__Lexample_ScalaJSExample$InnerLayout$1__V($$this) {
   var jsx$1 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input$1);
@@ -1682,24 +1670,24 @@ function $s_Lexample_ScalaJSExample$InnerLayout$1$class__$$init$__Lexample_Scala
   var jsx$2 = $m_s_Predef$();
   var this$8 = $m_Lscalatags_JsDom$all$().value$1;
   var ev$4 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  $$this.example$ScalaJSExample$InnerLayout$1$$undsetter$und$bar$und$eq__Lformidable_implicits_Selection$SelectionRx__V(jsx$15.apply__sc_Seq__Lformidable_implicits_Selection$Opt__sc_Seq__Lformidable_implicits_Selection$SelectionRx(jsx$14, jsx$11, jsx$10.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lformidable_implicits_Selection$Opt.getArrayOf(), [jsx$7, jsx$4, jsx$3.apply__O__sc_Seq__Lformidable_implicits_Selection$Opt(5, jsx$2.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$8, "Five", ev$4), ($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T("5ive"))])))]))))
+  $$this.example$ScalaJSExample$InnerLayout$1$$undsetter$und$bar$und$eq__Lformidable_implicits_Selection$SelectionRx__V(jsx$15.apply__sc_Seq__Lformidable_implicits_Selection$Opt__sc_Seq__Lrx_Ctx$Owner__Lformidable_implicits_Selection$SelectionRx(jsx$14, jsx$11, jsx$10.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lformidable_implicits_Selection$Opt.getArrayOf(), [jsx$7, jsx$4, jsx$3.apply__O__sc_Seq__Lformidable_implicits_Selection$Opt(5, jsx$2.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$8, "Five", ev$4), ($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T("5ive"))])))])), $m_Lrx_Ctx$Owner$Unsafe$()))
 }
-function $s_Lexample_ScalaJSExample$LayoutExample$1$class__$$init$__Lexample_ScalaJSExample$LayoutExample$1__V($$this) {
+function $s_Lexample_ScalaJSExample$LayoutExample$1$class__$$init$__Lexample_ScalaJSExample$LayoutExample$1__Lrx_Ctx$Owner$Unsafe$__V($$this, ctx$1) {
   var jsx$2 = $m_Lformidable_implicits_all$().InputRx__Lformidable_implicits_Input$InputRx$();
   var jsx$1 = $m_s_Predef$();
   var this$1 = $m_Lscalatags_JsDom$all$().placeholder$1;
   var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  $$this.a$1 = jsx$2.validate__Z__sc_Seq__Llikelib_TryLike__Lformidable_implicits_Input$Validate(true, jsx$1.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$1, "a", ev)])), $m_Lexample_Demo4$OnlyA$().like$1);
+  $$this.a$1 = jsx$2.validate__Z__sc_Seq__Llikelib_TryLike__Lrx_Ctx$Owner__Lformidable_implicits_Input$Validate(true, jsx$1.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$1, "a", ev)])), $m_Lexample_Demo4$OnlyA$().like$1, ctx$1);
   var jsx$4 = $m_Lformidable_implicits_all$().InputRx__Lformidable_implicits_Input$InputRx$();
   var jsx$3 = $m_s_Predef$();
   var this$2 = $m_Lscalatags_JsDom$all$().placeholder$1;
   var ev$1 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  $$this.b$1 = jsx$4.validate__Z__sc_Seq__Llikelib_TryLike__Lformidable_implicits_Input$Validate(true, jsx$3.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$2, "b", ev$1)])), $m_Lexample_Demo4$Size5$().like$1);
+  $$this.b$1 = jsx$4.validate__Z__sc_Seq__Llikelib_TryLike__Lrx_Ctx$Owner__Lformidable_implicits_Input$Validate(true, jsx$3.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$2, "b", ev$1)])), $m_Lexample_Demo4$Size5$().like$1, ctx$1);
   var jsx$6 = $m_Lformidable_implicits_all$().InputRx__Lformidable_implicits_Input$InputRx$();
   var jsx$5 = $m_s_Predef$();
   var this$3 = $m_Lscalatags_JsDom$all$().placeholder$1;
   var ev$2 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  $$this.c$1 = jsx$6.validate__Z__sc_Seq__Llikelib_TryLike__Lformidable_implicits_Input$Validate(true, jsx$5.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$3, "c", ev$2)])), $m_Lformidable_implicits_all$().IntStringLike$1)
+  $$this.c$1 = jsx$6.validate__Z__sc_Seq__Llikelib_TryLike__Lrx_Ctx$Owner__Lformidable_implicits_Input$Validate(true, jsx$5.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$3, "c", ev$2)])), $m_Lformidable_implicits_all$().IntStringLike$1, ctx$1)
 }
 function $s_Lexample_ScalaJSExample$NestedLayout$1$class__$$init$__Lexample_ScalaJSExample$NestedLayout$1__V($$this) {
   var jsx$1 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input$1);
@@ -1713,16 +1701,6 @@ function $s_Lexample_ScalaJSExample$NestedLayout$1$class__$$init$__Lexample_Scal
   $$this.inner$1 = new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7().init___Lexample_ScalaJSExample$NestedLayout$1($$this);
   $$this.other$1 = new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8().init___Lexample_ScalaJSExample$NestedLayout$1($$this)
 }
-function $s_Lexample_ScalaJSExample$UserPassLayout$1$class__$$init$__Lexample_ScalaJSExample$UserPassLayout$1__V($$this) {
-  var jsx$1 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input$1);
-  var this$1 = $m_Lscalatags_JsDom$all$().type$1;
-  var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  $$this.firstname$1 = jsx$1.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$1, "text", ev)])).render__Lorg_scalajs_dom_raw_Element();
-  var jsx$2 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().input$1);
-  var this$2 = $m_Lscalatags_JsDom$all$().type$1;
-  var ev$1 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  $$this.pass$1 = jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$2, "password", ev$1)])).render__Lorg_scalajs_dom_raw_Element()
-}
 /** @constructor */
 function $c_Lexample_todosparkle$() {
   $c_O.call(this)
@@ -1734,32 +1712,29 @@ function $h_Lexample_todosparkle$() {
   /*<skip>*/
 }
 $h_Lexample_todosparkle$.prototype = $c_Lexample_todosparkle$.prototype;
-$c_Lexample_todosparkle$.prototype.labelrx$1__p1__T__Lformidable_implicits_Input$Validate__Lrx_Rx = (function(labelTxt$1, field$1) {
-  var n = field$1.current$1;
-  return new $c_Lrx_package$NodePlus().init___Lrx_Node(n).map__F1__Lrx_RxCtx__Lrx_Rx(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(labelTxt$1$1) {
-    return (function(x0$5$2) {
-      var x0$5 = $as_s_util_Try(x0$5$2);
-      var rc9 = false;
-      var x2 = null;
-      if ($is_s_util_Failure(x0$5)) {
-        rc9 = true;
-        x2 = $as_s_util_Failure(x0$5);
-        var p3 = x2.exception$2;
-        var x = $m_Lformidable_package$FormidableUninitialized$();
-        if ((x === p3)) {
-          return labelTxt$1$1
-        }
-      };
-      if (rc9) {
-        var err = x2.exception$2;
-        return new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", " (", ")"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([labelTxt$1$1, err.getMessage__T()]))
-      };
-      if ($is_s_util_Success(x0$5)) {
-        return labelTxt$1$1
-      };
-      throw new $c_s_MatchError().init___O(x0$5)
-    })
-  })(labelTxt$1)), $m_Lrx_RxCtx$Dummy$())
+$c_Lexample_todosparkle$.prototype.icon$1__p1__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__T__T__T__Lrx_Rx = (function(field$1, owner$1, successColor$1, failedColor$1, normalColor$1) {
+  var $$this = field$1.current$1;
+  var this$3 = new $c_Lrx_package$GenericOps$$anon$1().init___Lrx_Node($$this);
+  var call = new $c_Lexample_todosparkle$$anonfun$icon$1$1().init___T__T__T(successColor$1, failedColor$1, normalColor$1);
+  return $s_Lrx_opmacros_Operators$class__mappedImpl__Lrx_opmacros_Operators__F2__Lrx_Ctx$Owner__Lrx_Rx(this$3, call, owner$1)
+});
+$c_Lexample_todosparkle$.prototype.sparkle__T__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__Lorg_scalajs_dom_raw_HTMLElement = (function(labelTxt, field, owner) {
+  var jsx$3 = this.row__T__Lscalatags_JsDom$TypedTag("collapse");
+  var jsx$2 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().label$1).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lexample_Framework$().RxStr__Lrx_Rx__F1__Lrx_Ctx$Owner__Lscalatags_generic_Modifier(this.labelrx$1__p1__T__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__Lrx_Rx(labelTxt, field, owner), new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(v$2) {
+    var v = $as_T(v$2);
+    $m_Lscalatags_JsDom$all$();
+    return new $c_Lscalatags_JsDom$StringFrag().init___T(v)
+  })), owner), this.colorize$1__p1__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__T__T__T__Lscalatags_generic_StylePair(field, owner, "#3c763d", "#a94442", "#4d4d4d")]));
+  var jsx$1 = this.column__T__Lscalatags_JsDom$TypedTag("small-9 large-11");
+  var this$2 = $m_Lscalatags_JsDom$all$();
+  var e = field.input__Lorg_scalajs_dom_raw_HTMLInputElement();
+  return jsx$3.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2, jsx$1.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$2, e)])), this.column__T__Lscalatags_JsDom$TypedTag("small-3 large-1").apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lexample_Framework$().rxMod__Lrx_Rx__Lscalatags_generic_Modifier(this.icon$1__p1__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__T__T__T__Lrx_Rx(field, owner, "#3c763d", "#a94442", "#4d4d4d"))]))])).render__Lorg_scalajs_dom_raw_Element()
+});
+$c_Lexample_todosparkle$.prototype.labelrx$1__p1__T__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__Lrx_Rx = (function(labelTxt$1, field$1, owner$1) {
+  var $$this = field$1.current$1;
+  var this$3 = new $c_Lrx_package$GenericOps$$anon$1().init___Lrx_Node($$this);
+  var call = new $c_Lexample_todosparkle$$anonfun$labelrx$1$1().init___T(labelTxt$1);
+  return $s_Lrx_opmacros_Operators$class__mappedImpl__Lrx_opmacros_Operators__F2__Lrx_Ctx$Owner__Lrx_Rx(this$3, call, owner$1)
 });
 $c_Lexample_todosparkle$.prototype.row__T__Lscalatags_JsDom$TypedTag = (function(classes) {
   var jsx$1 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div$1);
@@ -1768,79 +1743,15 @@ $c_Lexample_todosparkle$.prototype.row__T__Lscalatags_JsDom$TypedTag = (function
   var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
   return jsx$1.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$1, v, ev)]))
 });
-$c_Lexample_todosparkle$.prototype.colorize$1__p1__Lformidable_implicits_Input$Validate__T__T__T__Lscalatags_generic_StylePair = (function(field$1, successColor$1, failedColor$1, normalColor$1) {
-  var this$3 = $m_Lscalatags_JsDom$all$().color__Lscalatags_generic_Styles$color$();
-  var n = field$1.current$1;
-  var v = new $c_Lrx_package$NodePlus().init___Lrx_Node(n).map__F1__Lrx_RxCtx__Lrx_Rx(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(successColor$1$1, failedColor$1$1, normalColor$1$1) {
-    return (function(x0$3$2) {
-      var x0$3 = $as_s_util_Try(x0$3$2);
-      if ($is_s_util_Success(x0$3)) {
-        return successColor$1$1
-      };
-      if ($is_s_util_Failure(x0$3)) {
-        var x4 = $as_s_util_Failure(x0$3);
-        var p5 = x4.exception$2;
-        var x = $m_Lformidable_package$FormidableUninitialized$();
-        if ((x === p5)) {
-          return normalColor$1$1
-        }
-      };
-      return failedColor$1$1
-    })
-  })(successColor$1, failedColor$1, normalColor$1)), $m_Lrx_RxCtx$Dummy$());
+$c_Lexample_todosparkle$.prototype.colorize$1__p1__Lformidable_implicits_Input$Validate__Lrx_Ctx$Owner__T__T__T__Lscalatags_generic_StylePair = (function(field$1, owner$1, successColor$1, failedColor$1, normalColor$1) {
+  var this$5 = $m_Lscalatags_JsDom$all$().color__Lscalatags_generic_Styles$color$();
+  var $$this = field$1.current$1;
+  var this$3 = new $c_Lrx_package$GenericOps$$anon$1().init___Lrx_Node($$this);
+  var call = new $c_Lexample_todosparkle$$anonfun$colorize$1$1().init___T__T__T(successColor$1, failedColor$1, normalColor$1);
+  var v = $s_Lrx_opmacros_Operators$class__mappedImpl__Lrx_opmacros_Operators__F2__Lrx_Ctx$Owner__Lrx_Rx(this$3, call, owner$1);
   var evidence$2 = $m_Lscalatags_JsDom$all$().stringStyle$1;
   var ev = new $c_Lexample_Framework$$anon$1().init___Lscalatags_generic_StyleValue(evidence$2);
-  return new $c_Lscalatags_generic_StylePair().init___Lscalatags_generic_Style__O__Lscalatags_generic_StyleValue(this$3, v, ev)
-});
-$c_Lexample_todosparkle$.prototype.sparkle__T__Lformidable_implicits_Input$Validate__Lorg_scalajs_dom_raw_HTMLElement = (function(labelTxt, field) {
-  var jsx$3 = this.row__T__Lscalatags_JsDom$TypedTag("collapse");
-  var jsx$2 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().label$1).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lexample_Framework$().RxStr__Lrx_Rx__F1__Lscalatags_generic_Modifier(this.labelrx$1__p1__T__Lformidable_implicits_Input$Validate__Lrx_Rx(labelTxt, field), new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(v$2) {
-    var v = $as_T(v$2);
-    $m_Lscalatags_JsDom$all$();
-    return new $c_Lscalatags_JsDom$StringFrag().init___T(v)
-  }))), this.colorize$1__p1__Lformidable_implicits_Input$Validate__T__T__T__Lscalatags_generic_StylePair(field, "#3c763d", "#a94442", "#4d4d4d")]));
-  var jsx$1 = this.column__T__Lscalatags_JsDom$TypedTag("small-9 large-11");
-  var this$2 = $m_Lscalatags_JsDom$all$();
-  var e = field.input__Lorg_scalajs_dom_raw_HTMLInputElement();
-  return jsx$3.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2, jsx$1.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$2, e)])), this.column__T__Lscalatags_JsDom$TypedTag("small-3 large-1").apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lexample_Framework$().rxMod__Lrx_Rx__Lscalatags_generic_Modifier(this.icon$1__p1__Lformidable_implicits_Input$Validate__T__T__T__Lrx_Rx(field, "#3c763d", "#a94442", "#4d4d4d"))]))])).render__Lorg_scalajs_dom_raw_Element()
-});
-$c_Lexample_todosparkle$.prototype.icon$1__p1__Lformidable_implicits_Input$Validate__T__T__T__Lrx_Rx = (function(field$1, successColor$1, failedColor$1, normalColor$1) {
-  var n = field$1.current$1;
-  return new $c_Lrx_package$NodePlus().init___Lrx_Node(n).map__F1__Lrx_RxCtx__Lrx_Rx(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(successColor$1$1, failedColor$1$1, normalColor$1$1) {
-    return (function(x0$4$2) {
-      var x0$4 = $as_s_util_Try(x0$4$2);
-      if ($is_s_util_Success(x0$4)) {
-        var jsx$2 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span$1);
-        var this$2 = $m_Lscalatags_JsDom$all$().cls$1;
-        var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
-        var jsx$1 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$2, "fa fa-check postfix", ev);
-        var this$3 = $m_Lscalatags_JsDom$all$().color__Lscalatags_generic_Styles$color$();
-        var ev$1 = $m_Lscalatags_JsDom$all$().stringStyle$1;
-        return jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_Lscalatags_generic_StylePair().init___Lscalatags_generic_Style__O__Lscalatags_generic_StyleValue(this$3, successColor$1$1, ev$1)]))
-      };
-      if ($is_s_util_Failure(x0$4)) {
-        var x4 = $as_s_util_Failure(x0$4);
-        var p5 = x4.exception$2;
-        var x = $m_Lformidable_package$FormidableUninitialized$();
-        if ((x === p5)) {
-          var jsx$4 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span$1);
-          var this$4 = $m_Lscalatags_JsDom$all$().cls$1;
-          var ev$2 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-          var jsx$3 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$4, "fa fa-beer postfix", ev$2);
-          var this$5 = $m_Lscalatags_JsDom$all$().color__Lscalatags_generic_Styles$color$();
-          var ev$3 = $m_Lscalatags_JsDom$all$().stringStyle$1;
-          return jsx$4.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, new $c_Lscalatags_generic_StylePair().init___Lscalatags_generic_Style__O__Lscalatags_generic_StyleValue(this$5, normalColor$1$1, ev$3)]))
-        }
-      };
-      var jsx$6 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span$1);
-      var this$6 = $m_Lscalatags_JsDom$all$().cls$1;
-      var ev$4 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-      var jsx$5 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$6, "fa fa-close postfix", ev$4);
-      var this$7 = $m_Lscalatags_JsDom$all$().color__Lscalatags_generic_Styles$color$();
-      var ev$5 = $m_Lscalatags_JsDom$all$().stringStyle$1;
-      return jsx$6.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5, new $c_Lscalatags_generic_StylePair().init___Lscalatags_generic_Style__O__Lscalatags_generic_StyleValue(this$7, failedColor$1$1, ev$5)]))
-    })
-  })(successColor$1, failedColor$1, normalColor$1)), $m_Lrx_RxCtx$Dummy$())
+  return new $c_Lscalatags_generic_StylePair().init___Lscalatags_generic_Style__O__Lscalatags_generic_StyleValue(this$5, v, ev)
 });
 $c_Lexample_todosparkle$.prototype.column__T__Lscalatags_JsDom$TypedTag = (function(classes) {
   var jsx$1 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div$1);
@@ -1863,6 +1774,11 @@ function $m_Lexample_todosparkle$() {
   };
   return $n_Lexample_todosparkle$
 }
+function $s_Lformidable_implicits_BindDynamic$class__bindDynamic__Lformidable_implicits_BindDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1__Lrx_Var($$this, inp, make) {
+  var bound = inp[$$this.formidable$implicits$BindDynamic$$KEY$1];
+  var $default = new $c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1().init___Lformidable_implicits_BindDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1($$this, inp, make);
+  return $as_Lrx_Var(((bound === (void 0)) ? $default.apply__Lrx_Var() : bound))
+}
 /** @constructor */
 function $c_Lformidable_implicits_Checkbox$CheckboxRx$() {
   $c_O.call(this);
@@ -1875,18 +1791,18 @@ function $h_Lformidable_implicits_Checkbox$CheckboxRx$() {
   /*<skip>*/
 }
 $h_Lformidable_implicits_Checkbox$CheckboxRx$.prototype = $c_Lformidable_implicits_Checkbox$CheckboxRx$.prototype;
-$c_Lformidable_implicits_Checkbox$CheckboxRx$.prototype.bool__Z__sc_Seq__Lformidable_implicits_Checkbox$CheckboxBoolRx = (function($default, modifiers) {
+$c_Lformidable_implicits_Checkbox$CheckboxRx$.prototype.bool__Z__sc_Seq__Lrx_Ctx$Owner__Lformidable_implicits_Checkbox$CheckboxBoolRx = (function($default, modifiers, ctx) {
   var jsx$2 = this.$$outer$1;
   var jsx$1 = $m_s_Predef$();
   var this$1 = $m_Lscalatags_JsDom$all$();
   var evidence$1 = $m_s_Predef$().singleton$und$less$colon$less$2;
-  return new $c_Lformidable_implicits_Checkbox$CheckboxBoolRx().init___Lformidable_implicits_Checkbox__Z__sc_Seq(jsx$2, $default, jsx$1.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_Util$SeqNode().init___Lscalatags_generic_Util__sc_Seq__F1(this$1, modifiers, evidence$1)])))
+  return new $c_Lformidable_implicits_Checkbox$CheckboxBoolRx().init___Lformidable_implicits_Checkbox__Z__sc_Seq__Lrx_Ctx$Owner(jsx$2, $default, jsx$1.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_Util$SeqNode().init___Lscalatags_generic_Util__sc_Seq__F1(this$1, modifiers, evidence$1)])), ctx)
 });
-$c_Lformidable_implicits_Checkbox$CheckboxRx$.prototype.set__T__sc_Seq__Lformidable_implicits_Checkbox$CheckboxBaseRx = (function(name, checks) {
-  return new $c_Lformidable_implicits_Checkbox$CheckboxBaseRx().init___Lformidable_implicits_Checkbox__T__F1__F1__sc_Seq(this.$$outer$1, name, new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$16$2) {
+$c_Lformidable_implicits_Checkbox$CheckboxRx$.prototype.set__T__sc_Seq__Lrx_Ctx$Owner__Lformidable_implicits_Checkbox$CheckboxBaseRx = (function(name, checks, ctx) {
+  return new $c_Lformidable_implicits_Checkbox$CheckboxBaseRx().init___Lformidable_implicits_Checkbox__T__F1__F1__sc_Seq__Lrx_Ctx$Owner(this.$$outer$1, name, new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$16$2) {
     var x$16 = $as_sc_Seq(x$16$2);
     return x$16.toSet__sci_Set()
-  })), new $c_Lformidable_implicits_Checkbox$CheckboxRx$$anonfun$set$6().init___Lformidable_implicits_Checkbox$CheckboxRx$(this), checks)
+  })), new $c_Lformidable_implicits_Checkbox$CheckboxRx$$anonfun$set$6().init___Lformidable_implicits_Checkbox$CheckboxRx$(this), checks, ctx)
 });
 $c_Lformidable_implicits_Checkbox$CheckboxRx$.prototype.init___Lformidable_implicits_Checkbox = (function($$outer) {
   if (($$outer === null)) {
@@ -1998,6 +1914,9 @@ function $h_Lformidable_implicits_Common$Ignored$() {
   /*<skip>*/
 }
 $h_Lformidable_implicits_Common$Ignored$.prototype = $c_Lformidable_implicits_Common$Ignored$.prototype;
+$c_Lformidable_implicits_Common$Ignored$.prototype.apply__O__Lrx_Ctx$Owner__Lformidable_implicits_Common$Ignored = (function($default, ctx) {
+  return new $c_Lformidable_implicits_Common$Ignored().init___Lformidable_implicits_Common__O__Lrx_Ctx$Owner(this.$$outer$1, $default, ctx)
+});
 $c_Lformidable_implicits_Common$Ignored$.prototype.init___Lformidable_implicits_Common = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
@@ -2005,9 +1924,6 @@ $c_Lformidable_implicits_Common$Ignored$.prototype.init___Lformidable_implicits_
     this.$$outer$1 = $$outer
   };
   return this
-});
-$c_Lformidable_implicits_Common$Ignored$.prototype.apply__O__Lformidable_implicits_Common$Ignored = (function($default) {
-  return new $c_Lformidable_implicits_Common$Ignored().init___Lformidable_implicits_Common__O(this.$$outer$1, $default)
 });
 var $d_Lformidable_implicits_Common$Ignored$ = new $TypeData().initClass({
   Lformidable_implicits_Common$Ignored$: 0
@@ -2028,6 +1944,13 @@ function $h_Lformidable_implicits_Input$InputRx$() {
   /*<skip>*/
 }
 $h_Lformidable_implicits_Input$InputRx$.prototype = $c_Lformidable_implicits_Input$InputRx$.prototype;
+$c_Lformidable_implicits_Input$InputRx$.prototype.validate__Z__sc_Seq__Llikelib_TryLike__Lrx_Ctx$Owner__Lformidable_implicits_Input$Validate = (function(defaultToUninitialized, mods, evidence$4, ctx) {
+  var jsx$2 = this.$$outer$1;
+  var jsx$1 = $m_s_Predef$();
+  var this$1 = $m_Lscalatags_JsDom$all$();
+  var evidence$1 = $m_s_Predef$().singleton$und$less$colon$less$2;
+  return new $c_Lformidable_implicits_Input$Validate().init___Lformidable_implicits_Input__Z__sc_Seq__Llikelib_TryLike__Lrx_Ctx$Owner(jsx$2, defaultToUninitialized, jsx$1.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_Util$SeqNode().init___Lscalatags_generic_Util__sc_Seq__F1(this$1, mods, evidence$1)])), evidence$4, ctx)
+});
 $c_Lformidable_implicits_Input$InputRx$.prototype.init___Lformidable_implicits_Input = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
@@ -2036,13 +1959,6 @@ $c_Lformidable_implicits_Input$InputRx$.prototype.init___Lformidable_implicits_I
   };
   return this
 });
-$c_Lformidable_implicits_Input$InputRx$.prototype.validate__Z__sc_Seq__Llikelib_TryLike__Lformidable_implicits_Input$Validate = (function(defaultToUninitialized, mods, evidence$4) {
-  var jsx$2 = this.$$outer$1;
-  var jsx$1 = $m_s_Predef$();
-  var this$1 = $m_Lscalatags_JsDom$all$();
-  var evidence$1 = $m_s_Predef$().singleton$und$less$colon$less$2;
-  return new $c_Lformidable_implicits_Input$Validate().init___Lformidable_implicits_Input__Z__sc_Seq__Llikelib_TryLike(jsx$2, defaultToUninitialized, jsx$1.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_Util$SeqNode().init___Lscalatags_generic_Util__sc_Seq__F1(this$1, mods, evidence$1)])), evidence$4)
-});
 var $d_Lformidable_implicits_Input$InputRx$ = new $TypeData().initClass({
   Lformidable_implicits_Input$InputRx$: 0
 }, false, "formidable.implicits.Input$InputRx$", {
@@ -2050,11 +1966,6 @@ var $d_Lformidable_implicits_Input$InputRx$ = new $TypeData().initClass({
   O: 1
 });
 $c_Lformidable_implicits_Input$InputRx$.prototype.$classData = $d_Lformidable_implicits_Input$InputRx$;
-function $s_Lformidable_implicits_Input$InputRxDynamic$class__bindDynamic__Lformidable_implicits_Input$InputRxDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1__Lrx_Var($$this, inp, make) {
-  var bound = inp[$$this.formidable$implicits$Input$InputRxDynamic$$KEY$1];
-  var $default = new $c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1().init___Lformidable_implicits_Input$InputRxDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1($$this, inp, make);
-  return $as_Lrx_Var(((bound === (void 0)) ? $default.apply__Lrx_Var() : bound))
-}
 function $s_Lformidable_implicits_LowPriorityStringLikes$class__$$init$__Lformidable_implicits_LowPriorityStringLikes__V($$this) {
   $$this.StringStringLike$1 = new $c_Lformidable_implicits_LowPriorityStringLikes$$anon$2().init___Lformidable_implicits_LowPriorityStringLikes($$this);
   $$this.IntStringLike$1 = new $c_Lformidable_implicits_LowPriorityStringLikes$$anon$3().init___Lformidable_implicits_LowPriorityStringLikes($$this);
@@ -2154,13 +2065,6 @@ function $h_Lformidable_implicits_Selection$SelectionRx$() {
   /*<skip>*/
 }
 $h_Lformidable_implicits_Selection$SelectionRx$.prototype = $c_Lformidable_implicits_Selection$SelectionRx$.prototype;
-$c_Lformidable_implicits_Selection$SelectionRx$.prototype.apply__sc_Seq__Lformidable_implicits_Selection$Opt__sc_Seq__Lformidable_implicits_Selection$SelectionRx = (function(selectMods, head, options) {
-  var jsx$2 = this.$$outer$1;
-  var jsx$1 = $m_s_Predef$();
-  var this$1 = $m_Lscalatags_JsDom$all$();
-  var evidence$1 = $m_s_Predef$().singleton$und$less$colon$less$2;
-  return new $c_Lformidable_implicits_Selection$SelectionRx().init___Lformidable_implicits_Selection__sc_Seq__Lformidable_implicits_Selection$Opt__sc_Seq(jsx$2, jsx$1.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_Util$SeqNode().init___Lscalatags_generic_Util__sc_Seq__F1(this$1, selectMods, evidence$1)])), head, options)
-});
 $c_Lformidable_implicits_Selection$SelectionRx$.prototype.init___Lformidable_implicits_Selection = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
@@ -2169,6 +2073,13 @@ $c_Lformidable_implicits_Selection$SelectionRx$.prototype.init___Lformidable_imp
   };
   return this
 });
+$c_Lformidable_implicits_Selection$SelectionRx$.prototype.apply__sc_Seq__Lformidable_implicits_Selection$Opt__sc_Seq__Lrx_Ctx$Owner__Lformidable_implicits_Selection$SelectionRx = (function(selectMods, head, options, ctx) {
+  var jsx$2 = this.$$outer$1;
+  var jsx$1 = $m_s_Predef$();
+  var this$1 = $m_Lscalatags_JsDom$all$();
+  var evidence$1 = $m_s_Predef$().singleton$und$less$colon$less$2;
+  return new $c_Lformidable_implicits_Selection$SelectionRx().init___Lformidable_implicits_Selection__sc_Seq__Lformidable_implicits_Selection$Opt__sc_Seq__Lrx_Ctx$Owner(jsx$2, jsx$1.wrapRefArray__AO__scm_WrappedArray($makeNativeArrayWrapper($d_Lscalatags_generic_Modifier.getArrayOf(), [new $c_Lscalatags_generic_Util$SeqNode().init___Lscalatags_generic_Util__sc_Seq__F1(this$1, selectMods, evidence$1)])), head, options, ctx)
+});
 var $d_Lformidable_implicits_Selection$SelectionRx$ = new $TypeData().initClass({
   Lformidable_implicits_Selection$SelectionRx$: 0
 }, false, "formidable.implicits.Selection$SelectionRx$", {
@@ -2176,6 +2087,35 @@ var $d_Lformidable_implicits_Selection$SelectionRx$ = new $TypeData().initClass(
   O: 1
 });
 $c_Lformidable_implicits_Selection$SelectionRx$.prototype.$classData = $d_Lformidable_implicits_Selection$SelectionRx$;
+/** @constructor */
+function $c_Lrx_Ctx() {
+  $c_O.call(this);
+  this.rx0$1 = null;
+  this.rx$1 = null;
+  this.bitmap$0$1 = false
+}
+$c_Lrx_Ctx.prototype = new $h_O();
+$c_Lrx_Ctx.prototype.constructor = $c_Lrx_Ctx;
+/** @constructor */
+function $h_Lrx_Ctx() {
+  /*<skip>*/
+}
+$h_Lrx_Ctx.prototype = $c_Lrx_Ctx.prototype;
+$c_Lrx_Ctx.prototype.init___F0 = (function(rx0) {
+  this.rx0$1 = rx0;
+  return this
+});
+$c_Lrx_Ctx.prototype.rx__Lrx_Rx = (function() {
+  return ((!this.bitmap$0$1) ? this.rx$lzycompute__p1__Lrx_Rx() : this.rx$1)
+});
+$c_Lrx_Ctx.prototype.rx$lzycompute__p1__Lrx_Rx = (function() {
+  if ((!this.bitmap$0$1)) {
+    this.rx$1 = $as_Lrx_Rx(this.rx0$1.apply__O());
+    this.bitmap$0$1 = true
+  };
+  this.rx0$1 = null;
+  return this.rx$1
+});
 /** @constructor */
 function $c_Lrx_Node$() {
   $c_O.call(this)
@@ -2239,7 +2179,7 @@ function $m_Lrx_Node$() {
   };
   return $n_Lrx_Node$
 }
-function $s_Lrx_Node$Internal$class__addDownstream__Lrx_Node$Internal__Lrx_RxCtx__V($$this, ctx) {
+function $s_Lrx_Node$Internal$class__addDownstream__Lrx_Node$Internal__Lrx_Ctx$Data__V($$this, ctx) {
   var this$1 = $$this.downStream__scm_Set();
   var elem = ctx.rx__Lrx_Rx();
   $s_scm_FlatHashTable$class__addElem__scm_FlatHashTable__O__Z(this$1, elem);
@@ -2255,16 +2195,12 @@ function $s_Lrx_Node$Internal$class__$$init$__Lrx_Node$Internal__V($$this) {
   $$this.rx$Node$Internal$$undsetter$und$downStream$und$eq__scm_Set__V(new $c_scm_HashSet().init___());
   $$this.rx$Node$Internal$$undsetter$und$observers$und$eq__scm_Set__V(new $c_scm_HashSet().init___())
 }
-function $s_Lrx_Node$Internal$class__clearDownstream__Lrx_Node$Internal__V($$this) {
-  var this$1 = $$this.rx$Node$Internal$$$outer__Lrx_Node().Internal__Lrx_Node$Internal().downStream__scm_Set();
-  $s_scm_FlatHashTable$class__clearTable__scm_FlatHashTable__V(this$1)
-}
 function $s_Lrx_Node$class__toString__Lrx_Node__T($$this) {
   return new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "(", ")"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$$this.rx$Node$$super$toString__T(), $$this.now__O()]))
 }
-function $s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O($$this, ctx) {
+function $s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O($$this, ctx) {
   var this$1 = $$this.Internal__Lrx_Node$Internal();
-  $s_Lrx_Node$Internal$class__addDownstream__Lrx_Node$Internal__Lrx_RxCtx__V(this$1, ctx);
+  $s_Lrx_Node$Internal$class__addDownstream__Lrx_Node$Internal__Lrx_Ctx$Data__V(this$1, ctx);
   return $$this.now__O()
 }
 function $s_Lrx_Node$class__triggerLater__Lrx_Node__F0__Lrx_Obs($$this, thunk) {
@@ -2326,9 +2262,13 @@ function $h_Lrx_Rx$() {
   /*<skip>*/
 }
 $h_Lrx_Rx$.prototype = $c_Lrx_Rx$.prototype;
-$c_Lrx_Rx$.prototype.build__F1__Lrx_RxCtx__Lrx_Rx = (function(func, owner) {
-  var x$2 = $m_Lrx_RxCtx$Dummy$();
-  return new $c_Lrx_Rx().init___F1__s_Option(func, (((owner !== null) && (owner === x$2)) ? $m_s_None$() : new $c_s_Some().init___O(owner)))
+$c_Lrx_Rx$.prototype.build__F2__Lrx_Ctx$Owner__Lrx_Rx = (function(func, owner) {
+  var requirement = (owner !== null);
+  if ((!requirement)) {
+    throw new $c_jl_IllegalArgumentException().init___T(("requirement failed: " + "owning RxCtx was null! Perhaps mark the caller lazy?"))
+  };
+  var x$2 = $m_Lrx_Ctx$Owner$Unsafe$();
+  return new $c_Lrx_Rx().init___F2__s_Option(func, (((owner !== null) && (owner === x$2)) ? $m_s_None$() : new $c_s_Some().init___O(owner)))
 });
 var $d_Lrx_Rx$ = new $TypeData().initClass({
   Lrx_Rx$: 0
@@ -2344,95 +2284,20 @@ function $m_Lrx_Rx$() {
   };
   return $n_Lrx_Rx$
 }
-/** @constructor */
-function $c_Lrx_RxCtx() {
-  $c_O.call(this);
-  this.rx0$1 = null;
-  this.rx$1 = null;
-  this.bitmap$0$1 = false
-}
-$c_Lrx_RxCtx.prototype = new $h_O();
-$c_Lrx_RxCtx.prototype.constructor = $c_Lrx_RxCtx;
-/** @constructor */
-function $h_Lrx_RxCtx() {
-  /*<skip>*/
-}
-$h_Lrx_RxCtx.prototype = $c_Lrx_RxCtx.prototype;
-$c_Lrx_RxCtx.prototype.init___F0 = (function(rx0) {
-  this.rx0$1 = rx0;
-  return this
-});
-$c_Lrx_RxCtx.prototype.rx__Lrx_Rx = (function() {
-  return ((!this.bitmap$0$1) ? this.rx$lzycompute__p1__Lrx_Rx() : this.rx$1)
-});
-$c_Lrx_RxCtx.prototype.rx$lzycompute__p1__Lrx_Rx = (function() {
-  if ((!this.bitmap$0$1)) {
-    this.rx$1 = $as_Lrx_Rx(this.rx0$1.apply__O());
-    this.bitmap$0$1 = true
-  };
-  this.rx0$1 = null;
-  return this.rx$1
-});
-function $is_Lrx_RxCtx(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lrx_RxCtx)))
-}
-function $as_Lrx_RxCtx(obj) {
-  return (($is_Lrx_RxCtx(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "rx.RxCtx"))
-}
-function $isArrayOf_Lrx_RxCtx(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lrx_RxCtx)))
-}
-function $asArrayOf_Lrx_RxCtx(obj, depth) {
-  return (($isArrayOf_Lrx_RxCtx(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lrx.RxCtx;", depth))
-}
-var $d_Lrx_RxCtx = new $TypeData().initClass({
-  Lrx_RxCtx: 0
-}, false, "rx.RxCtx", {
-  Lrx_RxCtx: 1,
-  O: 1
-});
-$c_Lrx_RxCtx.prototype.$classData = $d_Lrx_RxCtx;
-/** @constructor */
-function $c_Lrx_package$GenericOps() {
-  $c_O.call(this);
-  this.rx$GenericOps$$n$f = null;
-  this.rx$GenericOps$$valFunc$f = null;
-  this.rx$GenericOps$$normFunc$f = null
-}
-$c_Lrx_package$GenericOps.prototype = new $h_O();
-$c_Lrx_package$GenericOps.prototype.constructor = $c_Lrx_package$GenericOps;
-/** @constructor */
-function $h_Lrx_package$GenericOps() {
-  /*<skip>*/
-}
-$h_Lrx_package$GenericOps.prototype = $c_Lrx_package$GenericOps.prototype;
-$c_Lrx_package$GenericOps.prototype.map__F1__Lrx_RxCtx__Lrx_Rx = (function(f, ctx) {
-  return $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, f$2) {
-    return (function(innerCtx$2) {
-      var innerCtx = $as_Lrx_RxCtx(innerCtx$2);
-      var this$1 = arg$outer.rx$GenericOps$$n$f.Internal__Lrx_Node$Internal();
-      $s_Lrx_Node$Internal$class__addDownstream__Lrx_Node$Internal__Lrx_RxCtx__V(this$1, innerCtx);
-      return arg$outer.rx$GenericOps$$normFunc$f.apply__O__O(f$2.apply__O__O(arg$outer.rx$GenericOps$$valFunc$f.apply__O__O(arg$outer.rx$GenericOps$$n$f)))
+function $s_Lrx_opmacros_Operators$class__mappedImpl__Lrx_opmacros_Operators__F2__Lrx_Ctx$Owner__Lrx_Rx($$this, call, enclosing) {
+  return $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(arg$outer, call$2) {
+    return (function(ownerCtx$2, dataCtx$2) {
+      var ownerCtx = $as_Lrx_Ctx$Owner(ownerCtx$2);
+      var dataCtx = $as_Lrx_Ctx$Data(dataCtx$2);
+      var this$1 = arg$outer.$$this$1$1.Internal__Lrx_Node$Internal();
+      $s_Lrx_Node$Internal$class__addDownstream__Lrx_Node$Internal__Lrx_Ctx$Data__V(this$1, dataCtx);
+      var jsx$1 = $as_F1(call$2.apply__O__O__O(ownerCtx, dataCtx));
+      var t = arg$outer.$$this$1$1;
+      var t$1 = jsx$1.apply__O__O(t.now__O());
+      return t$1
     })
-  })(this, f)), ctx)
-});
-$c_Lrx_package$GenericOps.prototype.init___Lrx_Node__Lrx_package$Internal$GenericFunc__Lrx_package$Internal$GenericFunc = (function(n, valFunc, normFunc) {
-  this.rx$GenericOps$$n$f = n;
-  this.rx$GenericOps$$valFunc$f = valFunc;
-  this.rx$GenericOps$$normFunc$f = normFunc;
-  return this
-});
-/** @constructor */
-function $c_Lrx_package$Internal$GenericFunc() {
-  $c_O.call(this)
+  })($$this, call)), enclosing)
 }
-$c_Lrx_package$Internal$GenericFunc.prototype = new $h_O();
-$c_Lrx_package$Internal$GenericFunc.prototype.constructor = $c_Lrx_package$Internal$GenericFunc;
-/** @constructor */
-function $h_Lrx_package$Internal$GenericFunc() {
-  /*<skip>*/
-}
-$h_Lrx_package$Internal$GenericFunc.prototype = $c_Lrx_package$Internal$GenericFunc.prototype;
 /** @constructor */
 function $c_Lscalatags_Escaping$() {
   $c_O.call(this);
@@ -6589,7 +6454,14 @@ function $h_Lexample_DemoImg$MediaPathLayout() {
   /*<skip>*/
 }
 $h_Lexample_DemoImg$MediaPathLayout.prototype = $c_Lexample_DemoImg$MediaPathLayout.prototype;
-$c_Lexample_DemoImg$MediaPathLayout.prototype.init___ = (function() {
+$c_Lexample_DemoImg$MediaPathLayout.prototype.set__Lexample_DemoImg$MediaPath__V = (function(inp) {
+  this.filez$1.update__O__V($m_s_None$());
+  this.path$1.update__O__V(inp.path$1)
+});
+$c_Lexample_DemoImg$MediaPathLayout.prototype.example$DemoImg$MediaPathLayout$$fizzlepop__Lorg_scalajs_dom_raw_File__T = (function(file) {
+  return $as_T($g["URL"]["createObjectURL"](file))
+});
+$c_Lexample_DemoImg$MediaPathLayout.prototype.init___Lrx_Ctx$Owner = (function(ctx) {
   this.path$1 = new $c_Lrx_Var().init___O("");
   var initialValue = $m_s_None$();
   this.filez$1 = new $c_Lrx_Var().init___O(initialValue);
@@ -6600,15 +6472,8 @@ $c_Lexample_DemoImg$MediaPathLayout.prototype.init___ = (function() {
   var this$4 = $m_Lscalatags_JsDom$all$().accept$1;
   var ev$1 = $m_Lscalatags_JsDom$all$().stringAttr$1;
   this.fileInput$1 = jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$4, "image/*", ev$1)])).render__Lorg_scalajs_dom_raw_Element();
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lexample_DemoImg$MediaPathLayout$$anonfun$3().init___Lexample_DemoImg$MediaPathLayout(this), $m_Lrx_RxCtx$Dummy$());
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lexample_DemoImg$MediaPathLayout$$anonfun$4().init___Lexample_DemoImg$MediaPathLayout(this), ctx);
   return this
-});
-$c_Lexample_DemoImg$MediaPathLayout.prototype.set__Lexample_DemoImg$MediaPath__V = (function(inp) {
-  this.filez$1.update__O__V($m_s_None$());
-  this.path$1.update__O__V(inp.path$1)
-});
-$c_Lexample_DemoImg$MediaPathLayout.prototype.example$DemoImg$MediaPathLayout$$fizzlepop__Lorg_scalajs_dom_raw_File__T = (function(file) {
-  return $as_T($g["URL"]["createObjectURL"](file))
 });
 $c_Lexample_DemoImg$MediaPathLayout.prototype.current__Lrx_Rx = (function() {
   return this.current$1
@@ -6724,13 +6589,7 @@ $c_Lformidable_implicits_Checkbox$CheckboxBaseRx.prototype.formidable$implicits$
   var this$1 = $m_sc_Seq$();
   return $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2))
 });
-$c_Lformidable_implicits_Checkbox$CheckboxBaseRx.prototype.current__Lrx_Rx = (function() {
-  return this.current$1
-});
-$c_Lformidable_implicits_Checkbox$CheckboxBaseRx.prototype.set__O__V = (function(inp) {
-  this.set__sc_Traversable__V($as_sc_Traversable(inp))
-});
-$c_Lformidable_implicits_Checkbox$CheckboxBaseRx.prototype.init___Lformidable_implicits_Checkbox__T__F1__F1__sc_Seq = (function($$outer, name, buildFrom, hasValue, checks) {
+$c_Lformidable_implicits_Checkbox$CheckboxBaseRx.prototype.init___Lformidable_implicits_Checkbox__T__F1__F1__sc_Seq__Lrx_Ctx$Owner = (function($$outer, name, buildFrom, hasValue, checks, ctx) {
   this.formidable$implicits$Checkbox$CheckboxBaseRx$$name$f = name;
   this.formidable$implicits$Checkbox$CheckboxBaseRx$$buildFrom$f = buildFrom;
   this.formidable$implicits$Checkbox$CheckboxBaseRx$$hasValue$f = hasValue;
@@ -6740,11 +6599,17 @@ $c_Lformidable_implicits_Checkbox$CheckboxBaseRx.prototype.init___Lformidable_im
   } else {
     this.$$outer$f = $$outer
   };
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3().init___Lformidable_implicits_Checkbox$CheckboxBaseRx(this), $m_Lrx_RxCtx$Dummy$());
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3().init___Lformidable_implicits_Checkbox$CheckboxBaseRx(this), ctx);
   var jsx$1 = new $c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$4().init___Lformidable_implicits_Checkbox$CheckboxBaseRx(this);
   var this$1 = $m_sc_Seq$();
   this.checkboxes$1 = $as_sc_TraversableOnce(checks.map__F1__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2)).toBuffer__scm_Buffer();
   return this
+});
+$c_Lformidable_implicits_Checkbox$CheckboxBaseRx.prototype.current__Lrx_Rx = (function() {
+  return this.current$1
+});
+$c_Lformidable_implicits_Checkbox$CheckboxBaseRx.prototype.set__O__V = (function(inp) {
+  this.set__sc_Traversable__V($as_sc_Traversable(inp))
 });
 $c_Lformidable_implicits_Checkbox$CheckboxBaseRx.prototype.set__sc_Traversable__V = (function(values) {
   var x1 = this.checks$1.partition__F1__T2(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, values$1) {
@@ -6805,7 +6670,10 @@ $c_Lformidable_implicits_Checkbox$CheckboxBoolRx.prototype.set__Z__V = (function
 $c_Lformidable_implicits_Checkbox$CheckboxBoolRx.prototype.current__Lrx_Rx = (function() {
   return this.current$1
 });
-$c_Lformidable_implicits_Checkbox$CheckboxBoolRx.prototype.init___Lformidable_implicits_Checkbox__Z__sc_Seq = (function($$outer, $default, mods) {
+$c_Lformidable_implicits_Checkbox$CheckboxBoolRx.prototype.set__O__V = (function(inp) {
+  this.set__Z__V($uZ(inp))
+});
+$c_Lformidable_implicits_Checkbox$CheckboxBoolRx.prototype.init___Lformidable_implicits_Checkbox__Z__sc_Seq__Lrx_Ctx$Owner = (function($$outer, $default, mods, ctx) {
   this.default$1 = $default;
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
@@ -6819,16 +6687,13 @@ $c_Lformidable_implicits_Checkbox$CheckboxBoolRx.prototype.init___Lformidable_im
   var this$2 = $m_Lscalatags_JsDom$all$();
   var evidence$1 = $m_s_Predef$().singleton$und$less$colon$less$2;
   this.input$1 = jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_Lscalatags_generic_Util$SeqNode().init___Lscalatags_generic_Util__sc_Seq__F1(this$2, mods, evidence$1)])).render__Lorg_scalajs_dom_raw_Element();
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1().init___Lformidable_implicits_Checkbox$CheckboxBoolRx(this), $m_Lrx_RxCtx$Dummy$());
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1().init___Lformidable_implicits_Checkbox$CheckboxBoolRx(this), ctx);
   this.input$1["onchange"] = (function(arg$outer) {
     return (function(x$1$2) {
       arg$outer.current$1.recalc__V()
     })
   })(this);
   return this
-});
-$c_Lformidable_implicits_Checkbox$CheckboxBoolRx.prototype.set__O__V = (function(inp) {
-  this.set__Z__V($uZ(inp))
 });
 var $d_Lformidable_implicits_Checkbox$CheckboxBoolRx = new $TypeData().initClass({
   Lformidable_implicits_Checkbox$CheckboxBoolRx: 0
@@ -6883,19 +6748,20 @@ $h_Lformidable_implicits_Common$Ignored.prototype = $c_Lformidable_implicits_Com
 $c_Lformidable_implicits_Common$Ignored.prototype.current__Lrx_Rx = (function() {
   return this.current$1
 });
-$c_Lformidable_implicits_Common$Ignored.prototype.init___Lformidable_implicits_Common__O = (function($$outer, $default) {
+$c_Lformidable_implicits_Common$Ignored.prototype.init___Lformidable_implicits_Common__O__Lrx_Ctx$Owner = (function($$outer, $default, ctx) {
   this.default$1 = $default;
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$f = $$outer
   };
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
-    return (function(rxctx$macro$40$2) {
-      $as_Lrx_RxCtx(rxctx$macro$40$2);
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(arg$outer) {
+    return (function(rxOwnerCtx$macro$86$2, rxDataCtx$macro$85$2) {
+      $as_Lrx_Ctx$Owner(rxOwnerCtx$macro$86$2);
+      $as_Lrx_Ctx$Data(rxDataCtx$macro$85$2);
       return new $c_s_util_Success().init___O(arg$outer.default$1)
     })
-  })(this)), $m_Lrx_RxCtx$Dummy$());
+  })(this)), ctx);
   return this
 });
 $c_Lformidable_implicits_Common$Ignored.prototype.set__O__V = (function(inp) {
@@ -6948,7 +6814,11 @@ $c_Lformidable_implicits_Input$Validate.prototype.current__Lrx_Rx = (function() 
 $c_Lformidable_implicits_Input$Validate.prototype.defaultValue__p1__s_util_Try = (function() {
   return (((1 & this.bitmap$0$1) === 0) ? this.defaultValue$lzycompute__p1__s_util_Try() : this.defaultValue$1)
 });
-$c_Lformidable_implicits_Input$Validate.prototype.init___Lformidable_implicits_Input__Z__sc_Seq__Llikelib_TryLike = (function($$outer, defaultToUninitialized, mods, evidence$3) {
+$c_Lformidable_implicits_Input$Validate.prototype.set__O__V = (function(inp) {
+  this.input__Lorg_scalajs_dom_raw_HTMLInputElement()["value"] = $as_T(this.formidable$implicits$Input$Validate$$strLike$1.to__O__O(inp));
+  this.formidable$implicits$Input$Validate$$$undcurrent$1.update__O__V(new $c_s_util_Success().init___O(inp))
+});
+$c_Lformidable_implicits_Input$Validate.prototype.init___Lformidable_implicits_Input__Z__sc_Seq__Llikelib_TryLike__Lrx_Ctx$Owner = (function($$outer, defaultToUninitialized, mods, evidence$3, ctx) {
   this.defaultToUninitialized$1 = defaultToUninitialized;
   this.mods$1 = mods;
   if (($$outer === null)) {
@@ -6959,18 +6829,15 @@ $c_Lformidable_implicits_Input$Validate.prototype.init___Lformidable_implicits_I
   this.formidable$implicits$Input$Validate$$strLike$1 = evidence$3;
   var initialValue = this.defaultValue__p1__s_util_Try();
   this.formidable$implicits$Input$Validate$$$undcurrent$1 = new $c_Lrx_Var().init___O(initialValue);
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
-    return (function(rxctx$macro$6$2) {
-      var rxctx$macro$6 = $as_Lrx_RxCtx(rxctx$macro$6$2);
-      var this$4 = arg$outer.formidable$implicits$Input$Validate$$$undcurrent$1;
-      return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$4, rxctx$macro$6))
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(arg$outer) {
+    return (function(rxOwnerCtx$macro$12$2, rxDataCtx$macro$11$2) {
+      $as_Lrx_Ctx$Owner(rxOwnerCtx$macro$12$2);
+      var rxDataCtx$macro$11 = $as_Lrx_Ctx$Data(rxDataCtx$macro$11$2);
+      var this$3 = arg$outer.formidable$implicits$Input$Validate$$$undcurrent$1;
+      return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$3, rxDataCtx$macro$11))
     })
-  })(this)), $m_Lrx_RxCtx$Dummy$());
+  })(this)), ctx);
   return this
-});
-$c_Lformidable_implicits_Input$Validate.prototype.set__O__V = (function(inp) {
-  this.input__Lorg_scalajs_dom_raw_HTMLInputElement()["value"] = $as_T(this.formidable$implicits$Input$Validate$$strLike$1.to__O__O(inp));
-  this.formidable$implicits$Input$Validate$$$undcurrent$1.update__O__V(new $c_s_util_Success().init___O(inp))
 });
 $c_Lformidable_implicits_Input$Validate.prototype.input__Lorg_scalajs_dom_raw_HTMLInputElement = (function() {
   return (((2 & this.bitmap$0$1) === 0) ? this.input$lzycompute__p1__Lorg_scalajs_dom_raw_HTMLInputElement() : this.input$1)
@@ -7035,10 +6902,7 @@ function $h_Lformidable_implicits_Selection$SelectionRx() {
   /*<skip>*/
 }
 $h_Lformidable_implicits_Selection$SelectionRx.prototype = $c_Lformidable_implicits_Selection$SelectionRx.prototype;
-$c_Lformidable_implicits_Selection$SelectionRx.prototype.current__Lrx_Rx = (function() {
-  return this.current$1
-});
-$c_Lformidable_implicits_Selection$SelectionRx.prototype.init___Lformidable_implicits_Selection__sc_Seq__Lformidable_implicits_Selection$Opt__sc_Seq = (function($$outer, selectMods, head, tail) {
+$c_Lformidable_implicits_Selection$SelectionRx.prototype.init___Lformidable_implicits_Selection__sc_Seq__Lformidable_implicits_Selection$Opt__sc_Seq__Lrx_Ctx$Owner = (function($$outer, selectMods, head, tail, ctx) {
   this.head$1 = head;
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
@@ -7106,8 +6970,11 @@ $c_Lformidable_implicits_Selection$SelectionRx.prototype.init___Lformidable_impl
   var this$8 = $m_scm_Buffer$();
   var bf$1 = this$8.ReusableCBFInstance$2;
   this.select$1 = jsx$1.apply__sc_Seq__Lscalatags_JsDom$TypedTag($as_sc_Seq($s_sc_TraversableLike$class__map__sc_TraversableLike__F1__scg_CanBuildFrom__O(this$9, f$3, bf$1))).render__Lorg_scalajs_dom_raw_Element();
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5().init___Lformidable_implicits_Selection$SelectionRx(this), $m_Lrx_RxCtx$Dummy$());
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5().init___Lformidable_implicits_Selection$SelectionRx(this), ctx);
   return this
+});
+$c_Lformidable_implicits_Selection$SelectionRx.prototype.current__Lrx_Rx = (function() {
+  return this.current$1
 });
 $c_Lformidable_implicits_Selection$SelectionRx.prototype.set__O__V = (function(value) {
   this.select$1["selectedIndex"] = this.formidable$implicits$Selection$SelectionRx$$options$1.indexWhere__F1__I(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(value$1) {
@@ -7126,6 +6993,68 @@ var $d_Lformidable_implicits_Selection$SelectionRx = new $TypeData().initClass({
   Lformidable_FormidableRx: 1
 });
 $c_Lformidable_implicits_Selection$SelectionRx.prototype.$classData = $d_Lformidable_implicits_Selection$SelectionRx;
+/** @constructor */
+function $c_Lrx_Ctx$Data() {
+  $c_Lrx_Ctx.call(this)
+}
+$c_Lrx_Ctx$Data.prototype = new $h_Lrx_Ctx();
+$c_Lrx_Ctx$Data.prototype.constructor = $c_Lrx_Ctx$Data;
+/** @constructor */
+function $h_Lrx_Ctx$Data() {
+  /*<skip>*/
+}
+$h_Lrx_Ctx$Data.prototype = $c_Lrx_Ctx$Data.prototype;
+function $is_Lrx_Ctx$Data(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lrx_Ctx$Data)))
+}
+function $as_Lrx_Ctx$Data(obj) {
+  return (($is_Lrx_Ctx$Data(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "rx.Ctx$Data"))
+}
+function $isArrayOf_Lrx_Ctx$Data(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lrx_Ctx$Data)))
+}
+function $asArrayOf_Lrx_Ctx$Data(obj, depth) {
+  return (($isArrayOf_Lrx_Ctx$Data(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lrx.Ctx$Data;", depth))
+}
+var $d_Lrx_Ctx$Data = new $TypeData().initClass({
+  Lrx_Ctx$Data: 0
+}, false, "rx.Ctx$Data", {
+  Lrx_Ctx$Data: 1,
+  Lrx_Ctx: 1,
+  O: 1
+});
+$c_Lrx_Ctx$Data.prototype.$classData = $d_Lrx_Ctx$Data;
+/** @constructor */
+function $c_Lrx_Ctx$Owner() {
+  $c_Lrx_Ctx.call(this)
+}
+$c_Lrx_Ctx$Owner.prototype = new $h_Lrx_Ctx();
+$c_Lrx_Ctx$Owner.prototype.constructor = $c_Lrx_Ctx$Owner;
+/** @constructor */
+function $h_Lrx_Ctx$Owner() {
+  /*<skip>*/
+}
+$h_Lrx_Ctx$Owner.prototype = $c_Lrx_Ctx$Owner.prototype;
+function $is_Lrx_Ctx$Owner(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lrx_Ctx$Owner)))
+}
+function $as_Lrx_Ctx$Owner(obj) {
+  return (($is_Lrx_Ctx$Owner(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "rx.Ctx$Owner"))
+}
+function $isArrayOf_Lrx_Ctx$Owner(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lrx_Ctx$Owner)))
+}
+function $asArrayOf_Lrx_Ctx$Owner(obj, depth) {
+  return (($isArrayOf_Lrx_Ctx$Owner(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lrx.Ctx$Owner;", depth))
+}
+var $d_Lrx_Ctx$Owner = new $TypeData().initClass({
+  Lrx_Ctx$Owner: 0
+}, false, "rx.Ctx$Owner", {
+  Lrx_Ctx$Owner: 1,
+  Lrx_Ctx: 1,
+  O: 1
+});
+$c_Lrx_Ctx$Owner.prototype.$classData = $d_Lrx_Ctx$Owner;
 /** @constructor */
 function $c_Lrx_Rx() {
   $c_O.call(this);
@@ -7150,38 +7079,37 @@ $c_Lrx_Rx.prototype.Internal$lzycompute__p1__Lrx_Rx$Internal$ = (function() {
 $c_Lrx_Rx.prototype.Internal__Lrx_Rx$Internal$ = (function() {
   return ((this.Internal$module$1 === null) ? this.Internal$lzycompute__p1__Lrx_Rx$Internal$() : this.Internal$module$1)
 });
-$c_Lrx_Rx.prototype.init___F1__s_Option = (function(func, owner) {
+$c_Lrx_Rx.prototype.toString__T = (function() {
+  return $s_Lrx_Node$class__toString__Lrx_Node__T(this)
+});
+$c_Lrx_Rx.prototype.init___F2__s_Option = (function(func, owner) {
   this.rx$Rx$$func$f = func;
   this.rx$Rx$$owner$f = owner;
   var f = new $c_Lrx_Rx$$anonfun$2().init___Lrx_Rx(this);
   if ((!owner.isEmpty__Z())) {
     var v1 = owner.get__O();
-    f.apply__Lrx_RxCtx__V($as_Lrx_RxCtx(v1))
+    f.apply__Lrx_Ctx$Owner__V($as_Lrx_Ctx$Owner(v1))
   };
   this.rx$Rx$$cached$f = null;
   this.Internal__Lrx_Rx$Internal$().update__V();
   return this
-});
-$c_Lrx_Rx.prototype.toString__T = (function() {
-  return $s_Lrx_Node$class__toString__Lrx_Node__T(this)
-});
-$c_Lrx_Rx.prototype.kill__V = (function() {
-  this.Internal__Lrx_Rx$Internal$().dead$1 = true;
-  var this$1 = this.rx$Rx$$owner$f;
-  if ((!this$1.isEmpty__Z())) {
-    var arg1 = this$1.get__O();
-    var x$9 = $as_Lrx_RxCtx(arg1);
-    var this$2 = x$9.rx__Lrx_Rx().Internal__Lrx_Rx$Internal$().owned$1;
-    $s_scm_FlatHashTable$class__removeElem__scm_FlatHashTable__O__Z(this$2, this)
-  };
-  this.Internal__Lrx_Rx$Internal$().clearDownstream__V();
-  this.Internal__Lrx_Rx$Internal$().clearUpstream__V()
 });
 $c_Lrx_Rx.prototype.Internal__Lrx_Node$Internal = (function() {
   return this.Internal__Lrx_Rx$Internal$()
 });
 $c_Lrx_Rx.prototype.rx$Node$$super$toString__T = (function() {
   return $c_O.prototype.toString__T.call(this)
+});
+$c_Lrx_Rx.prototype.ownerKilled__V = (function() {
+  this.Internal__Lrx_Rx$Internal$().dead$1 = true;
+  this.Internal__Lrx_Rx$Internal$().clearDownstream__V();
+  this.Internal__Lrx_Rx$Internal$().clearUpstream__V();
+  this.Internal__Lrx_Rx$Internal$().owned$1.foreach__F1__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$9$2) {
+    var x$9 = $as_Lrx_Rx(x$9$2);
+    x$9.ownerKilled__V()
+  })));
+  var this$1 = this.Internal__Lrx_Rx$Internal$().owned$1;
+  $s_scm_FlatHashTable$class__clearTable__scm_FlatHashTable__V(this$1)
 });
 $c_Lrx_Rx.prototype.now__O = (function() {
   return this.rx$Rx$$cached$f.get__O()
@@ -7295,8 +7223,8 @@ $c_Lrx_Rx$Internal$.prototype.update__V = (function() {
 $c_Lrx_Rx$Internal$.prototype.calc__s_util_Try = (function() {
   this.$$outer$1.Internal__Lrx_Rx$Internal$().clearUpstream__V();
   this.$$outer$1.Internal__Lrx_Rx$Internal$().owned$1.foreach__F1__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$8$2) {
-    var x$8 = $as_Lrx_Node(x$8$2);
-    x$8.kill__V()
+    var x$8 = $as_Lrx_Rx(x$8$2);
+    x$8.ownerKilled__V()
   })));
   var this$1 = this.$$outer$1.Internal__Lrx_Rx$Internal$().owned$1;
   $s_scm_FlatHashTable$class__clearTable__scm_FlatHashTable__V(this$1);
@@ -7311,39 +7239,6 @@ var $d_Lrx_Rx$Internal$ = new $TypeData().initClass({
 });
 $c_Lrx_Rx$Internal$.prototype.$classData = $d_Lrx_Rx$Internal$;
 /** @constructor */
-function $c_Lrx_RxCtx$Dummy$() {
-  $c_Lrx_RxCtx.call(this)
-}
-$c_Lrx_RxCtx$Dummy$.prototype = new $h_Lrx_RxCtx();
-$c_Lrx_RxCtx$Dummy$.prototype.constructor = $c_Lrx_RxCtx$Dummy$;
-/** @constructor */
-function $h_Lrx_RxCtx$Dummy$() {
-  /*<skip>*/
-}
-$h_Lrx_RxCtx$Dummy$.prototype = $c_Lrx_RxCtx$Dummy$.prototype;
-$c_Lrx_RxCtx$Dummy$.prototype.init___ = (function() {
-  $c_Lrx_RxCtx.prototype.init___F0.call(this, new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function() {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(new $c_jl_Exception().init___T("Invalid RxCtx: you can only call `Rx.apply` within an `Rx{...}` block or where an implicit `RxCtx` is available"))
-  })));
-  $n_Lrx_RxCtx$Dummy$ = this;
-  return this
-});
-var $d_Lrx_RxCtx$Dummy$ = new $TypeData().initClass({
-  Lrx_RxCtx$Dummy$: 0
-}, false, "rx.RxCtx$Dummy$", {
-  Lrx_RxCtx$Dummy$: 1,
-  Lrx_RxCtx: 1,
-  O: 1
-});
-$c_Lrx_RxCtx$Dummy$.prototype.$classData = $d_Lrx_RxCtx$Dummy$;
-var $n_Lrx_RxCtx$Dummy$ = (void 0);
-function $m_Lrx_RxCtx$Dummy$() {
-  if ((!$n_Lrx_RxCtx$Dummy$)) {
-    $n_Lrx_RxCtx$Dummy$ = new $c_Lrx_RxCtx$Dummy$().init___()
-  };
-  return $n_Lrx_RxCtx$Dummy$
-}
-/** @constructor */
 function $c_Lrx_Var() {
   $c_O.call(this);
   this.rx$Var$$initialValue$f = null;
@@ -7356,10 +7251,6 @@ function $h_Lrx_Var() {
   /*<skip>*/
 }
 $h_Lrx_Var.prototype = $c_Lrx_Var.prototype;
-$c_Lrx_Var.prototype.kill__V = (function() {
-  var this$1 = this.Internal__Lrx_Var$Internal$();
-  $s_Lrx_Node$Internal$class__clearDownstream__Lrx_Node$Internal__V(this$1)
-});
 $c_Lrx_Var.prototype.toString__T = (function() {
   return $s_Lrx_Node$class__toString__Lrx_Node__T(this)
 });
@@ -7467,87 +7358,29 @@ var $d_Lrx_Var$Internal$ = new $TypeData().initClass({
 });
 $c_Lrx_Var$Internal$.prototype.$classData = $d_Lrx_Var$Internal$;
 /** @constructor */
-function $c_Lrx_package$Internal$GenericFunc$Apply$() {
-  $c_Lrx_package$Internal$GenericFunc.call(this)
+function $c_Lrx_package$GenericOps$$anon$1() {
+  $c_O.call(this);
+  this.$$this$1$1 = null
 }
-$c_Lrx_package$Internal$GenericFunc$Apply$.prototype = new $h_Lrx_package$Internal$GenericFunc();
-$c_Lrx_package$Internal$GenericFunc$Apply$.prototype.constructor = $c_Lrx_package$Internal$GenericFunc$Apply$;
+$c_Lrx_package$GenericOps$$anon$1.prototype = new $h_O();
+$c_Lrx_package$GenericOps$$anon$1.prototype.constructor = $c_Lrx_package$GenericOps$$anon$1;
 /** @constructor */
-function $h_Lrx_package$Internal$GenericFunc$Apply$() {
+function $h_Lrx_package$GenericOps$$anon$1() {
   /*<skip>*/
 }
-$h_Lrx_package$Internal$GenericFunc$Apply$.prototype = $c_Lrx_package$Internal$GenericFunc$Apply$.prototype;
-$c_Lrx_package$Internal$GenericFunc$Apply$.prototype.apply__O__O = (function(v) {
-  var v$1 = $as_Lrx_Node(v);
-  return v$1.now__O()
-});
-var $d_Lrx_package$Internal$GenericFunc$Apply$ = new $TypeData().initClass({
-  Lrx_package$Internal$GenericFunc$Apply$: 0
-}, false, "rx.package$Internal$GenericFunc$Apply$", {
-  Lrx_package$Internal$GenericFunc$Apply$: 1,
-  Lrx_package$Internal$GenericFunc: 1,
-  O: 1
-});
-$c_Lrx_package$Internal$GenericFunc$Apply$.prototype.$classData = $d_Lrx_package$Internal$GenericFunc$Apply$;
-var $n_Lrx_package$Internal$GenericFunc$Apply$ = (void 0);
-function $m_Lrx_package$Internal$GenericFunc$Apply$() {
-  if ((!$n_Lrx_package$Internal$GenericFunc$Apply$)) {
-    $n_Lrx_package$Internal$GenericFunc$Apply$ = new $c_Lrx_package$Internal$GenericFunc$Apply$().init___()
-  };
-  return $n_Lrx_package$Internal$GenericFunc$Apply$
-}
-/** @constructor */
-function $c_Lrx_package$Internal$GenericFunc$Normal$() {
-  $c_Lrx_package$Internal$GenericFunc.call(this)
-}
-$c_Lrx_package$Internal$GenericFunc$Normal$.prototype = new $h_Lrx_package$Internal$GenericFunc();
-$c_Lrx_package$Internal$GenericFunc$Normal$.prototype.constructor = $c_Lrx_package$Internal$GenericFunc$Normal$;
-/** @constructor */
-function $h_Lrx_package$Internal$GenericFunc$Normal$() {
-  /*<skip>*/
-}
-$h_Lrx_package$Internal$GenericFunc$Normal$.prototype = $c_Lrx_package$Internal$GenericFunc$Normal$.prototype;
-$c_Lrx_package$Internal$GenericFunc$Normal$.prototype.apply__O__O = (function(v) {
-  return v
-});
-var $d_Lrx_package$Internal$GenericFunc$Normal$ = new $TypeData().initClass({
-  Lrx_package$Internal$GenericFunc$Normal$: 0
-}, false, "rx.package$Internal$GenericFunc$Normal$", {
-  Lrx_package$Internal$GenericFunc$Normal$: 1,
-  Lrx_package$Internal$GenericFunc: 1,
-  O: 1
-});
-$c_Lrx_package$Internal$GenericFunc$Normal$.prototype.$classData = $d_Lrx_package$Internal$GenericFunc$Normal$;
-var $n_Lrx_package$Internal$GenericFunc$Normal$ = (void 0);
-function $m_Lrx_package$Internal$GenericFunc$Normal$() {
-  if ((!$n_Lrx_package$Internal$GenericFunc$Normal$)) {
-    $n_Lrx_package$Internal$GenericFunc$Normal$ = new $c_Lrx_package$Internal$GenericFunc$Normal$().init___()
-  };
-  return $n_Lrx_package$Internal$GenericFunc$Normal$
-}
-/** @constructor */
-function $c_Lrx_package$NodePlus() {
-  $c_Lrx_package$GenericOps.call(this)
-}
-$c_Lrx_package$NodePlus.prototype = new $h_Lrx_package$GenericOps();
-$c_Lrx_package$NodePlus.prototype.constructor = $c_Lrx_package$NodePlus;
-/** @constructor */
-function $h_Lrx_package$NodePlus() {
-  /*<skip>*/
-}
-$h_Lrx_package$NodePlus.prototype = $c_Lrx_package$NodePlus.prototype;
-$c_Lrx_package$NodePlus.prototype.init___Lrx_Node = (function(n) {
-  $c_Lrx_package$GenericOps.prototype.init___Lrx_Node__Lrx_package$Internal$GenericFunc__Lrx_package$Internal$GenericFunc.call(this, n, $m_Lrx_package$Internal$GenericFunc$Apply$(), $m_Lrx_package$Internal$GenericFunc$Normal$());
+$h_Lrx_package$GenericOps$$anon$1.prototype = $c_Lrx_package$GenericOps$$anon$1.prototype;
+$c_Lrx_package$GenericOps$$anon$1.prototype.init___Lrx_Node = (function($$this$1) {
+  this.$$this$1$1 = $$this$1;
   return this
 });
-var $d_Lrx_package$NodePlus = new $TypeData().initClass({
-  Lrx_package$NodePlus: 0
-}, false, "rx.package$NodePlus", {
-  Lrx_package$NodePlus: 1,
-  Lrx_package$GenericOps: 1,
-  O: 1
+var $d_Lrx_package$GenericOps$$anon$1 = new $TypeData().initClass({
+  Lrx_package$GenericOps$$anon$1: 0
+}, false, "rx.package$GenericOps$$anon$1", {
+  Lrx_package$GenericOps$$anon$1: 1,
+  O: 1,
+  Lrx_opmacros_Operators: 1
 });
-$c_Lrx_package$NodePlus.prototype.$classData = $d_Lrx_package$NodePlus;
+$c_Lrx_package$GenericOps$$anon$1.prototype.$classData = $d_Lrx_package$GenericOps$$anon$1;
 /** @constructor */
 function $c_Lscalatags_JsDom$GenericAttr() {
   $c_O.call(this)
@@ -8552,7 +8385,7 @@ function $h_Lexample_Demo2$User$() {
 $h_Lexample_Demo2$User$.prototype = $c_Lexample_Demo2$User$.prototype;
 $c_Lexample_Demo2$User$.prototype.init___ = (function() {
   $n_Lexample_Demo2$User$ = this;
-  this.like$1 = new $c_Lexample_Demo2$User$$anon$1().init___();
+  this.like$1 = new $c_Lexample_Demo2$User$$anon$2().init___();
   return this
 });
 $c_Lexample_Demo2$User$.prototype.equals$extension__T__O__Z = (function($$this, x$1) {
@@ -8598,33 +8431,33 @@ function $m_Lexample_Demo2$User$() {
   return $n_Lexample_Demo2$User$
 }
 /** @constructor */
-function $c_Lexample_Demo2$User$$anon$1() {
+function $c_Lexample_Demo2$User$$anon$2() {
   $c_O.call(this)
 }
-$c_Lexample_Demo2$User$$anon$1.prototype = new $h_O();
-$c_Lexample_Demo2$User$$anon$1.prototype.constructor = $c_Lexample_Demo2$User$$anon$1;
+$c_Lexample_Demo2$User$$anon$2.prototype = new $h_O();
+$c_Lexample_Demo2$User$$anon$2.prototype.constructor = $c_Lexample_Demo2$User$$anon$2;
 /** @constructor */
-function $h_Lexample_Demo2$User$$anon$1() {
+function $h_Lexample_Demo2$User$$anon$2() {
   /*<skip>*/
 }
-$h_Lexample_Demo2$User$$anon$1.prototype = $c_Lexample_Demo2$User$$anon$1.prototype;
-$c_Lexample_Demo2$User$$anon$1.prototype.from__O__O = (function(inp) {
+$h_Lexample_Demo2$User$$anon$2.prototype = $c_Lexample_Demo2$User$$anon$2.prototype;
+$c_Lexample_Demo2$User$$anon$2.prototype.from__O__O = (function(inp) {
   var inp$1 = $as_T(inp);
   return new $c_Lexample_Demo2$User().init___T(inp$1)
 });
-$c_Lexample_Demo2$User$$anon$1.prototype.to__O__O = (function(inp) {
+$c_Lexample_Demo2$User$$anon$2.prototype.to__O__O = (function(inp) {
   var inp$1 = $as_Lexample_Demo2$User(inp).id$1;
   return inp$1
 });
-var $d_Lexample_Demo2$User$$anon$1 = new $TypeData().initClass({
-  Lexample_Demo2$User$$anon$1: 0
-}, false, "example.Demo2$User$$anon$1", {
-  Lexample_Demo2$User$$anon$1: 1,
+var $d_Lexample_Demo2$User$$anon$2 = new $TypeData().initClass({
+  Lexample_Demo2$User$$anon$2: 0
+}, false, "example.Demo2$User$$anon$2", {
+  Lexample_Demo2$User$$anon$2: 1,
   O: 1,
   Llikelib_Like: 1,
   Llikelib_As: 1
 });
-$c_Lexample_Demo2$User$$anon$1.prototype.$classData = $d_Lexample_Demo2$User$$anon$1;
+$c_Lexample_Demo2$User$$anon$2.prototype.$classData = $d_Lexample_Demo2$User$$anon$2;
 /** @constructor */
 function $c_Lexample_Demo4$OnlyA$() {
   $c_O.call(this);
@@ -8639,7 +8472,7 @@ function $h_Lexample_Demo4$OnlyA$() {
 $h_Lexample_Demo4$OnlyA$.prototype = $c_Lexample_Demo4$OnlyA$.prototype;
 $c_Lexample_Demo4$OnlyA$.prototype.init___ = (function() {
   $n_Lexample_Demo4$OnlyA$ = this;
-  this.like$1 = new $c_Lexample_Demo4$OnlyA$$anon$4().init___();
+  this.like$1 = new $c_Lexample_Demo4$OnlyA$$anon$5().init___();
   return this
 });
 $c_Lexample_Demo4$OnlyA$.prototype.equals$extension__T__O__Z = (function($$this, x$1) {
@@ -8713,35 +8546,35 @@ function $m_Lexample_Demo4$OnlyA$() {
   return $n_Lexample_Demo4$OnlyA$
 }
 /** @constructor */
-function $c_Lexample_Demo4$OnlyA$$anon$4() {
+function $c_Lexample_Demo4$OnlyA$$anon$5() {
   $c_O.call(this)
 }
-$c_Lexample_Demo4$OnlyA$$anon$4.prototype = new $h_O();
-$c_Lexample_Demo4$OnlyA$$anon$4.prototype.constructor = $c_Lexample_Demo4$OnlyA$$anon$4;
+$c_Lexample_Demo4$OnlyA$$anon$5.prototype = new $h_O();
+$c_Lexample_Demo4$OnlyA$$anon$5.prototype.constructor = $c_Lexample_Demo4$OnlyA$$anon$5;
 /** @constructor */
-function $h_Lexample_Demo4$OnlyA$$anon$4() {
+function $h_Lexample_Demo4$OnlyA$$anon$5() {
   /*<skip>*/
 }
-$h_Lexample_Demo4$OnlyA$$anon$4.prototype = $c_Lexample_Demo4$OnlyA$$anon$4.prototype;
-$c_Lexample_Demo4$OnlyA$$anon$4.prototype.init___ = (function() {
+$h_Lexample_Demo4$OnlyA$$anon$5.prototype = $c_Lexample_Demo4$OnlyA$$anon$5.prototype;
+$c_Lexample_Demo4$OnlyA$$anon$5.prototype.init___ = (function() {
   return this
 });
-$c_Lexample_Demo4$OnlyA$$anon$4.prototype.to__O__O = (function(inp) {
+$c_Lexample_Demo4$OnlyA$$anon$5.prototype.to__O__O = (function(inp) {
   var inp$1 = $as_Lexample_Demo4$OnlyA(inp).value$1;
   return inp$1
 });
-$c_Lexample_Demo4$OnlyA$$anon$4.prototype.from__T__s_util_Try = (function(str) {
+$c_Lexample_Demo4$OnlyA$$anon$5.prototype.from__T__s_util_Try = (function(str) {
   return ($m_Lexample_Demo4$OnlyA$().example$Demo4$OnlyA$$valid__T__Z(str) ? new $c_s_util_Success().init___O(new $c_Lexample_Demo4$OnlyA().init___T(str)) : new $c_s_util_Failure().init___jl_Throwable(new $c_jl_IllegalArgumentException().init___T("Requries only A!")))
 });
-var $d_Lexample_Demo4$OnlyA$$anon$4 = new $TypeData().initClass({
-  Lexample_Demo4$OnlyA$$anon$4: 0
-}, false, "example.Demo4$OnlyA$$anon$4", {
-  Lexample_Demo4$OnlyA$$anon$4: 1,
+var $d_Lexample_Demo4$OnlyA$$anon$5 = new $TypeData().initClass({
+  Lexample_Demo4$OnlyA$$anon$5: 0
+}, false, "example.Demo4$OnlyA$$anon$5", {
+  Lexample_Demo4$OnlyA$$anon$5: 1,
   O: 1,
   Llikelib_TryLike: 1,
   Llikelib_As: 1
 });
-$c_Lexample_Demo4$OnlyA$$anon$4.prototype.$classData = $d_Lexample_Demo4$OnlyA$$anon$4;
+$c_Lexample_Demo4$OnlyA$$anon$5.prototype.$classData = $d_Lexample_Demo4$OnlyA$$anon$5;
 /** @constructor */
 function $c_Lexample_Demo4$Size5$() {
   $c_O.call(this);
@@ -8756,7 +8589,7 @@ function $h_Lexample_Demo4$Size5$() {
 $h_Lexample_Demo4$Size5$.prototype = $c_Lexample_Demo4$Size5$.prototype;
 $c_Lexample_Demo4$Size5$.prototype.init___ = (function() {
   $n_Lexample_Demo4$Size5$ = this;
-  this.like$1 = new $c_Lexample_Demo4$Size5$$anon$5().init___();
+  this.like$1 = new $c_Lexample_Demo4$Size5$$anon$6().init___();
   return this
 });
 $c_Lexample_Demo4$Size5$.prototype.equals$extension__T__O__Z = (function($$this, x$1) {
@@ -8802,38 +8635,39 @@ function $m_Lexample_Demo4$Size5$() {
   return $n_Lexample_Demo4$Size5$
 }
 /** @constructor */
-function $c_Lexample_Demo4$Size5$$anon$5() {
+function $c_Lexample_Demo4$Size5$$anon$6() {
   $c_O.call(this)
 }
-$c_Lexample_Demo4$Size5$$anon$5.prototype = new $h_O();
-$c_Lexample_Demo4$Size5$$anon$5.prototype.constructor = $c_Lexample_Demo4$Size5$$anon$5;
+$c_Lexample_Demo4$Size5$$anon$6.prototype = new $h_O();
+$c_Lexample_Demo4$Size5$$anon$6.prototype.constructor = $c_Lexample_Demo4$Size5$$anon$6;
 /** @constructor */
-function $h_Lexample_Demo4$Size5$$anon$5() {
+function $h_Lexample_Demo4$Size5$$anon$6() {
   /*<skip>*/
 }
-$h_Lexample_Demo4$Size5$$anon$5.prototype = $c_Lexample_Demo4$Size5$$anon$5.prototype;
-$c_Lexample_Demo4$Size5$$anon$5.prototype.init___ = (function() {
+$h_Lexample_Demo4$Size5$$anon$6.prototype = $c_Lexample_Demo4$Size5$$anon$6.prototype;
+$c_Lexample_Demo4$Size5$$anon$6.prototype.init___ = (function() {
   return this
 });
-$c_Lexample_Demo4$Size5$$anon$5.prototype.to__O__O = (function(inp) {
+$c_Lexample_Demo4$Size5$$anon$6.prototype.to__O__O = (function(inp) {
   var inp$1 = $as_Lexample_Demo4$Size5(inp).value$1;
   return inp$1
 });
-$c_Lexample_Demo4$Size5$$anon$5.prototype.from__T__s_util_Try = (function(str) {
+$c_Lexample_Demo4$Size5$$anon$6.prototype.from__T__s_util_Try = (function(str) {
   return (($uI(str["length"]) === 5) ? new $c_s_util_Success().init___O(new $c_Lexample_Demo4$Size5().init___T(str)) : new $c_s_util_Failure().init___jl_Throwable(new $c_jl_IllegalArgumentException().init___T("Requires exactly 5 characters!")))
 });
-var $d_Lexample_Demo4$Size5$$anon$5 = new $TypeData().initClass({
-  Lexample_Demo4$Size5$$anon$5: 0
-}, false, "example.Demo4$Size5$$anon$5", {
-  Lexample_Demo4$Size5$$anon$5: 1,
+var $d_Lexample_Demo4$Size5$$anon$6 = new $TypeData().initClass({
+  Lexample_Demo4$Size5$$anon$6: 0
+}, false, "example.Demo4$Size5$$anon$6", {
+  Lexample_Demo4$Size5$$anon$6: 1,
   O: 1,
   Llikelib_TryLike: 1,
   Llikelib_As: 1
 });
-$c_Lexample_Demo4$Size5$$anon$5.prototype.$classData = $d_Lexample_Demo4$Size5$$anon$5;
+$c_Lexample_Demo4$Size5$$anon$6.prototype.$classData = $d_Lexample_Demo4$Size5$$anon$6;
 /** @constructor */
 function $c_Lexample_ScalaJSExample$$anon$10() {
   $c_O.call(this);
+  this.ctx$1 = null;
   this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
   this.current$1 = null;
   this.fid$1 = null;
@@ -8850,8 +8684,9 @@ function $h_Lexample_ScalaJSExample$$anon$10() {
 $h_Lexample_ScalaJSExample$$anon$10.prototype = $c_Lexample_ScalaJSExample$$anon$10.prototype;
 $c_Lexample_ScalaJSExample$$anon$10.prototype.init___ = (function() {
   $s_Lexample_ScalaJSExample$InfoLayout$1$class__$$init$__Lexample_ScalaJSExample$InfoLayout$1__V(this);
+  this.ctx$1 = $m_Lrx_Ctx$Owner$Unsafe$();
   this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8().init___Lexample_ScalaJSExample$$anon$10(this), $m_Lrx_RxCtx$Dummy$());
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8().init___Lexample_ScalaJSExample$$anon$10(this), this.ctx$1);
   return this
 });
 $c_Lexample_ScalaJSExample$$anon$10.prototype.stopUpdate__p1__V = (function() {
@@ -8915,6 +8750,7 @@ $c_Lexample_ScalaJSExample$$anon$10.prototype.$classData = $d_Lexample_ScalaJSEx
 /** @constructor */
 function $c_Lexample_ScalaJSExample$$anon$11() {
   $c_O.call(this);
+  this.ctx$1 = null;
   this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
   this.current$1 = null;
   this.a$1 = null;
@@ -8928,12 +8764,6 @@ function $h_Lexample_ScalaJSExample$$anon$11() {
   /*<skip>*/
 }
 $h_Lexample_ScalaJSExample$$anon$11.prototype = $c_Lexample_ScalaJSExample$$anon$11.prototype;
-$c_Lexample_ScalaJSExample$$anon$11.prototype.init___ = (function() {
-  $s_Lexample_ScalaJSExample$LayoutExample$1$class__$$init$__Lexample_ScalaJSExample$LayoutExample$1__V(this);
-  this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9().init___Lexample_ScalaJSExample$$anon$11(this), $m_Lrx_RxCtx$Dummy$());
-  return this
-});
 $c_Lexample_ScalaJSExample$$anon$11.prototype.set__Lexample_Demo4$Example__V = (function(inp) {
   this.example$ScalaJSExample$$anon$$isUpdating$1 = true;
   var this$1 = $m_Lexample_Demo4$Example$().unapply__Lexample_Demo4$Example__s_Option(inp);
@@ -8981,6 +8811,13 @@ $c_Lexample_ScalaJSExample$$anon$11.prototype.current__Lrx_Rx = (function() {
 $c_Lexample_ScalaJSExample$$anon$11.prototype.set__O__V = (function(inp) {
   this.set__Lexample_Demo4$Example__V($as_Lexample_Demo4$Example(inp))
 });
+$c_Lexample_ScalaJSExample$$anon$11.prototype.init___Lrx_Ctx$Owner$Unsafe$ = (function(ctx$1) {
+  $s_Lexample_ScalaJSExample$LayoutExample$1$class__$$init$__Lexample_ScalaJSExample$LayoutExample$1__Lrx_Ctx$Owner$Unsafe$__V(this, ctx$1);
+  this.ctx$1 = $m_Lrx_Ctx$Owner$Unsafe$();
+  this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9().init___Lexample_ScalaJSExample$$anon$11(this), this.ctx$1);
+  return this
+});
 var $d_Lexample_ScalaJSExample$$anon$11 = new $TypeData().initClass({
   Lexample_ScalaJSExample$$anon$11: 0
 }, false, "example.ScalaJSExample$$anon$11", {
@@ -8993,6 +8830,7 @@ $c_Lexample_ScalaJSExample$$anon$11.prototype.$classData = $d_Lexample_ScalaJSEx
 /** @constructor */
 function $c_Lexample_ScalaJSExample$$anon$12() {
   $c_O.call(this);
+  this.ctx$1 = null;
   this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
   this.current$1 = null;
   this.id$1 = null;
@@ -9008,8 +8846,9 @@ function $h_Lexample_ScalaJSExample$$anon$12() {
 $h_Lexample_ScalaJSExample$$anon$12.prototype = $c_Lexample_ScalaJSExample$$anon$12.prototype;
 $c_Lexample_ScalaJSExample$$anon$12.prototype.init___ = (function() {
   $s_Lexample_DemoImg$GameLayout$class__$$init$__Lexample_DemoImg$GameLayout__V(this);
+  this.ctx$1 = $m_Lrx_Ctx$Owner$Unsafe$();
   this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10().init___Lexample_ScalaJSExample$$anon$12(this), $m_Lrx_RxCtx$Dummy$());
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10().init___Lexample_ScalaJSExample$$anon$12(this), this.ctx$1);
   return this
 });
 $c_Lexample_ScalaJSExample$$anon$12.prototype.stopUpdate__p1__V = (function() {
@@ -9069,80 +8908,9 @@ var $d_Lexample_ScalaJSExample$$anon$12 = new $TypeData().initClass({
 });
 $c_Lexample_ScalaJSExample$$anon$12.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$12;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$6() {
-  $c_O.call(this);
-  this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
-  this.current$1 = null;
-  this.firstname$1 = null;
-  this.pass$1 = null
-}
-$c_Lexample_ScalaJSExample$$anon$6.prototype = new $h_O();
-$c_Lexample_ScalaJSExample$$anon$6.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$6;
-/** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$6() {
-  /*<skip>*/
-}
-$h_Lexample_ScalaJSExample$$anon$6.prototype = $c_Lexample_ScalaJSExample$$anon$6.prototype;
-$c_Lexample_ScalaJSExample$$anon$6.prototype.init___ = (function() {
-  $s_Lexample_ScalaJSExample$UserPassLayout$1$class__$$init$__Lexample_ScalaJSExample$UserPassLayout$1__V(this);
-  this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anon$6$$anonfun$4().init___Lexample_ScalaJSExample$$anon$6(this), $m_Lrx_RxCtx$Dummy$());
-  return this
-});
-$c_Lexample_ScalaJSExample$$anon$6.prototype.set__Lexample_Demo1$UserPass__V = (function(inp) {
-  this.example$ScalaJSExample$$anon$$isUpdating$1 = true;
-  var this$1 = $m_Lexample_Demo1$UserPass$().unapply__Lexample_Demo1$UserPass__s_Option(inp);
-  if ((!this$1.isEmpty__Z())) {
-    var arg1 = this$1.get__O();
-    var x0$6 = $as_T2(arg1);
-    if ((x0$6 !== null)) {
-      var a0 = $as_T(x0$6.$$und1$f);
-      var a1 = $as_T(x0$6.$$und2$f);
-      $m_sci_List$();
-      var this$2 = $m_Lformidable_implicits_all$();
-      var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
-      var this$4 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$2, evidence$2);
-      var inp$1 = this.firstname$1;
-      this$4.bind__Lorg_scalajs_dom_raw_HTMLInputElement__O__V(inp$1, a0);
-      var this$5 = $m_Lformidable_implicits_all$();
-      var evidence$2$1 = $m_Lformidable_implicits_all$().StringStringLike$1;
-      var this$7 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$5, evidence$2$1);
-      var inp$2 = this.pass$1;
-      this$7.bind__Lorg_scalajs_dom_raw_HTMLInputElement__O__V(inp$2, a1);
-      var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array([(void 0), (void 0)]);
-      var this$9 = $m_sci_List$();
-      var cbf = this$9.ReusableCBFInstance$2;
-      var jsx$1 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(xs, cbf))
-    } else {
-      var jsx$1;
-      throw new $c_s_MatchError().init___O(x0$6)
-    };
-    new $c_s_Some().init___O(jsx$1)
-  };
-  this.stopUpdate__p1__V()
-});
-$c_Lexample_ScalaJSExample$$anon$6.prototype.stopUpdate__p1__V = (function() {
-  this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
-  this.current$1.recalc__V()
-});
-$c_Lexample_ScalaJSExample$$anon$6.prototype.current__Lrx_Rx = (function() {
-  return this.current$1
-});
-$c_Lexample_ScalaJSExample$$anon$6.prototype.set__O__V = (function(inp) {
-  this.set__Lexample_Demo1$UserPass__V($as_Lexample_Demo1$UserPass(inp))
-});
-var $d_Lexample_ScalaJSExample$$anon$6 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$6: 0
-}, false, "example.ScalaJSExample$$anon$6", {
-  Lexample_ScalaJSExample$$anon$6: 1,
-  O: 1,
-  Lexample_ScalaJSExample$UserPassLayout$1: 1,
-  Lformidable_FormidableRx: 1
-});
-$c_Lexample_ScalaJSExample$$anon$6.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$6;
-/** @constructor */
 function $c_Lexample_ScalaJSExample$$anon$9() {
   $c_O.call(this);
+  this.ctx$1 = null;
   this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
   this.current$1 = null;
   this.top$1 = null;
@@ -9159,8 +8927,9 @@ function $h_Lexample_ScalaJSExample$$anon$9() {
 $h_Lexample_ScalaJSExample$$anon$9.prototype = $c_Lexample_ScalaJSExample$$anon$9.prototype;
 $c_Lexample_ScalaJSExample$$anon$9.prototype.init___ = (function() {
   $s_Lexample_ScalaJSExample$NestedLayout$1$class__$$init$__Lexample_ScalaJSExample$NestedLayout$1__V(this);
+  this.ctx$1 = $m_Lrx_Ctx$Owner$Unsafe$();
   this.example$ScalaJSExample$$anon$$isUpdating$1 = false;
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7().init___Lexample_ScalaJSExample$$anon$9(this), $m_Lrx_RxCtx$Dummy$());
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7().init___Lexample_ScalaJSExample$$anon$9(this), this.ctx$1);
   return this
 });
 $c_Lexample_ScalaJSExample$$anon$9.prototype.set__Lexample_Demo2$Nested__V = (function(inp) {
@@ -9232,6 +9001,7 @@ $c_Lexample_ScalaJSExample$$anon$9.prototype.$classData = $d_Lexample_ScalaJSExa
 /** @constructor */
 function $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7() {
   $c_O.call(this);
+  this.ctx$1 = null;
   this.example$ScalaJSExample$NestedLayout$$anon$$isUpdating$1 = false;
   this.current$1 = null;
   this.foo$1 = null;
@@ -9286,8 +9056,9 @@ $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7.prototype.foo__Lorg_scalajs_do
 });
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7.prototype.init___Lexample_ScalaJSExample$NestedLayout$1 = (function($$outer) {
   $s_Lexample_ScalaJSExample$InnerLayout$1$class__$$init$__Lexample_ScalaJSExample$InnerLayout$1__V(this);
+  this.ctx$1 = $m_Lrx_Ctx$Owner$Unsafe$();
   this.example$ScalaJSExample$NestedLayout$$anon$$isUpdating$1 = false;
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5().init___Lexample_ScalaJSExample$NestedLayout$1$$anon$7(this), $m_Lrx_RxCtx$Dummy$());
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5().init___Lexample_ScalaJSExample$NestedLayout$1$$anon$7(this), this.ctx$1);
   return this
 });
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7.prototype.stopUpdate__p1__V = (function() {
@@ -9297,11 +9068,11 @@ $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7.prototype.stopUpdate__p1__V = 
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7.prototype.current__Lrx_Rx = (function() {
   return this.current$1
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7.prototype.set__O__V = (function(inp) {
-  this.set__Lexample_Demo2$Inner__V($as_Lexample_Demo2$Inner(inp))
-});
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7.prototype.example$ScalaJSExample$InnerLayout$1$$undsetter$und$foo$und$eq__Lorg_scalajs_dom_raw_HTMLInputElement__V = (function(x$1) {
   this.foo$1 = x$1
+});
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7.prototype.set__O__V = (function(inp) {
+  this.set__Lexample_Demo2$Inner__V($as_Lexample_Demo2$Inner(inp))
 });
 var $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$7 = new $TypeData().initClass({
   Lexample_ScalaJSExample$NestedLayout$1$$anon$7: 0
@@ -9315,6 +9086,7 @@ $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7.prototype.$classData = $d_Lexa
 /** @constructor */
 function $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8() {
   $c_O.call(this);
+  this.ctx$1 = null;
   this.example$ScalaJSExample$NestedLayout$$anon$$isUpdating$1 = false;
   this.current$1 = null;
   this.foo$1 = null;
@@ -9369,8 +9141,9 @@ $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8.prototype.foo__Lorg_scalajs_do
 });
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8.prototype.init___Lexample_ScalaJSExample$NestedLayout$1 = (function($$outer) {
   $s_Lexample_ScalaJSExample$InnerLayout$1$class__$$init$__Lexample_ScalaJSExample$InnerLayout$1__V(this);
+  this.ctx$1 = $m_Lrx_Ctx$Owner$Unsafe$();
   this.example$ScalaJSExample$NestedLayout$$anon$$isUpdating$1 = false;
-  this.current$1 = $m_Lrx_Rx$().build__F1__Lrx_RxCtx__Lrx_Rx(new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6().init___Lexample_ScalaJSExample$NestedLayout$1$$anon$8(this), $m_Lrx_RxCtx$Dummy$());
+  this.current$1 = $m_Lrx_Rx$().build__F2__Lrx_Ctx$Owner__Lrx_Rx(new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6().init___Lexample_ScalaJSExample$NestedLayout$1$$anon$8(this), this.ctx$1);
   return this
 });
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8.prototype.stopUpdate__p1__V = (function() {
@@ -9380,11 +9153,11 @@ $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8.prototype.stopUpdate__p1__V = 
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8.prototype.current__Lrx_Rx = (function() {
   return this.current$1
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8.prototype.set__O__V = (function(inp) {
-  this.set__Lexample_Demo2$Inner__V($as_Lexample_Demo2$Inner(inp))
-});
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8.prototype.example$ScalaJSExample$InnerLayout$1$$undsetter$und$foo$und$eq__Lorg_scalajs_dom_raw_HTMLInputElement__V = (function(x$1) {
   this.foo$1 = x$1
+});
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8.prototype.set__O__V = (function(inp) {
+  this.set__Lexample_Demo2$Inner__V($as_Lexample_Demo2$Inner(inp))
 });
 var $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$8 = new $TypeData().initClass({
   Lexample_ScalaJSExample$NestedLayout$1$$anon$8: 0
@@ -9401,7 +9174,7 @@ function $c_Lformidable_implicits_Input$InputBindRx() {
   this.evidence$1$1 = null;
   this.formidable$implicits$Input$InputBindRx$$strLike$1 = null;
   this.$$outer$f = null;
-  this.formidable$implicits$Input$InputRxDynamic$$KEY$1 = null;
+  this.formidable$implicits$BindDynamic$$KEY$1 = null;
   this.bitmap$0$1 = false
 }
 $c_Lformidable_implicits_Input$InputBindRx.prototype = new $h_O();
@@ -9422,7 +9195,7 @@ $c_Lformidable_implicits_Input$InputBindRx.prototype.init___Lformidable_implicit
   } else {
     this.$$outer$f = $$outer
   };
-  this.formidable$implicits$Input$InputRxDynamic$$KEY$1 = "_inp_rx";
+  this.formidable$implicits$BindDynamic$$KEY$1 = "_inp_rx";
   return this
 });
 $c_Lformidable_implicits_Input$InputBindRx.prototype.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node = (function(inp) {
@@ -9433,7 +9206,7 @@ $c_Lformidable_implicits_Input$InputBindRx.prototype.unbind__Lorg_scalajs_dom_ra
       return this$1.from__T__s_util_Try(inp$1)
     })
   })(this));
-  return $s_Lformidable_implicits_Input$InputRxDynamic$class__bindDynamic__Lformidable_implicits_Input$InputRxDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1__Lrx_Var(this, inp, make)
+  return $s_Lformidable_implicits_BindDynamic$class__bindDynamic__Lformidable_implicits_BindDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1__Lrx_Var(this, inp, make)
 });
 $c_Lformidable_implicits_Input$InputBindRx.prototype.formidable$implicits$Input$InputBindRx$$strLike$lzycompute__p1__Llikelib_TryLike = (function() {
   if ((!this.bitmap$0$1)) {
@@ -9451,7 +9224,7 @@ $c_Lformidable_implicits_Input$InputBindRx.prototype.update__p1__Lorg_scalajs_do
       return this$1.from__T__s_util_Try(inp$1)
     })
   })(this));
-  var dynamicVar = $s_Lformidable_implicits_Input$InputRxDynamic$class__bindDynamic__Lformidable_implicits_Input$InputRxDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1__Lrx_Var(this, inp, make);
+  var dynamicVar = $s_Lformidable_implicits_BindDynamic$class__bindDynamic__Lformidable_implicits_BindDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1__Lrx_Var(this, inp, make);
   var this$2 = this.formidable$implicits$Input$InputBindRx$$strLike__Llikelib_TryLike();
   var inp$3 = $as_T(inp["value"]);
   dynamicVar.update__O__V(this$2.from__T__s_util_Try(inp$3))
@@ -9465,7 +9238,7 @@ var $d_Lformidable_implicits_Input$InputBindRx = new $TypeData().initClass({
   Lformidable_implicits_Input$InputBindRx: 1,
   O: 1,
   Lformidable_BindRx: 1,
-  Lformidable_implicits_Input$InputRxDynamic: 1
+  Lformidable_implicits_BindDynamic: 1
 });
 $c_Lformidable_implicits_Input$InputBindRx.prototype.$classData = $d_Lformidable_implicits_Input$InputBindRx;
 /** @constructor */
@@ -9734,6 +9507,40 @@ $h_Ljava_io_OutputStream.prototype = $c_Ljava_io_OutputStream.prototype;
 $c_Ljava_io_OutputStream.prototype.close__V = (function() {
   /*<skip>*/
 });
+/** @constructor */
+function $c_Lrx_Ctx$Owner$Unsafe$() {
+  $c_Lrx_Ctx$Owner.call(this)
+}
+$c_Lrx_Ctx$Owner$Unsafe$.prototype = new $h_Lrx_Ctx$Owner();
+$c_Lrx_Ctx$Owner$Unsafe$.prototype.constructor = $c_Lrx_Ctx$Owner$Unsafe$;
+/** @constructor */
+function $h_Lrx_Ctx$Owner$Unsafe$() {
+  /*<skip>*/
+}
+$h_Lrx_Ctx$Owner$Unsafe$.prototype = $c_Lrx_Ctx$Owner$Unsafe$.prototype;
+$c_Lrx_Ctx$Owner$Unsafe$.prototype.init___ = (function() {
+  $c_Lrx_Ctx$Owner.prototype.init___F0.call(this, new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function() {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(new $c_jl_Exception().init___T("Invalid Ctx.Owner: you can only call `Rx.apply` within an `Rx{...}` block or where an implicit `RxCtx` is available"))
+  })));
+  $n_Lrx_Ctx$Owner$Unsafe$ = this;
+  return this
+});
+var $d_Lrx_Ctx$Owner$Unsafe$ = new $TypeData().initClass({
+  Lrx_Ctx$Owner$Unsafe$: 0
+}, false, "rx.Ctx$Owner$Unsafe$", {
+  Lrx_Ctx$Owner$Unsafe$: 1,
+  Lrx_Ctx$Owner: 1,
+  Lrx_Ctx: 1,
+  O: 1
+});
+$c_Lrx_Ctx$Owner$Unsafe$.prototype.$classData = $d_Lrx_Ctx$Owner$Unsafe$;
+var $n_Lrx_Ctx$Owner$Unsafe$ = (void 0);
+function $m_Lrx_Ctx$Owner$Unsafe$() {
+  if ((!$n_Lrx_Ctx$Owner$Unsafe$)) {
+    $n_Lrx_Ctx$Owner$Unsafe$ = new $c_Lrx_Ctx$Owner$Unsafe$().init___()
+  };
+  return $n_Lrx_Ctx$Owner$Unsafe$
+}
 /** @constructor */
 function $c_Lscalatags_JsDom$Cap$SeqFrag() {
   $c_O.call(this);
@@ -13126,128 +12933,6 @@ var $d_scm_WrappedArrayBuilder = new $TypeData().initClass({
 });
 $c_scm_WrappedArrayBuilder.prototype.$classData = $d_scm_WrappedArrayBuilder;
 /** @constructor */
-function $c_Lexample_Demo1$UserPass() {
-  $c_O.call(this);
-  this.firstname$1 = null;
-  this.pass$1 = null
-}
-$c_Lexample_Demo1$UserPass.prototype = new $h_O();
-$c_Lexample_Demo1$UserPass.prototype.constructor = $c_Lexample_Demo1$UserPass;
-/** @constructor */
-function $h_Lexample_Demo1$UserPass() {
-  /*<skip>*/
-}
-$h_Lexample_Demo1$UserPass.prototype = $c_Lexample_Demo1$UserPass.prototype;
-$c_Lexample_Demo1$UserPass.prototype.init___T__T = (function(firstname, pass) {
-  this.firstname$1 = firstname;
-  this.pass$1 = pass;
-  return this
-});
-$c_Lexample_Demo1$UserPass.prototype.productPrefix__T = (function() {
-  return "UserPass"
-});
-$c_Lexample_Demo1$UserPass.prototype.productArity__I = (function() {
-  return 2
-});
-$c_Lexample_Demo1$UserPass.prototype.equals__O__Z = (function(x$1) {
-  if ((this === x$1)) {
-    return true
-  } else if ($is_Lexample_Demo1$UserPass(x$1)) {
-    var UserPass$1 = $as_Lexample_Demo1$UserPass(x$1);
-    return ((this.firstname$1 === UserPass$1.firstname$1) && (this.pass$1 === UserPass$1.pass$1))
-  } else {
-    return false
-  }
-});
-$c_Lexample_Demo1$UserPass.prototype.productElement__I__O = (function(x$1) {
-  switch (x$1) {
-    case 0: {
-      return this.firstname$1;
-      break
-    }
-    case 1: {
-      return this.pass$1;
-      break
-    }
-    default: {
-      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
-    }
-  }
-});
-$c_Lexample_Demo1$UserPass.prototype.toString__T = (function() {
-  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Lexample_Demo1$UserPass.prototype.hashCode__I = (function() {
-  var this$2 = $m_s_util_hashing_MurmurHash3$();
-  return this$2.productHash__s_Product__I__I(this, (-889275714))
-});
-$c_Lexample_Demo1$UserPass.prototype.productIterator__sc_Iterator = (function() {
-  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
-});
-function $is_Lexample_Demo1$UserPass(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lexample_Demo1$UserPass)))
-}
-function $as_Lexample_Demo1$UserPass(obj) {
-  return (($is_Lexample_Demo1$UserPass(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "example.Demo1$UserPass"))
-}
-function $isArrayOf_Lexample_Demo1$UserPass(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lexample_Demo1$UserPass)))
-}
-function $asArrayOf_Lexample_Demo1$UserPass(obj, depth) {
-  return (($isArrayOf_Lexample_Demo1$UserPass(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lexample.Demo1$UserPass;", depth))
-}
-var $d_Lexample_Demo1$UserPass = new $TypeData().initClass({
-  Lexample_Demo1$UserPass: 0
-}, false, "example.Demo1$UserPass", {
-  Lexample_Demo1$UserPass: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lexample_Demo1$UserPass.prototype.$classData = $d_Lexample_Demo1$UserPass;
-/** @constructor */
-function $c_Lexample_Demo1$UserPass$() {
-  $c_sr_AbstractFunction2.call(this)
-}
-$c_Lexample_Demo1$UserPass$.prototype = new $h_sr_AbstractFunction2();
-$c_Lexample_Demo1$UserPass$.prototype.constructor = $c_Lexample_Demo1$UserPass$;
-/** @constructor */
-function $h_Lexample_Demo1$UserPass$() {
-  /*<skip>*/
-}
-$h_Lexample_Demo1$UserPass$.prototype = $c_Lexample_Demo1$UserPass$.prototype;
-$c_Lexample_Demo1$UserPass$.prototype.toString__T = (function() {
-  return "UserPass"
-});
-$c_Lexample_Demo1$UserPass$.prototype.apply__O__O__O = (function(v1, v2) {
-  var firstname = $as_T(v1);
-  var pass = $as_T(v2);
-  return new $c_Lexample_Demo1$UserPass().init___T__T(firstname, pass)
-});
-$c_Lexample_Demo1$UserPass$.prototype.unapply__Lexample_Demo1$UserPass__s_Option = (function(x$0) {
-  return ((x$0 === null) ? $m_s_None$() : new $c_s_Some().init___O(new $c_T2().init___O__O(x$0.firstname$1, x$0.pass$1)))
-});
-var $d_Lexample_Demo1$UserPass$ = new $TypeData().initClass({
-  Lexample_Demo1$UserPass$: 0
-}, false, "example.Demo1$UserPass$", {
-  Lexample_Demo1$UserPass$: 1,
-  sr_AbstractFunction2: 1,
-  O: 1,
-  F2: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lexample_Demo1$UserPass$.prototype.$classData = $d_Lexample_Demo1$UserPass$;
-var $n_Lexample_Demo1$UserPass$ = (void 0);
-function $m_Lexample_Demo1$UserPass$() {
-  if ((!$n_Lexample_Demo1$UserPass$)) {
-    $n_Lexample_Demo1$UserPass$ = new $c_Lexample_Demo1$UserPass$().init___()
-  };
-  return $n_Lexample_Demo1$UserPass$
-}
-/** @constructor */
 function $c_Lexample_Demo2$Inner() {
   $c_O.call(this);
   this.foo$1 = null;
@@ -14255,21 +13940,18 @@ var $d_Lexample_DemoImg$MediaPath = new $TypeData().initClass({
 });
 $c_Lexample_DemoImg$MediaPath.prototype.$classData = $d_Lexample_DemoImg$MediaPath;
 /** @constructor */
-function $c_Lexample_DemoImg$MediaPathLayout$$anonfun$3() {
-  $c_sr_AbstractFunction1.call(this);
+function $c_Lexample_DemoImg$MediaPathLayout$$anonfun$4() {
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype.constructor = $c_Lexample_DemoImg$MediaPathLayout$$anonfun$3;
+$c_Lexample_DemoImg$MediaPathLayout$$anonfun$4.prototype = new $h_sr_AbstractFunction2();
+$c_Lexample_DemoImg$MediaPathLayout$$anonfun$4.prototype.constructor = $c_Lexample_DemoImg$MediaPathLayout$$anonfun$4;
 /** @constructor */
-function $h_Lexample_DemoImg$MediaPathLayout$$anonfun$3() {
+function $h_Lexample_DemoImg$MediaPathLayout$$anonfun$4() {
   /*<skip>*/
 }
-$h_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype = $c_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype;
-$c_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
-});
-$c_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype.init___Lexample_DemoImg$MediaPathLayout = (function($$outer) {
+$h_Lexample_DemoImg$MediaPathLayout$$anonfun$4.prototype = $c_Lexample_DemoImg$MediaPathLayout$$anonfun$4.prototype;
+$c_Lexample_DemoImg$MediaPathLayout$$anonfun$4.prototype.init___Lexample_DemoImg$MediaPathLayout = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -14277,16 +13959,19 @@ $c_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype.init___Lexample_DemoImg
   };
   return this
 });
-$c_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$5) {
+$c_Lexample_DemoImg$MediaPathLayout$$anonfun$4.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
+});
+$c_Lexample_DemoImg$MediaPathLayout$$anonfun$4.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$12, rxDataCtx$macro$11) {
   try {
-    var this$3 = this.$$outer$2.filez$1;
-    if ($as_s_Option($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$3, rxctx$macro$5)).isDefined__Z()) {
+    var this$2 = this.$$outer$2.filez$1;
+    if ($as_s_Option($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$2, rxDataCtx$macro$11)).isDefined__Z()) {
       var jsx$2 = this.$$outer$2;
-      var this$4 = this.$$outer$2.filez$1;
-      var jsx$1 = jsx$2.example$DemoImg$MediaPathLayout$$fizzlepop__Lorg_scalajs_dom_raw_File__T($as_s_Option(this$4.Internal__Lrx_Var$Internal$().value$1).get__O())
+      var this$3 = this.$$outer$2.filez$1;
+      var jsx$1 = jsx$2.example$DemoImg$MediaPathLayout$$fizzlepop__Lorg_scalajs_dom_raw_File__T($as_s_Option(this$3.Internal__Lrx_Var$Internal$().value$1).get__O())
     } else {
-      var this$6 = this.$$outer$2.path$1;
-      var jsx$1 = $as_T($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$6, rxctx$macro$5))
+      var this$4 = this.$$outer$2.path$1;
+      var jsx$1 = $as_T($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, rxDataCtx$macro$11))
     };
     return new $c_s_util_Success().init___O(new $c_Lexample_DemoImg$MediaPath().init___T(jsx$1))
   } catch (e) {
@@ -14303,32 +13988,29 @@ $c_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype.apply__Lrx_RxCtx__s_uti
     }
   }
 });
-var $d_Lexample_DemoImg$MediaPathLayout$$anonfun$3 = new $TypeData().initClass({
-  Lexample_DemoImg$MediaPathLayout$$anonfun$3: 0
-}, false, "example.DemoImg$MediaPathLayout$$anonfun$3", {
-  Lexample_DemoImg$MediaPathLayout$$anonfun$3: 1,
-  sr_AbstractFunction1: 1,
+var $d_Lexample_DemoImg$MediaPathLayout$$anonfun$4 = new $TypeData().initClass({
+  Lexample_DemoImg$MediaPathLayout$$anonfun$4: 0
+}, false, "example.DemoImg$MediaPathLayout$$anonfun$4", {
+  Lexample_DemoImg$MediaPathLayout$$anonfun$4: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_DemoImg$MediaPathLayout$$anonfun$3.prototype.$classData = $d_Lexample_DemoImg$MediaPathLayout$$anonfun$3;
+$c_Lexample_DemoImg$MediaPathLayout$$anonfun$4.prototype.$classData = $d_Lexample_DemoImg$MediaPathLayout$$anonfun$4;
 /** @constructor */
 function $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype = new $h_sr_AbstractFunction2();
 $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8;
 /** @constructor */
 function $h_Lexample_ScalaJSExample$$anon$10$$anonfun$8() {
   /*<skip>*/
 }
 $h_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype;
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
-});
 $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype.init___Lexample_ScalaJSExample$$anon$10 = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
@@ -14337,98 +14019,92 @@ $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype.init___Lexample_ScalaJS
   };
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$10) {
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
+});
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$26, rxDataCtx$macro$25) {
   if (this.$$outer$2.example$ScalaJSExample$$anon$$isUpdating$1) {
     return new $c_s_util_Failure().init___jl_Throwable($m_Lformidable_package$FormidableProcessingFailure$())
   } else {
     var this$1 = $m_Lformidable_implicits_all$();
     new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
     var inp = this.$$outer$2.fid$1;
-    var this$5 = inp.current$1;
-    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, rxctx$macro$10)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18().init___Lexample_ScalaJSExample$$anon$10$$anonfun$8__Lrx_RxCtx(this, rxctx$macro$10))
+    var this$4 = inp.current$1;
+    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, rxDataCtx$macro$25)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21().init___Lexample_ScalaJSExample$$anon$10$$anonfun$8__Lrx_Ctx$Data(this, rxDataCtx$macro$25))
   }
 });
 var $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8 = new $TypeData().initClass({
   Lexample_ScalaJSExample$$anon$10$$anonfun$8: 0
 }, false, "example.ScalaJSExample$$anon$10$$anonfun$8", {
   Lexample_ScalaJSExample$$anon$10$$anonfun$8: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
 $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18() {
+function $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
-  this.rxctx$macro$10$1$f = null
+  this.rxDataCtx$macro$25$1$f = null
 }
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18;
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18() {
+function $h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18.prototype = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18.prototype;
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21.prototype = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21.prototype;
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21.prototype.apply__O__O = (function(v1) {
   return this.apply__Lexample_Demo3$FakeId__s_util_Try($as_Lexample_Demo3$FakeId(v1))
 });
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18.prototype.init___Lexample_ScalaJSExample$$anon$10$$anonfun$8__Lrx_RxCtx = (function($$outer, rxctx$macro$10$1) {
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21.prototype.init___Lexample_ScalaJSExample$$anon$10$$anonfun$8__Lrx_Ctx$Data = (function($$outer, rxDataCtx$macro$25$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$2 = $$outer
   };
-  this.rxctx$macro$10$1$f = rxctx$macro$10$1;
+  this.rxDataCtx$macro$25$1$f = rxDataCtx$macro$25$1;
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18.prototype.apply__Lexample_Demo3$FakeId__s_util_Try = (function(a0) {
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21.prototype.apply__Lexample_Demo3$FakeId__s_util_Try = (function(a0) {
   var this$1 = $m_Lformidable_implicits_all$();
   new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
   var inp = this.$$outer$2.$$outer$2.doit$1;
-  var this$5 = inp.current$1;
-  var ctx = this.rxctx$macro$10$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19().init___Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18__Lexample_Demo3$FakeId(this, a0))
+  var this$4 = inp.current$1;
+  var ctx = this.rxDataCtx$macro$25$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22().init___Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21__Lexample_Demo3$FakeId(this, a0))
 });
-var $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18: 0
-}, false, "example.ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18", {
-  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18: 1,
+var $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21: 0
+}, false, "example.ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21", {
+  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18;
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19() {
+function $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.a0$7$f = null
 }
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19;
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19() {
+function $h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19.prototype = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19.prototype;
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22.prototype = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22.prototype;
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22.prototype.apply__O__O = (function(v1) {
   return this.apply__Z__s_util_Try($uZ(v1))
 });
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19.prototype.apply__Z__s_util_Try = (function(a1) {
-  var this$1 = $m_Lformidable_implicits_all$();
-  var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
-  var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
-  var inp = this.$$outer$2.$$outer$2.$$outer$2.title$1;
-  var this$5 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
-  var ctx = this.$$outer$2.rxctx$macro$10$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20().init___Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19__Z(this, a1))
-});
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19.prototype.init___Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18__Lexample_Demo3$FakeId = (function($$outer, a0$7) {
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22.prototype.init___Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21__Lexample_Demo3$FakeId = (function($$outer, a0$7) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -14437,47 +14113,43 @@ $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$
   this.a0$7$f = a0$7;
   return this
 });
-var $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19: 0
-}, false, "example.ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19", {
-  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19: 1,
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22.prototype.apply__Z__s_util_Try = (function(a1) {
+  var this$1 = $m_Lformidable_implicits_all$();
+  var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
+  var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
+  var inp = this.$$outer$2.$$outer$2.$$outer$2.title$1;
+  var this$4 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
+  var ctx = this.$$outer$2.rxDataCtx$macro$25$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23().init___Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22__Z(this, a1))
+});
+var $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22: 0
+}, false, "example.ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22", {
+  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19;
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20() {
+function $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.a1$2$f = false
 }
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20;
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20() {
+function $h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20.prototype = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20.prototype;
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23.prototype = $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23.prototype;
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23.prototype.apply__O__O = (function(v1) {
   return this.apply__T__s_util_Try($as_T(v1))
 });
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20.prototype.apply__T__s_util_Try = (function(a2) {
-  var this$1 = $m_Lformidable_implicits_all$();
-  new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
-  var inp = this.$$outer$2.$$outer$2.$$outer$2.$$outer$2.colors$1;
-  var this$5 = inp.current$1;
-  var ctx = this.$$outer$2.$$outer$2.rxctx$macro$10$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, a2$2) {
-    return (function(a3$2) {
-      var a3 = $as_sci_Set(a3$2);
-      return new $c_Lexample_Demo3$Info().init___Lexample_Demo3$FakeId__Z__T__sci_Set(arg$outer.$$outer$2.a0$7$f, arg$outer.a1$2$f, a2$2, a3)
-    })
-  })(this, a2)))
-});
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20.prototype.init___Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19__Z = (function($$outer, a1$2) {
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23.prototype.init___Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22__Z = (function($$outer, a1$2) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -14486,23 +14158,36 @@ $c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$
   this.a1$2$f = a1$2;
   return this
 });
-var $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20: 0
-}, false, "example.ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20", {
-  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20: 1,
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23.prototype.apply__T__s_util_Try = (function(a2) {
+  var this$1 = $m_Lformidable_implicits_all$();
+  new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
+  var inp = this.$$outer$2.$$outer$2.$$outer$2.$$outer$2.colors$1;
+  var this$4 = inp.current$1;
+  var ctx = this.$$outer$2.$$outer$2.rxDataCtx$macro$25$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, a2$2) {
+    return (function(a3$2) {
+      var a3 = $as_sci_Set(a3$2);
+      return new $c_Lexample_Demo3$Info().init___Lexample_Demo3$FakeId__Z__T__sci_Set(arg$outer.$$outer$2.a0$7$f, arg$outer.a1$2$f, a2$2, a3)
+    })
+  })(this, a2)))
+});
+var $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23: 0
+}, false, "example.ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23", {
+  Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20;
+$c_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$10$$anonfun$8$$anonfun$apply$21$$anonfun$apply$22$$anonfun$apply$23;
 /** @constructor */
 function $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9.prototype = new $h_sr_AbstractFunction2();
 $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9;
 /** @constructor */
 function $h_Lexample_ScalaJSExample$$anon$11$$anonfun$9() {
@@ -14517,89 +14202,92 @@ $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9.prototype.init___Lexample_ScalaJS
   };
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
 });
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$11) {
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$28, rxDataCtx$macro$27) {
   if (this.$$outer$2.example$ScalaJSExample$$anon$$isUpdating$1) {
     return new $c_s_util_Failure().init___jl_Throwable($m_Lformidable_package$FormidableProcessingFailure$())
   } else {
     var this$1 = $m_Lformidable_implicits_all$();
     new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
     var inp = this.$$outer$2.a$1;
-    var this$5 = inp.current$1;
-    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, rxctx$macro$11)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22().init___Lexample_ScalaJSExample$$anon$11$$anonfun$9__Lrx_RxCtx(this, rxctx$macro$11))
+    var this$4 = inp.current$1;
+    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, rxDataCtx$macro$27)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25().init___Lexample_ScalaJSExample$$anon$11$$anonfun$9__Lrx_Ctx$Data(this, rxDataCtx$macro$27))
   }
 });
 var $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9 = new $TypeData().initClass({
   Lexample_ScalaJSExample$$anon$11$$anonfun$9: 0
 }, false, "example.ScalaJSExample$$anon$11$$anonfun$9", {
   Lexample_ScalaJSExample$$anon$11$$anonfun$9: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
 $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22() {
+function $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
-  this.rxctx$macro$11$1$f = null
+  this.rxDataCtx$macro$27$1$f = null
 }
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22;
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22() {
+function $h_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22.prototype = $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22.prototype;
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25.prototype = $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25.prototype;
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25.prototype.apply__O__O = (function(v1) {
   return this.apply__T__s_util_Try($as_Lexample_Demo4$OnlyA(v1).value$1)
 });
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22.prototype.init___Lexample_ScalaJSExample$$anon$11$$anonfun$9__Lrx_RxCtx = (function($$outer, rxctx$macro$11$1) {
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25.prototype.apply__T__s_util_Try = (function(a0) {
+  var this$1 = $m_Lformidable_implicits_all$();
+  new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
+  var inp = this.$$outer$2.$$outer$2.b$1;
+  var this$4 = inp.current$1;
+  var ctx = this.rxDataCtx$macro$27$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26().init___Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25__T(this, a0))
+});
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25.prototype.init___Lexample_ScalaJSExample$$anon$11$$anonfun$9__Lrx_Ctx$Data = (function($$outer, rxDataCtx$macro$27$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$2 = $$outer
   };
-  this.rxctx$macro$11$1$f = rxctx$macro$11$1;
+  this.rxDataCtx$macro$27$1$f = rxDataCtx$macro$27$1;
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22.prototype.apply__T__s_util_Try = (function(a0) {
-  var this$1 = $m_Lformidable_implicits_all$();
-  new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
-  var inp = this.$$outer$2.$$outer$2.b$1;
-  var this$5 = inp.current$1;
-  var ctx = this.rxctx$macro$11$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23().init___Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22__T(this, a0))
-});
-var $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22: 0
-}, false, "example.ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22", {
-  Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22: 1,
+var $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25: 0
+}, false, "example.ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25", {
+  Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22;
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23() {
+function $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.a0$8$f = null
 }
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23;
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23() {
+function $h_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23.prototype = $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23.prototype;
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23.prototype.init___Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22__T = (function($$outer, a0$8) {
+$h_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26.prototype = $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26.prototype;
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26.prototype.apply__O__O = (function(v1) {
+  return this.apply__T__s_util_Try($as_Lexample_Demo4$Size5(v1).value$1)
+});
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26.prototype.init___Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25__T = (function($$outer, a0$8) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -14608,47 +14296,44 @@ $c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$
   this.a0$8$f = a0$8;
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23.prototype.apply__O__O = (function(v1) {
-  return this.apply__T__s_util_Try($as_Lexample_Demo4$Size5(v1).value$1)
-});
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23.prototype.apply__T__s_util_Try = (function(a1) {
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26.prototype.apply__T__s_util_Try = (function(a1) {
   var this$1 = $m_Lformidable_implicits_all$();
   new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
   var inp = this.$$outer$2.$$outer$2.$$outer$2.c$1;
-  var this$5 = inp.current$1;
-  var ctx = this.$$outer$2.rxctx$macro$11$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, a1$3) {
+  var this$4 = inp.current$1;
+  var ctx = this.$$outer$2.rxDataCtx$macro$27$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, a1$3) {
     return (function(a2$2) {
       var a2 = $uI(a2$2);
       return new $c_Lexample_Demo4$Example().init___T__T__I(arg$outer.a0$8$f, a1$3, a2)
     })
   })(this, a1)))
 });
-var $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23: 0
-}, false, "example.ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23", {
-  Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23: 1,
+var $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26: 0
+}, false, "example.ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26", {
+  Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$22$$anonfun$apply$23;
+$c_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$11$$anonfun$9$$anonfun$apply$25$$anonfun$apply$26;
 /** @constructor */
 function $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype = new $h_sr_AbstractFunction2();
 $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10;
 /** @constructor */
 function $h_Lexample_ScalaJSExample$$anon$12$$anonfun$10() {
   /*<skip>*/
 }
 $h_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype;
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
 });
 $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype.init___Lexample_ScalaJSExample$$anon$12 = (function($$outer) {
   if (($$outer === null)) {
@@ -14658,7 +14343,7 @@ $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype.init___Lexample_ScalaJ
   };
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$12) {
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$30, rxDataCtx$macro$29) {
   if (this.$$outer$2.example$ScalaJSExample$$anon$$isUpdating$1) {
     return new $c_s_util_Failure().init___jl_Throwable($m_Lformidable_package$FormidableProcessingFailure$())
   } else {
@@ -14666,83 +14351,96 @@ $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype.apply__Lrx_RxCtx__s_ut
     var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
     var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
     var inp = this.$$outer$2.id$1;
-    var this$5 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
-    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, rxctx$macro$12)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25().init___Lexample_ScalaJSExample$$anon$12$$anonfun$10__Lrx_RxCtx(this, rxctx$macro$12))
+    var this$4 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
+    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, rxDataCtx$macro$29)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28().init___Lexample_ScalaJSExample$$anon$12$$anonfun$10__Lrx_Ctx$Data(this, rxDataCtx$macro$29))
   }
 });
 var $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10 = new $TypeData().initClass({
   Lexample_ScalaJSExample$$anon$12$$anonfun$10: 0
 }, false, "example.ScalaJSExample$$anon$12$$anonfun$10", {
   Lexample_ScalaJSExample$$anon$12$$anonfun$10: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
 $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25() {
+function $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
-  this.rxctx$macro$12$1$f = null
+  this.rxDataCtx$macro$29$1$f = null
 }
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25;
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25() {
+function $h_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25.prototype = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25.prototype;
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28.prototype = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28.prototype;
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28.prototype.apply__O__O = (function(v1) {
   return this.apply__T__s_util_Try($as_T(v1))
 });
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25.prototype.init___Lexample_ScalaJSExample$$anon$12$$anonfun$10__Lrx_RxCtx = (function($$outer, rxctx$macro$12$1) {
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28.prototype.apply__T__s_util_Try = (function(a0) {
+  var this$1 = $m_Lformidable_implicits_all$();
+  var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
+  var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
+  var inp = this.$$outer$2.$$outer$2.title$1;
+  var this$4 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
+  var ctx = this.rxDataCtx$macro$29$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29().init___Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28__T(this, a0))
+});
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28.prototype.init___Lexample_ScalaJSExample$$anon$12$$anonfun$10__Lrx_Ctx$Data = (function($$outer, rxDataCtx$macro$29$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$2 = $$outer
   };
-  this.rxctx$macro$12$1$f = rxctx$macro$12$1;
+  this.rxDataCtx$macro$29$1$f = rxDataCtx$macro$29$1;
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25.prototype.apply__T__s_util_Try = (function(a0) {
-  var this$1 = $m_Lformidable_implicits_all$();
-  var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
-  var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
-  var inp = this.$$outer$2.$$outer$2.title$1;
-  var this$5 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
-  var ctx = this.rxctx$macro$12$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26().init___Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25__T(this, a0))
-});
-var $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25: 0
-}, false, "example.ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25", {
-  Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25: 1,
+var $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28: 0
+}, false, "example.ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28", {
+  Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25;
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26() {
+function $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.a0$9$f = null
 }
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26;
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26() {
+function $h_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26.prototype = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26.prototype;
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29.prototype = $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29.prototype;
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29.prototype.apply__O__O = (function(v1) {
   return this.apply__T__s_util_Try($as_T(v1))
 });
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26.prototype.init___Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25__T = (function($$outer, a0$9) {
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29.prototype.apply__T__s_util_Try = (function(a1) {
+  var this$1 = $m_Lformidable_implicits_all$();
+  new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
+  var inp = this.$$outer$2.$$outer$2.$$outer$2.img$1;
+  var this$4 = inp.current$1;
+  var ctx = this.$$outer$2.rxDataCtx$macro$29$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, a1$4) {
+    return (function(a2$2) {
+      var a2 = $as_Lexample_DemoImg$MediaPath(a2$2);
+      return new $c_Lexample_DemoImg$Game().init___T__T__Lexample_DemoImg$MediaPath(arg$outer.a0$9$f, a1$4, a2)
+    })
+  })(this, a1)))
+});
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29.prototype.init___Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28__T = (function($$outer, a0$9) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -14751,140 +14449,31 @@ $c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply
   this.a0$9$f = a0$9;
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26.prototype.apply__T__s_util_Try = (function(a1) {
-  var this$1 = $m_Lformidable_implicits_all$();
-  new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
-  var inp = this.$$outer$2.$$outer$2.$$outer$2.img$1;
-  var this$5 = inp.current$1;
-  var ctx = this.$$outer$2.rxctx$macro$12$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, a1$4) {
-    return (function(a2$2) {
-      var a2 = $as_Lexample_DemoImg$MediaPath(a2$2);
-      return new $c_Lexample_DemoImg$Game().init___T__T__Lexample_DemoImg$MediaPath(arg$outer.a0$9$f, a1$4, a2)
-    })
-  })(this, a1)))
-});
-var $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26: 0
-}, false, "example.ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26", {
-  Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26: 1,
+var $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29: 0
+}, false, "example.ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29", {
+  Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$25$$anonfun$apply$26;
-/** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$6$$anonfun$4() {
-  $c_sr_AbstractFunction1.call(this);
-  this.$$outer$2 = null
-}
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$6$$anonfun$4;
-/** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$6$$anonfun$4() {
-  /*<skip>*/
-}
-$h_Lexample_ScalaJSExample$$anon$6$$anonfun$4.prototype = $c_Lexample_ScalaJSExample$$anon$6$$anonfun$4.prototype;
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
-});
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4.prototype.init___Lexample_ScalaJSExample$$anon$6 = (function($$outer) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  return this
-});
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$6) {
-  if (this.$$outer$2.example$ScalaJSExample$$anon$$isUpdating$1) {
-    return new $c_s_util_Failure().init___jl_Throwable($m_Lformidable_package$FormidableProcessingFailure$())
-  } else {
-    var this$1 = $m_Lformidable_implicits_all$();
-    var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
-    var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
-    var inp = this.$$outer$2.firstname$1;
-    var this$5 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
-    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, rxctx$macro$6)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8().init___Lexample_ScalaJSExample$$anon$6$$anonfun$4__Lrx_RxCtx(this, rxctx$macro$6))
-  }
-});
-var $d_Lexample_ScalaJSExample$$anon$6$$anonfun$4 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$6$$anonfun$4: 0
-}, false, "example.ScalaJSExample$$anon$6$$anonfun$4", {
-  Lexample_ScalaJSExample$$anon$6$$anonfun$4: 1,
-  sr_AbstractFunction1: 1,
-  O: 1,
-  F1: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$6$$anonfun$4;
-/** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8() {
-  $c_sr_AbstractFunction1.call(this);
-  this.$$outer$2 = null;
-  this.rxctx$macro$6$1$2 = null
-}
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8;
-/** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8() {
-  /*<skip>*/
-}
-$h_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8.prototype = $c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8.prototype;
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8.prototype.apply__O__O = (function(v1) {
-  return this.apply__T__s_util_Try($as_T(v1))
-});
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8.prototype.init___Lexample_ScalaJSExample$$anon$6$$anonfun$4__Lrx_RxCtx = (function($$outer, rxctx$macro$6$1) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  this.rxctx$macro$6$1$2 = rxctx$macro$6$1;
-  return this
-});
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8.prototype.apply__T__s_util_Try = (function(a0) {
-  var this$1 = $m_Lformidable_implicits_all$();
-  var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
-  var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
-  var inp = this.$$outer$2.$$outer$2.pass$1;
-  var this$5 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
-  var ctx = this.rxctx$macro$6$1$2;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(a0$3) {
-    return (function(a1$2) {
-      var a1 = $as_T(a1$2);
-      return new $c_Lexample_Demo1$UserPass().init___T__T(a0$3, a1)
-    })
-  })(a0)))
-});
-var $d_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8: 0
-}, false, "example.ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8", {
-  Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8: 1,
-  sr_AbstractFunction1: 1,
-  O: 1,
-  F1: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$6$$anonfun$4$$anonfun$apply$8;
+$c_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$12$$anonfun$10$$anonfun$apply$28$$anonfun$apply$29;
 /** @constructor */
 function $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype = new $h_sr_AbstractFunction2();
 $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7;
 /** @constructor */
 function $h_Lexample_ScalaJSExample$$anon$9$$anonfun$7() {
   /*<skip>*/
 }
 $h_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype;
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
 });
 $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype.init___Lexample_ScalaJSExample$$anon$9 = (function($$outer) {
   if (($$outer === null)) {
@@ -14894,7 +14483,7 @@ $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype.init___Lexample_ScalaJSE
   };
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$9) {
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$24, rxDataCtx$macro$23) {
   if (this.$$outer$2.example$ScalaJSExample$$anon$$isUpdating$1) {
     return new $c_s_util_Failure().init___jl_Throwable($m_Lformidable_package$FormidableProcessingFailure$())
   } else {
@@ -14902,94 +14491,85 @@ $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype.apply__Lrx_RxCtx__s_util
     var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
     var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
     var inp = this.$$outer$2.top$1;
-    var this$5 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
-    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, rxctx$macro$9)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14().init___Lexample_ScalaJSExample$$anon$9$$anonfun$7__Lrx_RxCtx(this, rxctx$macro$9))
+    var this$4 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
+    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, rxDataCtx$macro$23)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17().init___Lexample_ScalaJSExample$$anon$9$$anonfun$7__Lrx_Ctx$Data(this, rxDataCtx$macro$23))
   }
 });
 var $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7 = new $TypeData().initClass({
   Lexample_ScalaJSExample$$anon$9$$anonfun$7: 0
 }, false, "example.ScalaJSExample$$anon$9$$anonfun$7", {
   Lexample_ScalaJSExample$$anon$9$$anonfun$7: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
 $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14() {
+function $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
-  this.rxctx$macro$9$1$f = null
+  this.rxDataCtx$macro$23$1$f = null
 }
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14;
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14() {
+function $h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14.prototype = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14.prototype;
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17.prototype = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17.prototype;
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17.prototype.apply__O__O = (function(v1) {
   return this.apply__T__s_util_Try($as_T(v1))
 });
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14.prototype.apply__T__s_util_Try = (function(a0) {
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17.prototype.init___Lexample_ScalaJSExample$$anon$9$$anonfun$7__Lrx_Ctx$Data = (function($$outer, rxDataCtx$macro$23$1) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
+  this.rxDataCtx$macro$23$1$f = rxDataCtx$macro$23$1;
+  return this
+});
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17.prototype.apply__T__s_util_Try = (function(a0) {
   var this$2 = $m_Lformidable_implicits_all$();
   var this$1 = $m_Lformidable_implicits_all$();
   var evidence$1 = $m_Lexample_Demo2$User$().like$1;
   var evidence$2 = new $c_Lformidable_implicits_ReallyLowPriorityStringLikes$$anon$1().init___Lformidable_implicits_ReallyLowPriorityStringLikes__Llikelib_Like(this$1, evidence$1);
   var this$4 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$2, evidence$2);
   var inp = this.$$outer$2.$$outer$2.uid$1;
-  var this$6 = this$4.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
-  var ctx = this.rxctx$macro$9$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$6, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15().init___Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14__T(this, a0))
+  var this$5 = this$4.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
+  var ctx = this.rxDataCtx$macro$23$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$5, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18().init___Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17__T(this, a0))
 });
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14.prototype.init___Lexample_ScalaJSExample$$anon$9$$anonfun$7__Lrx_RxCtx = (function($$outer, rxctx$macro$9$1) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  this.rxctx$macro$9$1$f = rxctx$macro$9$1;
-  return this
-});
-var $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14: 0
-}, false, "example.ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14", {
-  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14: 1,
+var $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17: 0
+}, false, "example.ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17", {
+  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14;
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15() {
+function $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.a0$6$f = null
 }
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15;
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15() {
+function $h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15.prototype = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15.prototype;
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18.prototype = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18.prototype;
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18.prototype.apply__O__O = (function(v1) {
   return this.apply__T__s_util_Try($as_Lexample_Demo2$User(v1).id$1)
 });
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15.prototype.apply__T__s_util_Try = (function(a1) {
-  var this$1 = $m_Lformidable_implicits_all$();
-  new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
-  var inp = this.$$outer$2.$$outer$2.$$outer$2.inner$1;
-  var inp$1 = $as_Lformidable_FormidableRx(inp);
-  var this$5 = inp$1.current__Lrx_Rx();
-  var ctx = this.$$outer$2.rxctx$macro$9$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16().init___Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15__T(this, a1))
-});
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15.prototype.init___Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14__T = (function($$outer, a0$6) {
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18.prototype.init___Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17__T = (function($$outer, a0$6) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -14998,34 +14578,43 @@ $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$1
   this.a0$6$f = a0$6;
   return this
 });
-var $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15: 0
-}, false, "example.ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15", {
-  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15: 1,
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18.prototype.apply__T__s_util_Try = (function(a1) {
+  var this$1 = $m_Lformidable_implicits_all$();
+  new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
+  var inp = this.$$outer$2.$$outer$2.$$outer$2.inner$1;
+  var inp$1 = $as_Lformidable_FormidableRx(inp);
+  var this$4 = inp$1.current__Lrx_Rx();
+  var ctx = this.$$outer$2.rxDataCtx$macro$23$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19().init___Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18__T(this, a1))
+});
+var $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18: 0
+}, false, "example.ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18", {
+  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15;
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16() {
+function $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.a1$1$f = null
 }
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16;
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.prototype.constructor = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16() {
+function $h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.prototype = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.prototype;
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.prototype = $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.prototype;
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.prototype.apply__O__O = (function(v1) {
   return this.apply__Lexample_Demo2$Inner__s_util_Try($as_Lexample_Demo2$Inner(v1))
 });
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.prototype.init___Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15__T = (function($$outer, a1$1) {
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.prototype.init___Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18__T = (function($$outer, a1$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -15034,107 +14623,107 @@ $c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$1
   this.a1$1$f = a1$1;
   return this
 });
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.prototype.apply__Lexample_Demo2$Inner__s_util_Try = (function(a2) {
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.prototype.apply__Lexample_Demo2$Inner__s_util_Try = (function(a2) {
   var this$1 = $m_Lformidable_implicits_all$();
   new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
   var inp = this.$$outer$2.$$outer$2.$$outer$2.$$outer$2.other$1;
   var inp$1 = $as_Lformidable_FormidableRx(inp);
-  var this$5 = inp$1.current__Lrx_Rx();
-  var ctx = this.$$outer$2.$$outer$2.rxctx$macro$9$1$f;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, a2$1) {
+  var this$4 = inp$1.current__Lrx_Rx();
+  var ctx = this.$$outer$2.$$outer$2.rxDataCtx$macro$23$1$f;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, a2$1) {
     return (function(a3$2) {
       var a3 = $as_Lexample_Demo2$Inner(a3$2);
       return new $c_Lexample_Demo2$Nested().init___T__T__Lexample_Demo2$Inner__Lexample_Demo2$Inner(arg$outer.$$outer$2.a0$6$f, arg$outer.a1$1$f, a2$1, a3)
     })
   })(this, a2)))
 });
-var $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16: 0
-}, false, "example.ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16", {
-  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16: 1,
+var $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19: 0
+}, false, "example.ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19", {
+  Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16;
+$c_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.prototype.$classData = $d_Lexample_ScalaJSExample$$anon$9$$anonfun$7$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19;
 /** @constructor */
 function $c_Lexample_ScalaJSExample$$anonfun$11() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.imgForm$1$f = null
 }
-$c_Lexample_ScalaJSExample$$anonfun$11.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anonfun$11.prototype = new $h_sr_AbstractFunction2();
 $c_Lexample_ScalaJSExample$$anonfun$11.prototype.constructor = $c_Lexample_ScalaJSExample$$anonfun$11;
 /** @constructor */
 function $h_Lexample_ScalaJSExample$$anonfun$11() {
   /*<skip>*/
 }
 $h_Lexample_ScalaJSExample$$anonfun$11.prototype = $c_Lexample_ScalaJSExample$$anonfun$11.prototype;
-$c_Lexample_ScalaJSExample$$anonfun$11.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__Lscalatags_JsDom$TypedTag($as_Lrx_RxCtx(v1))
+$c_Lexample_ScalaJSExample$$anonfun$11.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__Lscalatags_JsDom$TypedTag = (function(rxOwnerCtx$macro$34, rxDataCtx$macro$33) {
+  var this$1 = this.imgForm$1$f.img$1.filez$1;
+  var this$2 = $as_s_Option($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$1, rxDataCtx$macro$33));
+  var f = new $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31().init___Lexample_ScalaJSExample$$anonfun$11__Lrx_Ctx$Owner(this, rxOwnerCtx$macro$34);
+  if (this$2.isEmpty__Z()) {
+    var this$3 = $m_s_None$()
+  } else {
+    var v1 = this$2.get__O();
+    var this$3 = new $c_s_Some().init___O(f.apply__Lorg_scalajs_dom_raw_File__Lscalatags_JsDom$TypedTag(v1))
+  };
+  if (this$3.isEmpty__Z()) {
+    var jsx$2 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().p$1);
+    var this$4 = $m_Lscalatags_JsDom$all$().cls$1;
+    var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
+    var jsx$1 = jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$4, "form-hint", ev)])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T("No Files.."))]))
+  } else {
+    var jsx$1 = this$3.get__O()
+  };
+  return $as_Lscalatags_JsDom$TypedTag(jsx$1)
 });
 $c_Lexample_ScalaJSExample$$anonfun$11.prototype.init___Lexample_DemoImg$GameLayout = (function(imgForm$1) {
   this.imgForm$1$f = imgForm$1;
   return this
 });
-$c_Lexample_ScalaJSExample$$anonfun$11.prototype.apply__Lrx_RxCtx__Lscalatags_JsDom$TypedTag = (function(rxctx$macro$13) {
-  var this$2 = this.imgForm$1$f.img$1.filez$1;
-  var this$3 = $as_s_Option($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$2, rxctx$macro$13));
-  var f = new $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28().init___Lexample_ScalaJSExample$$anonfun$11__Lrx_RxCtx(this, rxctx$macro$13);
-  if (this$3.isEmpty__Z()) {
-    var this$4 = $m_s_None$()
-  } else {
-    var v1 = this$3.get__O();
-    var this$4 = new $c_s_Some().init___O(f.apply__Lorg_scalajs_dom_raw_File__Lscalatags_JsDom$TypedTag(v1))
-  };
-  if (this$4.isEmpty__Z()) {
-    var jsx$2 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().p$1);
-    var this$5 = $m_Lscalatags_JsDom$all$().cls$1;
-    var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
-    var jsx$1 = jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$5, "form-hint", ev)])).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T("No Files.."))]))
-  } else {
-    var jsx$1 = this$4.get__O()
-  };
-  return $as_Lscalatags_JsDom$TypedTag(jsx$1)
+$c_Lexample_ScalaJSExample$$anonfun$11.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__Lscalatags_JsDom$TypedTag($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
 });
 var $d_Lexample_ScalaJSExample$$anonfun$11 = new $TypeData().initClass({
   Lexample_ScalaJSExample$$anonfun$11: 0
 }, false, "example.ScalaJSExample$$anonfun$11", {
   Lexample_ScalaJSExample$$anonfun$11: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
 $c_Lexample_ScalaJSExample$$anonfun$11.prototype.$classData = $d_Lexample_ScalaJSExample$$anonfun$11;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28() {
+function $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
-  this.rxctx$macro$13$1$2 = null
+  this.rxOwnerCtx$macro$34$1$2 = null
 }
-$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype.constructor = $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28;
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31.prototype.constructor = $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28() {
+function $h_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype = $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype;
-$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lorg_scalajs_dom_raw_File__Lscalatags_JsDom$TypedTag(v1)
-});
-$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype.init___Lexample_ScalaJSExample$$anonfun$11__Lrx_RxCtx = (function($$outer, rxctx$macro$13$1) {
+$h_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31.prototype = $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31.prototype;
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31.prototype.init___Lexample_ScalaJSExample$$anonfun$11__Lrx_Ctx$Owner = (function($$outer, rxOwnerCtx$macro$34$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$2 = $$outer
   };
-  this.rxctx$macro$13$1$2 = rxctx$macro$13$1;
+  this.rxOwnerCtx$macro$34$1$2 = rxOwnerCtx$macro$34$1;
   return this
 });
-$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype.apply__Lorg_scalajs_dom_raw_File__Lscalatags_JsDom$TypedTag = (function(x$2) {
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lorg_scalajs_dom_raw_File__Lscalatags_JsDom$TypedTag(v1)
+});
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31.prototype.apply__Lorg_scalajs_dom_raw_File__Lscalatags_JsDom$TypedTag = (function(x$2) {
   var jsx$12 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div$1).apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T("grid--collapse"))]));
   var jsx$11 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div$1).apply__sc_Seq__Lscalatags_JsDom$TypedTag($m_sci_Nil$());
   var jsx$10 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().a$1);
@@ -15164,22 +14753,22 @@ $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype.apply__Lorg_s
   var jsx$6 = jsx$11.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$8.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$7.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$5, "fa fa-times fa-lg", ev$2)])), ($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T(" Discard"))]))]));
   var jsx$5 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div$1).apply__sc_Seq__Lscalatags_JsDom$TypedTag($m_sci_Nil$());
   var jsx$4 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div$1);
-  var this$10 = $m_Lscalatags_JsDom$all$().cls$1;
-  var n = $as_Lformidable_FormidableRx(this.$$outer$2.imgForm$1$f).current__Lrx_Rx();
-  var v$1 = new $c_Lrx_package$NodePlus().init___Lrx_Node(n).map__F1__Lrx_RxCtx__Lrx_Rx(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(g$2) {
-    var g = $as_s_util_Try(g$2);
-    return new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["button small expand ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([(g.isSuccess__Z() ? "" : "disabled")]))
-  })), this.rxctx$macro$13$1$2);
+  var this$11 = $m_Lscalatags_JsDom$all$().cls$1;
+  var $$this = $as_Lformidable_FormidableRx(this.$$outer$2.imgForm$1$f).current__Lrx_Rx();
+  var this$9 = new $c_Lrx_package$GenericOps$$anon$1().init___Lrx_Node($$this);
+  var call = new $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33().init___Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31(this);
+  var enclosing = this.rxOwnerCtx$macro$34$1$2;
+  var v$1 = $s_Lrx_opmacros_Operators$class__mappedImpl__Lrx_opmacros_Operators__F2__Lrx_Ctx$Owner__Lrx_Rx(this$9, call, enclosing);
   var evidence$1 = $m_Lscalatags_JsDom$all$().stringAttr$1;
   var ev$3 = new $c_Lexample_Framework$$anon$2().init___Lscalatags_generic_AttrValue(evidence$1);
-  var jsx$3 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$10, v$1, ev$3);
-  var this$15 = $m_Lscalatags_JsDom$all$().onclick$1;
+  var jsx$3 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$11, v$1, ev$3);
+  var this$16 = $m_Lscalatags_JsDom$all$().onclick$1;
   var v$2 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function() {
-    var this$12 = $m_s_Console$();
-    var this$13 = this$12.outVar$2;
-    $as_Ljava_io_PrintStream(this$13.tl$1.get__O()).println__O__V("Test")
+    var this$13 = $m_s_Console$();
+    var this$14 = this$13.outVar$2;
+    $as_Ljava_io_PrintStream(this$14.tl$1.get__O()).println__O__V("Test")
   }));
-  var this$14 = $m_Lscalatags_JsDom$all$();
+  var this$15 = $m_Lscalatags_JsDom$all$();
   var evidence$2$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(f$2$1) {
     var f$3 = $as_F0(f$2$1);
     return (function(f$4) {
@@ -15188,30 +14777,64 @@ $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype.apply__Lorg_s
       })
     })(f$3)
   }));
-  var ev$4 = new $c_Lscalatags_LowPriorityImplicits$$anon$2().init___Lscalatags_LowPriorityImplicits__F1(this$14, evidence$2$1);
-  var jsx$2 = jsx$4.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$15, v$2, ev$4)]));
+  var ev$4 = new $c_Lscalatags_LowPriorityImplicits$$anon$2().init___Lscalatags_LowPriorityImplicits__F1(this$15, evidence$2$1);
+  var jsx$2 = jsx$4.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$16, v$2, ev$4)]));
   var jsx$1 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().i$1);
-  var this$16 = $m_Lscalatags_JsDom$all$().cls$1;
+  var this$17 = $m_Lscalatags_JsDom$all$().cls$1;
   var ev$5 = $m_Lscalatags_JsDom$all$().stringAttr$1;
-  return jsx$12.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$6, jsx$5.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$16, "fa fa-check fa-lg", ev$5)])), ($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T(" Upload"))]))]))]))
+  return jsx$12.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$6, jsx$5.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$17, "fa fa-check fa-lg", ev$5)])), ($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag().init___T(" Upload"))]))]))]))
 });
-var $d_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28: 0
-}, false, "example.ScalaJSExample$$anonfun$11$$anonfun$apply$28", {
-  Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28: 1,
+var $d_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31: 0
+}, false, "example.ScalaJSExample$$anonfun$11$$anonfun$apply$31", {
+  Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28.prototype.$classData = $d_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$28;
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31.prototype.$classData = $d_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31;
+/** @constructor */
+function $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33() {
+  $c_sr_AbstractFunction2.call(this)
+}
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33.prototype = new $h_sr_AbstractFunction2();
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33.prototype.constructor = $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33;
+/** @constructor */
+function $h_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33() {
+  /*<skip>*/
+}
+$h_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33.prototype = $c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33.prototype;
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__F1 = (function(rxOwnerCtx$macro$32, rxDataCtx$macro$31) {
+  return new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(g$2) {
+    var g = $as_s_util_Try(g$2);
+    return new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["button small expand ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([(g.isSuccess__Z() ? "" : "disabled")]))
+  }))
+});
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33.prototype.init___Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31 = (function($$outer) {
+  return this
+});
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__F1($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
+});
+var $d_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33: 0
+}, false, "example.ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33", {
+  Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33: 1,
+  sr_AbstractFunction2: 1,
+  O: 1,
+  F2: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33.prototype.$classData = $d_Lexample_ScalaJSExample$$anonfun$11$$anonfun$apply$31$$anonfun$apply$33;
 /** @constructor */
 function $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype = new $h_sr_AbstractFunction2();
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype.constructor = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5;
 /** @constructor */
 function $h_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5() {
@@ -15226,10 +14849,10 @@ $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype.init___Le
   };
   return this
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$7) {
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$20, rxDataCtx$macro$19) {
   if (this.$$outer$2.example$ScalaJSExample$NestedLayout$$anon$$isUpdating$1) {
     return new $c_s_util_Failure().init___jl_Throwable($m_Lformidable_package$FormidableProcessingFailure$())
   } else {
@@ -15237,84 +14860,84 @@ $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype.apply__Lr
     var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
     var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
     var inp = this.$$outer$2.foo$1;
-    var this$5 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
-    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, rxctx$macro$7)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10().init___Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5__Lrx_RxCtx(this, rxctx$macro$7))
+    var this$4 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
+    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, rxDataCtx$macro$19)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13().init___Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5__Lrx_Ctx$Data(this, rxDataCtx$macro$19))
   }
 });
 var $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5 = new $TypeData().initClass({
   Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5: 0
 }, false, "example.ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5", {
   Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5.prototype.$classData = $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10() {
+function $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
-  this.rxctx$macro$7$1$2 = null
+  this.rxDataCtx$macro$19$1$2 = null
 }
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10.prototype.constructor = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10;
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13.prototype.constructor = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10() {
+function $h_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10.prototype = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10.prototype;
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10.prototype.apply__O__O = (function(v1) {
-  return this.apply__T__s_util_Try($as_T(v1))
-});
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10.prototype.init___Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5__Lrx_RxCtx = (function($$outer, rxctx$macro$7$1) {
+$h_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13.prototype = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13.prototype;
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13.prototype.init___Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5__Lrx_Ctx$Data = (function($$outer, rxDataCtx$macro$19$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$2 = $$outer
   };
-  this.rxctx$macro$7$1$2 = rxctx$macro$7$1;
+  this.rxDataCtx$macro$19$1$2 = rxDataCtx$macro$19$1;
   return this
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10.prototype.apply__T__s_util_Try = (function(a0) {
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13.prototype.apply__O__O = (function(v1) {
+  return this.apply__T__s_util_Try($as_T(v1))
+});
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13.prototype.apply__T__s_util_Try = (function(a0) {
   var this$1 = $m_Lformidable_implicits_all$();
   new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
   var inp = this.$$outer$2.$$outer$2.bar$1;
-  var this$5 = inp.current$1;
-  var ctx = this.rxctx$macro$7$1$2;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(a0$4) {
+  var this$4 = inp.current$1;
+  var ctx = this.rxDataCtx$macro$19$1$2;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(a0$4) {
     return (function(a1$2) {
       var a1 = $uI(a1$2);
       return new $c_Lexample_Demo2$Inner().init___T__I(a0$4, a1)
     })
   })(a0)))
 });
-var $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10: 0
-}, false, "example.ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10", {
-  Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10: 1,
+var $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13: 0
+}, false, "example.ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13", {
+  Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10.prototype.$classData = $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$10;
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13.prototype.$classData = $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$7$$anonfun$5$$anonfun$apply$13;
 /** @constructor */
 function $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype = new $h_sr_AbstractFunction2();
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype.constructor = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6;
 /** @constructor */
 function $h_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6() {
   /*<skip>*/
 }
 $h_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype;
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
 });
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype.init___Lexample_ScalaJSExample$NestedLayout$1$$anon$8 = (function($$outer) {
   if (($$outer === null)) {
@@ -15324,7 +14947,7 @@ $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype.init___Le
   };
   return this
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$8) {
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$22, rxDataCtx$macro$21) {
   if (this.$$outer$2.example$ScalaJSExample$NestedLayout$$anon$$isUpdating$1) {
     return new $c_s_util_Failure().init___jl_Throwable($m_Lformidable_package$FormidableProcessingFailure$())
   } else {
@@ -15332,86 +14955,318 @@ $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype.apply__Lr
     var evidence$2 = $m_Lformidable_implicits_all$().StringStringLike$1;
     var this$3 = new $c_Lformidable_implicits_Input$InputBindRx().init___Lformidable_implicits_Input__Llikelib_TryLike(this$1, evidence$2);
     var inp = this.$$outer$2.foo$1;
-    var this$5 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
-    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, rxctx$macro$8)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12().init___Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6__Lrx_RxCtx(this, rxctx$macro$8))
+    var this$4 = this$3.unbind__Lorg_scalajs_dom_raw_HTMLInputElement__Lrx_Node(inp);
+    return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, rxDataCtx$macro$21)).flatMap__F1__s_util_Try(new $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15().init___Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6__Lrx_Ctx$Data(this, rxDataCtx$macro$21))
   }
 });
 var $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6 = new $TypeData().initClass({
   Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6: 0
 }, false, "example.ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6", {
   Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
 $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6.prototype.$classData = $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6;
 /** @constructor */
-function $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12() {
+function $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
-  this.rxctx$macro$8$1$2 = null
+  this.rxDataCtx$macro$21$1$2 = null
 }
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12.prototype = new $h_sr_AbstractFunction1();
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12.prototype.constructor = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12;
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15.prototype = new $h_sr_AbstractFunction1();
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15.prototype.constructor = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15;
 /** @constructor */
-function $h_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12() {
+function $h_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15() {
   /*<skip>*/
 }
-$h_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12.prototype = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12.prototype;
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12.prototype.apply__O__O = (function(v1) {
+$h_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15.prototype = $c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15.prototype;
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15.prototype.apply__O__O = (function(v1) {
   return this.apply__T__s_util_Try($as_T(v1))
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12.prototype.apply__T__s_util_Try = (function(a0) {
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15.prototype.apply__T__s_util_Try = (function(a0) {
   var this$1 = $m_Lformidable_implicits_all$();
   new $c_Lformidable_implicits_Common$FormidableBindRx().init___Lformidable_implicits_Common(this$1);
   var inp = this.$$outer$2.$$outer$2.bar$1;
-  var this$5 = inp.current$1;
-  var ctx = this.rxctx$macro$8$1$2;
-  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$5, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(a0$5) {
+  var this$4 = inp.current$1;
+  var ctx = this.rxDataCtx$macro$21$1$2;
+  return $as_s_util_Try($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$4, ctx)).map__F1__s_util_Try(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(a0$5) {
     return (function(a1$2) {
       var a1 = $uI(a1$2);
       return new $c_Lexample_Demo2$Inner().init___T__I(a0$5, a1)
     })
   })(a0)))
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12.prototype.init___Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6__Lrx_RxCtx = (function($$outer, rxctx$macro$8$1) {
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15.prototype.init___Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6__Lrx_Ctx$Data = (function($$outer, rxDataCtx$macro$21$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$2 = $$outer
   };
-  this.rxctx$macro$8$1$2 = rxctx$macro$8$1;
+  this.rxDataCtx$macro$21$1$2 = rxDataCtx$macro$21$1;
   return this
 });
-var $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12 = new $TypeData().initClass({
-  Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12: 0
-}, false, "example.ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12", {
-  Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12: 1,
+var $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15 = new $TypeData().initClass({
+  Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15: 0
+}, false, "example.ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15", {
+  Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12.prototype.$classData = $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$12;
+$c_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15.prototype.$classData = $d_Lexample_ScalaJSExample$NestedLayout$1$$anon$8$$anonfun$6$$anonfun$apply$15;
+/** @constructor */
+function $c_Lexample_todosparkle$$anonfun$colorize$1$1() {
+  $c_sr_AbstractFunction2.call(this);
+  this.successColor$1$f = null;
+  this.failedColor$1$f = null;
+  this.normalColor$1$f = null
+}
+$c_Lexample_todosparkle$$anonfun$colorize$1$1.prototype = new $h_sr_AbstractFunction2();
+$c_Lexample_todosparkle$$anonfun$colorize$1$1.prototype.constructor = $c_Lexample_todosparkle$$anonfun$colorize$1$1;
+/** @constructor */
+function $h_Lexample_todosparkle$$anonfun$colorize$1$1() {
+  /*<skip>*/
+}
+$h_Lexample_todosparkle$$anonfun$colorize$1$1.prototype = $c_Lexample_todosparkle$$anonfun$colorize$1$1.prototype;
+$c_Lexample_todosparkle$$anonfun$colorize$1$1.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__F1 = (function(rxOwnerCtx$macro$14, rxDataCtx$macro$13) {
+  return new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
+    return (function(x0$4$2) {
+      var x0$4 = $as_s_util_Try(x0$4$2);
+      if ($is_s_util_Success(x0$4)) {
+        return arg$outer.successColor$1$f
+      };
+      if ($is_s_util_Failure(x0$4)) {
+        var x4 = $as_s_util_Failure(x0$4);
+        var p5 = x4.exception$2;
+        var x = $m_Lformidable_package$FormidableUninitialized$();
+        if ((x === p5)) {
+          return arg$outer.normalColor$1$f
+        }
+      };
+      return arg$outer.failedColor$1$f
+    })
+  })(this))
+});
+$c_Lexample_todosparkle$$anonfun$colorize$1$1.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__F1($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
+});
+$c_Lexample_todosparkle$$anonfun$colorize$1$1.prototype.init___T__T__T = (function(successColor$1, failedColor$1, normalColor$1) {
+  this.successColor$1$f = successColor$1;
+  this.failedColor$1$f = failedColor$1;
+  this.normalColor$1$f = normalColor$1;
+  return this
+});
+var $d_Lexample_todosparkle$$anonfun$colorize$1$1 = new $TypeData().initClass({
+  Lexample_todosparkle$$anonfun$colorize$1$1: 0
+}, false, "example.todosparkle$$anonfun$colorize$1$1", {
+  Lexample_todosparkle$$anonfun$colorize$1$1: 1,
+  sr_AbstractFunction2: 1,
+  O: 1,
+  F2: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lexample_todosparkle$$anonfun$colorize$1$1.prototype.$classData = $d_Lexample_todosparkle$$anonfun$colorize$1$1;
+/** @constructor */
+function $c_Lexample_todosparkle$$anonfun$icon$1$1() {
+  $c_sr_AbstractFunction2.call(this);
+  this.successColor$1$f = null;
+  this.failedColor$1$f = null;
+  this.normalColor$1$f = null
+}
+$c_Lexample_todosparkle$$anonfun$icon$1$1.prototype = new $h_sr_AbstractFunction2();
+$c_Lexample_todosparkle$$anonfun$icon$1$1.prototype.constructor = $c_Lexample_todosparkle$$anonfun$icon$1$1;
+/** @constructor */
+function $h_Lexample_todosparkle$$anonfun$icon$1$1() {
+  /*<skip>*/
+}
+$h_Lexample_todosparkle$$anonfun$icon$1$1.prototype = $c_Lexample_todosparkle$$anonfun$icon$1$1.prototype;
+$c_Lexample_todosparkle$$anonfun$icon$1$1.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__F1 = (function(rxOwnerCtx$macro$16, rxDataCtx$macro$15) {
+  return new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
+    return (function(x0$5$2) {
+      var x0$5 = $as_s_util_Try(x0$5$2);
+      if ($is_s_util_Success(x0$5)) {
+        var jsx$2 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span$1);
+        var this$1 = $m_Lscalatags_JsDom$all$().cls$1;
+        var ev = $m_Lscalatags_JsDom$all$().stringAttr$1;
+        var jsx$1 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$1, "fa fa-check postfix", ev);
+        var this$2 = $m_Lscalatags_JsDom$all$().color__Lscalatags_generic_Styles$color$();
+        var v = arg$outer.successColor$1$f;
+        var ev$1 = $m_Lscalatags_JsDom$all$().stringStyle$1;
+        return jsx$2.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_Lscalatags_generic_StylePair().init___Lscalatags_generic_Style__O__Lscalatags_generic_StyleValue(this$2, v, ev$1)]))
+      };
+      if ($is_s_util_Failure(x0$5)) {
+        var x4 = $as_s_util_Failure(x0$5);
+        var p5 = x4.exception$2;
+        var x = $m_Lformidable_package$FormidableUninitialized$();
+        if ((x === p5)) {
+          var jsx$4 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span$1);
+          var this$3 = $m_Lscalatags_JsDom$all$().cls$1;
+          var ev$2 = $m_Lscalatags_JsDom$all$().stringAttr$1;
+          var jsx$3 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$3, "fa fa-beer postfix", ev$2);
+          var this$4 = $m_Lscalatags_JsDom$all$().color__Lscalatags_generic_Styles$color$();
+          var v$1 = arg$outer.normalColor$1$f;
+          var ev$3 = $m_Lscalatags_JsDom$all$().stringStyle$1;
+          return jsx$4.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, new $c_Lscalatags_generic_StylePair().init___Lscalatags_generic_Style__O__Lscalatags_generic_StyleValue(this$4, v$1, ev$3)]))
+        }
+      };
+      var jsx$6 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().span$1);
+      var this$5 = $m_Lscalatags_JsDom$all$().cls$1;
+      var ev$4 = $m_Lscalatags_JsDom$all$().stringAttr$1;
+      var jsx$5 = new $c_Lscalatags_generic_AttrPair().init___Lscalatags_generic_Attr__O__Lscalatags_generic_AttrValue(this$5, "fa fa-close postfix", ev$4);
+      var this$6 = $m_Lscalatags_JsDom$all$().color__Lscalatags_generic_Styles$color$();
+      var v$2 = arg$outer.failedColor$1$f;
+      var ev$5 = $m_Lscalatags_JsDom$all$().stringStyle$1;
+      return jsx$6.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5, new $c_Lscalatags_generic_StylePair().init___Lscalatags_generic_Style__O__Lscalatags_generic_StyleValue(this$6, v$2, ev$5)]))
+    })
+  })(this))
+});
+$c_Lexample_todosparkle$$anonfun$icon$1$1.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__F1($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
+});
+$c_Lexample_todosparkle$$anonfun$icon$1$1.prototype.init___T__T__T = (function(successColor$1, failedColor$1, normalColor$1) {
+  this.successColor$1$f = successColor$1;
+  this.failedColor$1$f = failedColor$1;
+  this.normalColor$1$f = normalColor$1;
+  return this
+});
+var $d_Lexample_todosparkle$$anonfun$icon$1$1 = new $TypeData().initClass({
+  Lexample_todosparkle$$anonfun$icon$1$1: 0
+}, false, "example.todosparkle$$anonfun$icon$1$1", {
+  Lexample_todosparkle$$anonfun$icon$1$1: 1,
+  sr_AbstractFunction2: 1,
+  O: 1,
+  F2: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lexample_todosparkle$$anonfun$icon$1$1.prototype.$classData = $d_Lexample_todosparkle$$anonfun$icon$1$1;
+/** @constructor */
+function $c_Lexample_todosparkle$$anonfun$labelrx$1$1() {
+  $c_sr_AbstractFunction2.call(this);
+  this.labelTxt$1$f = null
+}
+$c_Lexample_todosparkle$$anonfun$labelrx$1$1.prototype = new $h_sr_AbstractFunction2();
+$c_Lexample_todosparkle$$anonfun$labelrx$1$1.prototype.constructor = $c_Lexample_todosparkle$$anonfun$labelrx$1$1;
+/** @constructor */
+function $h_Lexample_todosparkle$$anonfun$labelrx$1$1() {
+  /*<skip>*/
+}
+$h_Lexample_todosparkle$$anonfun$labelrx$1$1.prototype = $c_Lexample_todosparkle$$anonfun$labelrx$1$1.prototype;
+$c_Lexample_todosparkle$$anonfun$labelrx$1$1.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__F1 = (function(rxOwnerCtx$macro$18, rxDataCtx$macro$17) {
+  return new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
+    return (function(x0$6$2) {
+      var x0$6 = $as_s_util_Try(x0$6$2);
+      var rc9 = false;
+      var x2 = null;
+      if ($is_s_util_Failure(x0$6)) {
+        rc9 = true;
+        x2 = $as_s_util_Failure(x0$6);
+        var p3 = x2.exception$2;
+        var x = $m_Lformidable_package$FormidableUninitialized$();
+        if ((x === p3)) {
+          return arg$outer.labelTxt$1$f
+        }
+      };
+      if (rc9) {
+        var err = x2.exception$2;
+        return new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", " (", ")"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([arg$outer.labelTxt$1$f, err.getMessage__T()]))
+      };
+      if ($is_s_util_Success(x0$6)) {
+        return arg$outer.labelTxt$1$f
+      };
+      throw new $c_s_MatchError().init___O(x0$6)
+    })
+  })(this))
+});
+$c_Lexample_todosparkle$$anonfun$labelrx$1$1.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__F1($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
+});
+$c_Lexample_todosparkle$$anonfun$labelrx$1$1.prototype.init___T = (function(labelTxt$1) {
+  this.labelTxt$1$f = labelTxt$1;
+  return this
+});
+var $d_Lexample_todosparkle$$anonfun$labelrx$1$1 = new $TypeData().initClass({
+  Lexample_todosparkle$$anonfun$labelrx$1$1: 0
+}, false, "example.todosparkle$$anonfun$labelrx$1$1", {
+  Lexample_todosparkle$$anonfun$labelrx$1$1: 1,
+  sr_AbstractFunction2: 1,
+  O: 1,
+  F2: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lexample_todosparkle$$anonfun$labelrx$1$1.prototype.$classData = $d_Lexample_todosparkle$$anonfun$labelrx$1$1;
+/** @constructor */
+function $c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1() {
+  $c_sr_AbstractFunction0.call(this);
+  this.$$outer$2 = null;
+  this.inp$1$f = null;
+  this.make$1$f = null
+}
+$c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1.prototype = new $h_sr_AbstractFunction0();
+$c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1.prototype.constructor = $c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1;
+/** @constructor */
+function $h_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1() {
+  /*<skip>*/
+}
+$h_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1.prototype = $c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1.prototype;
+$c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1.prototype.apply__Lrx_Var = (function() {
+  var initialValue = this.make$1$f.apply__O__O($as_T(this.inp$1$f["value"]));
+  var result = new $c_Lrx_Var().init___O(initialValue);
+  this.inp$1$f["onkeyup"] = (function(arg$outer, result$1) {
+    return (function(ev$2) {
+      result$1.update__O__V(arg$outer.make$1$f.apply__O__O($as_T(arg$outer.inp$1$f["value"])))
+    })
+  })(this, result);
+  this.inp$1$f[this.$$outer$2.formidable$implicits$BindDynamic$$KEY$1] = result;
+  return result
+});
+$c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1.prototype.init___Lformidable_implicits_BindDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1 = (function($$outer, inp$1, make$1) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
+  this.inp$1$f = inp$1;
+  this.make$1$f = make$1;
+  return this
+});
+$c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1.prototype.apply__O = (function() {
+  return this.apply__Lrx_Var()
+});
+var $d_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1 = new $TypeData().initClass({
+  Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1: 0
+}, false, "formidable.implicits.BindDynamic$$anonfun$bindDynamic$1", {
+  Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1: 1,
+  sr_AbstractFunction0: 1,
+  O: 1,
+  F0: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1.prototype.$classData = $d_Lformidable_implicits_BindDynamic$$anonfun$bindDynamic$1;
 /** @constructor */
 function $c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3.prototype = new $h_sr_AbstractFunction1();
+$c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3.prototype = new $h_sr_AbstractFunction2();
 $c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3.prototype.constructor = $c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3;
 /** @constructor */
 function $h_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3() {
   /*<skip>*/
 }
 $h_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3.prototype = $c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3.prototype;
-$c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
+$c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
 });
-$c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$2) {
+$c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$4, rxDataCtx$macro$3) {
   try {
     return new $c_s_util_Success().init___O($as_sc_Traversable(this.$$outer$2.formidable$implicits$Checkbox$CheckboxBaseRx$$buildFrom$f.apply__O__O(this.$$outer$2.formidable$implicits$Checkbox$CheckboxBaseRx$$currentlyChecked__sc_Seq())))
   } catch (e) {
@@ -15440,9 +15295,9 @@ var $d_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3 = new $TypeData(
   Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3: 0
 }, false, "formidable.implicits.Checkbox$CheckboxBaseRx$$anonfun$3", {
   Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$3: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
@@ -15492,19 +15347,16 @@ var $d_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$4 = new $TypeData(
 $c_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$4.prototype.$classData = $d_Lformidable_implicits_Checkbox$CheckboxBaseRx$$anonfun$4;
 /** @constructor */
 function $c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype = new $h_sr_AbstractFunction1();
+$c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype = new $h_sr_AbstractFunction2();
 $c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype.constructor = $c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1;
 /** @constructor */
 function $h_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1() {
   /*<skip>*/
 }
 $h_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype = $c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype;
-$c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
-});
 $c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype.init___Lformidable_implicits_Checkbox$CheckboxBoolRx = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
@@ -15513,7 +15365,10 @@ $c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype.init___Lfo
   };
   return this
 });
-$c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$1) {
+$c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
+});
+$c_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$2, rxDataCtx$macro$1) {
   try {
     return new $c_s_util_Success().init___O($uZ(this.$$outer$2.input$1["checked"]))
   } catch (e) {
@@ -15534,9 +15389,9 @@ var $d_Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1 = new $TypeData(
   Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1: 0
 }, false, "formidable.implicits.Checkbox$CheckboxBoolRx$$anonfun$1", {
   Lformidable_implicits_Checkbox$CheckboxBoolRx$$anonfun$1: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
@@ -15577,69 +15432,17 @@ var $d_Lformidable_implicits_Checkbox$CheckboxRx$$anonfun$set$6 = new $TypeData(
 });
 $c_Lformidable_implicits_Checkbox$CheckboxRx$$anonfun$set$6.prototype.$classData = $d_Lformidable_implicits_Checkbox$CheckboxRx$$anonfun$set$6;
 /** @constructor */
-function $c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1() {
-  $c_sr_AbstractFunction0.call(this);
-  this.$$outer$2 = null;
-  this.inp$1$f = null;
-  this.make$1$f = null
-}
-$c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1.prototype = new $h_sr_AbstractFunction0();
-$c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1.prototype.constructor = $c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1;
-/** @constructor */
-function $h_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1() {
-  /*<skip>*/
-}
-$h_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1.prototype = $c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1.prototype;
-$c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1.prototype.apply__Lrx_Var = (function() {
-  var initialValue = this.make$1$f.apply__O__O($as_T(this.inp$1$f["value"]));
-  var result = new $c_Lrx_Var().init___O(initialValue);
-  this.inp$1$f["onkeyup"] = (function(arg$outer, result$1) {
-    return (function(ev$2) {
-      result$1.update__O__V(arg$outer.make$1$f.apply__O__O($as_T(arg$outer.inp$1$f["value"])))
-    })
-  })(this, result);
-  this.inp$1$f[this.$$outer$2.formidable$implicits$Input$InputRxDynamic$$KEY$1] = result;
-  return result
-});
-$c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1.prototype.init___Lformidable_implicits_Input$InputRxDynamic__Lorg_scalajs_dom_raw_HTMLInputElement__F1 = (function($$outer, inp$1, make$1) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  this.inp$1$f = inp$1;
-  this.make$1$f = make$1;
-  return this
-});
-$c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1.prototype.apply__O = (function() {
-  return this.apply__Lrx_Var()
-});
-var $d_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1 = new $TypeData().initClass({
-  Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1: 0
-}, false, "formidable.implicits.Input$InputRxDynamic$$anonfun$bindDynamic$1", {
-  Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1: 1,
-  sr_AbstractFunction0: 1,
-  O: 1,
-  F0: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1.prototype.$classData = $d_Lformidable_implicits_Input$InputRxDynamic$$anonfun$bindDynamic$1;
-/** @constructor */
 function $c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5() {
-  $c_sr_AbstractFunction1.call(this);
+  $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 }
-$c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype = new $h_sr_AbstractFunction1();
+$c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype = new $h_sr_AbstractFunction2();
 $c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype.constructor = $c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5;
 /** @constructor */
 function $h_Lformidable_implicits_Selection$SelectionRx$$anonfun$5() {
   /*<skip>*/
 }
 $h_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype = $c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype;
-$c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lrx_RxCtx__s_util_Try($as_Lrx_RxCtx(v1))
-});
 $c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype.init___Lformidable_implicits_Selection$SelectionRx = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
@@ -15648,10 +15451,13 @@ $c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype.init___Lform
   };
   return this
 });
-$c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype.apply__Lrx_RxCtx__s_util_Try = (function(rxctx$macro$7) {
+$c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype.apply__O__O__O = (function(v1, v2) {
+  return this.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try($as_Lrx_Ctx$Owner(v1), $as_Lrx_Ctx$Data(v2))
+});
+$c_Lformidable_implicits_Selection$SelectionRx$$anonfun$5.prototype.apply__Lrx_Ctx$Owner__Lrx_Ctx$Data__s_util_Try = (function(rxOwnerCtx$macro$18, rxDataCtx$macro$17) {
   try {
-    var this$3 = this.$$outer$2.formidable$implicits$Selection$SelectionRx$$selected$1;
-    return new $c_s_util_Success().init___O($s_Lrx_Node$class__apply__Lrx_Node__Lrx_RxCtx__O(this$3, rxctx$macro$7))
+    var this$2 = this.$$outer$2.formidable$implicits$Selection$SelectionRx$$selected$1;
+    return new $c_s_util_Success().init___O($s_Lrx_Node$class__apply__Lrx_Node__Lrx_Ctx$Data__O(this$2, rxDataCtx$macro$17))
   } catch (e) {
     var e$2 = $m_sjsr_package$().wrapJavaScriptException__O__jl_Throwable(e);
     if ((e$2 !== null)) {
@@ -15670,9 +15476,9 @@ var $d_Lformidable_implicits_Selection$SelectionRx$$anonfun$5 = new $TypeData().
   Lformidable_implicits_Selection$SelectionRx$$anonfun$5: 0
 }, false, "formidable.implicits.Selection$SelectionRx$$anonfun$5", {
   Lformidable_implicits_Selection$SelectionRx$$anonfun$5: 1,
-  sr_AbstractFunction1: 1,
+  sr_AbstractFunction2: 1,
   O: 1,
-  F1: 1,
+  F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
@@ -15690,7 +15496,7 @@ function $h_Lrx_Rx$$anonfun$2() {
 }
 $h_Lrx_Rx$$anonfun$2.prototype = $c_Lrx_Rx$$anonfun$2.prototype;
 $c_Lrx_Rx$$anonfun$2.prototype.apply__O__O = (function(v1) {
-  this.apply__Lrx_RxCtx__V($as_Lrx_RxCtx(v1))
+  this.apply__Lrx_Ctx$Owner__V($as_Lrx_Ctx$Owner(v1))
 });
 $c_Lrx_Rx$$anonfun$2.prototype.init___Lrx_Rx = (function($$outer) {
   if (($$outer === null)) {
@@ -15700,17 +15506,17 @@ $c_Lrx_Rx$$anonfun$2.prototype.init___Lrx_Rx = (function($$outer) {
   };
   return this
 });
-$c_Lrx_Rx$$anonfun$2.prototype.apply__Lrx_RxCtx__V = (function(o) {
+$c_Lrx_Rx$$anonfun$2.prototype.apply__Lrx_Ctx$Owner__V = (function(o) {
   var this$1 = o.rx__Lrx_Rx().Internal__Lrx_Rx$Internal$().owned$1;
   var elem = this.$$outer$2;
   $s_scm_FlatHashTable$class__addElem__scm_FlatHashTable__O__Z(this$1, elem);
   var this$2 = o.rx__Lrx_Rx().Internal__Lrx_Rx$Internal$();
-  var ctx = new $c_Lrx_RxCtx().init___F0(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer) {
+  var ctx = new $c_Lrx_Ctx$Data().init___F0(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer) {
     return (function() {
       return arg$outer.$$outer$2
     })
   })(this)));
-  $s_Lrx_Node$Internal$class__addDownstream__Lrx_Node$Internal__Lrx_RxCtx__V(this$2, ctx)
+  $s_Lrx_Node$Internal$class__addDownstream__Lrx_Node$Internal__Lrx_Ctx$Data__V(this$2, ctx)
 });
 var $d_Lrx_Rx$$anonfun$2 = new $TypeData().initClass({
   Lrx_Rx$$anonfun$2: 0
@@ -15744,9 +15550,13 @@ $c_Lrx_Rx$Internal$$anonfun$calc$2.prototype.init___Lrx_Rx$Internal$ = (function
   return this
 });
 $c_Lrx_Rx$Internal$$anonfun$calc$2.prototype.apply__O = (function() {
-  return this.$$outer$2.$$outer$1.rx$Rx$$func$f.apply__O__O(new $c_Lrx_RxCtx().init___F0(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer) {
+  return this.$$outer$2.$$outer$1.rx$Rx$$func$f.apply__O__O__O(new $c_Lrx_Ctx$Owner().init___F0(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer) {
     return (function() {
       return arg$outer.$$outer$2.$$outer$1
+    })
+  })(this))), new $c_Lrx_Ctx$Data().init___F0(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer$1) {
+    return (function() {
+      return arg$outer$1.$$outer$2.$$outer$1
     })
   })(this))))
 });
