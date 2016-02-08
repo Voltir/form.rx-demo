@@ -14,13 +14,13 @@ object Demo1 {
   case class UserPass(firstname: String, pass : String)
 
   //The form layout
-  class UserPassLayout(implicit ctx: Ctx.Owner) extends LayoutFor[UserPass] {
+  class UserPassLayout(implicit ctx: Ctx.Owner) {
     val firstname = input(`type`:="text").render
     val pass = input(`type`:="password").render
   }
 
   //The form instance
-  val form = FormidableRx.apply2[UserPass,UserPassLayout]
+  val form = FormidableRx[UserPass,UserPassLayout]
 
   //The Html
   val default = UserPass("Bob!","supersecretbob")
@@ -34,7 +34,7 @@ object Demo2 {
   }
   case class Inner(foo: String, bar: Int)
   case class Nested(top: String, uid: User, inner: Inner, other: Inner)
-  trait InnerLayout {
+  class InnerLayout(implicit ctx: Ctx.Owner) {
     val foo = input(`type`:="text").render
     val bar = SelectionRx[Int]()(
       Opt(1)(value:="One","One"),
@@ -43,11 +43,11 @@ object Demo2 {
       Opt(5)(value:="Five","5ive")
     )(Ctx.Owner.Unsafe)
   }
-  trait NestedLayout {
+  class NestedLayout(implicit ctx: Ctx.Owner) {
     val top = input(`type`:="text").render
     val uid = input(`type`:="text").render
-    val inner = FormidableRx[InnerLayout,Inner]
-    val other = FormidableRx[InnerLayout,Inner]
+    val inner = FormidableRx[Inner,InnerLayout]
+    val other = FormidableRx[Inner,InnerLayout]
   }
 }
 
@@ -144,7 +144,7 @@ object DemoImg {
 
   case class Game(id: String, title: String, img: MediaPath)
 
-  trait GameLayout {
+  class GameLayout(implicit ctx: Ctx.Owner) {
     val id = input(`type`:="text").render
     val title = input(`type`:="text").render
     val img = new MediaPathLayout()(Ctx.Owner.Unsafe)
@@ -234,10 +234,10 @@ object ScalaJSExample {
     )
   }
 
-  def second: HtmlTag = {
+  def second(implicit ctx: Ctx.Owner): HtmlTag = {
     import Demo2._
 
-    trait InnerLayout {
+    class InnerLayout(implicit ctx: Ctx.Owner) {
       val foo = input(`type`:="text").render
       val bar = SelectionRx[Int]()(
         Opt(1)(value:="One","One"),
@@ -246,14 +246,14 @@ object ScalaJSExample {
         Opt(5)(value:="Five","5ive")
       )(Ctx.Owner.Unsafe)
     }
-    trait NestedLayout {
+    class NestedLayout(implicit ctx: Ctx.Owner) {
       val top = input(`type`:="text").render
       val uid = input(`type`:="text").render
-      val inner = FormidableRx[InnerLayout,Inner]
-      val other = FormidableRx[InnerLayout,Inner]
+      val inner = FormidableRx[Inner,InnerLayout]
+      val other = FormidableRx[Inner,InnerLayout]
     }
 
-    val form2 = FormidableRx[NestedLayout,Nested]
+    val form2 = FormidableRx[Nested,NestedLayout]
     val default = Nested("This is top",User("fiz@foo.com"),Inner("This is foo",2),Inner("Other foo",5))
     template("Example 2", "Formidable can nest")(form2,"Default",default) {
       form(
@@ -269,10 +269,10 @@ object ScalaJSExample {
     }
   }
 
-  def third: HtmlTag = {
+  def third(implicit ctx: Ctx.Owner): HtmlTag = {
     import Demo3._
 
-    trait InfoLayout {
+    class InfoLayout(implicit ctx: Ctx.Owner) {
       val fid = Ignored(FakeId(-1))(Ctx.Owner.Unsafe)
       val doit = CheckboxRx.bool(false)(Ctx.Owner.Unsafe)
       val title = input(`type`:="text").render
@@ -283,7 +283,7 @@ object ScalaJSExample {
       )(Ctx.Owner.Unsafe)
     }
 
-    val form3 = FormidableRx[InfoLayout,Info]
+    val form3 = FormidableRx[Info,InfoLayout]
     val default = Info(FakeId(-1),true,"My Color Choices",Set(Red,Green))
     template("Example 3", "Example with checkboxes")(form3,"Default",default) {
       form(
@@ -297,14 +297,13 @@ object ScalaJSExample {
   val fourth: HtmlTag = {
     import Demo4._
     import todosparkle._
-    implicit val ctx = Ctx.Owner.Unsafe
-    trait LayoutExample {
+    class LayoutExample(implicit ctx: Ctx.Owner) {
       val a = InputRx.validate[OnlyA](true)(placeholder:="a")
       val b = InputRx.validate[Size5](true)(placeholder:="b")
       val c = InputRx.validate[Int](true)(placeholder:="c")
     }
 
-    val form4 = FormidableRx[LayoutExample, Example]
+    val form4 = FormidableRx[Example,LayoutExample]
     val default = Example(OnlyA.like.from("AAA").get, Size5.like.from("12345").get, 42)
     template("Example 4", "Basic Validating fields")(form4,"Default",default) {
       form(
@@ -318,7 +317,7 @@ object ScalaJSExample {
 
   val imgRx: HtmlTag = {
     import DemoImg._
-    val imgForm  = FormidableRx[GameLayout,Game]
+    val imgForm  = FormidableRx[Game,GameLayout]
     val default = Game("GAMEID","OMG YOLO",MediaPath("http://placekitten.com/350/350"))
     template("Example Img Upload","Basic User/Password form")(imgForm,"Wurt",default) {
       val gameMediaSection = {
@@ -355,18 +354,19 @@ object ScalaJSExample {
   }
 
 
-//  val demo1 = template("Example 1","Basic User/Password form")(Demo1.form,"Bob",Demo1.default) {
-//    form(
-//      Demo1.form.firstname,
-//      Demo1.form.pass
-//    )
-//  }
+  val demo1 = template("Example 1","Basic User/Password form")(Demo1.form,"Bob",Demo1.default) {
+    form(
+      Demo1.form.firstname,
+      Demo1.form.pass
+    )
+  }
 
   @JSExport
   def main(content: dom.html.Div): Unit = {
+    import Ctx.Owner.Unsafe._
     content.innerHTML = ""
     content.appendChild(row(column("small-12 text-center")(h1("Formidable"))).render)
-    //content.appendChild(Seq(demo1,hr).render)
+    content.appendChild(Seq(demo1,hr).render)
     content.appendChild(Seq(second,hr).render)
     content.appendChild(Seq(third,hr).render)
     content.appendChild(Seq(fourth,hr).render)
