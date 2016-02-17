@@ -6,9 +6,9 @@ import rx._
 import scala.scalajs.js.annotation.JSExport
 import org.scalajs.dom
 import scalatags.JsDom.all._
-import formidable._
-import formidable.implicits.all._
-import Framework._
+import formrx._
+import formrx.implicits.all._
+import framework.Framework._
 
 object Demo1 {
   case class UserPass(firstname: String, pass : String)
@@ -20,7 +20,7 @@ object Demo1 {
   }
 
   //The form instance
-  val form = FormidableRx[UserPass,UserPassLayout]
+  val form = FormRx[UserPass,UserPassLayout]
 
   //The Html
   val default = UserPass("Bob!","supersecretbob")
@@ -46,8 +46,8 @@ object Demo2 {
   class NestedLayout(implicit ctx: Ctx.Owner) {
     val top = input(`type`:="text").render
     val uid = input(`type`:="text").render
-    val inner = FormidableRx[Inner,InnerLayout]
-    val other = FormidableRx[Inner,InnerLayout]
+    val inner = FormRx[Inner,InnerLayout]
+    val other = FormRx[Inner,InnerLayout]
   }
 }
 
@@ -113,7 +113,7 @@ object DemoImg {
 
   case class MediaPath(path: String)
 
-  class MediaPathLayout()(implicit ctx: Ctx.Owner) extends FormidableRx[MediaPath] {
+  class MediaPathLayout()(implicit ctx: Ctx.Owner) extends FormRx[MediaPath] {
     val path: Var[String] = Var("")
     val filez: Var[Option[dom.File]] = Var(None)
 
@@ -163,6 +163,9 @@ object todosparkle {
     val failedColor = "#a94442"
     val normalColor = "#4d4d4d"
 
+    val awt = implicitly[StyleValue[String]]
+    println(awt)
+
     def colorize = {
       color := field.current.map {
         case Success(_)           => successColor
@@ -205,7 +208,7 @@ object ScalaJSExample {
 
   def template[T]
       (title: String, description: String)
-      (formidable: FormidableRx[T], defaultTxt: String, default: T)
+      (formidable: FormRx[T], defaultTxt: String, default: T)
       (formTag: HtmlTag): HtmlTag = {
     val created = div("Not created yet").render
     row(
@@ -249,11 +252,11 @@ object ScalaJSExample {
     class NestedLayout(implicit ctx: Ctx.Owner) {
       val top = input(`type`:="text").render
       val uid = input(`type`:="text").render
-      val inner = FormidableRx[Inner,InnerLayout]
-      val other = FormidableRx[Inner,InnerLayout]
+      val inner = FormRx[Inner,InnerLayout]
+      val other = FormRx[Inner,InnerLayout]
     }
 
-    val form2 = FormidableRx[Nested,NestedLayout]
+    val form2 = FormRx[Nested,NestedLayout]
     val default = Nested("This is top",User("fiz@foo.com"),Inner("This is foo",2),Inner("Other foo",5))
     template("Example 2", "Formidable can nest")(form2,"Default",default) {
       form(
@@ -283,7 +286,7 @@ object ScalaJSExample {
       )(Ctx.Owner.Unsafe)
     }
 
-    val form3 = FormidableRx[Info,InfoLayout]
+    val form3 = FormRx[Info,InfoLayout]
     val default = Info(FakeId(-1),true,"My Color Choices",Set(Red,Green))
     template("Example 3", "Example with checkboxes")(form3,"Default",default) {
       form(
@@ -303,7 +306,7 @@ object ScalaJSExample {
       val c = InputRx.validate[Int](true)(placeholder:="c")
     }
 
-    val form4 = FormidableRx[Example,LayoutExample]
+    val form4 = FormRx[Example,LayoutExample]
     val default = Example(OnlyA.like.from("AAA").get, Size5.like.from("12345").get, 42)
     template("Example 4", "Basic Validating fields")(form4,"Default",default) {
       form(
@@ -317,7 +320,7 @@ object ScalaJSExample {
 
   val imgRx: HtmlTag = {
     import DemoImg._
-    val imgForm  = FormidableRx[Game,GameLayout]
+    val imgForm  = FormRx[Game,GameLayout]
     val default = Game("GAMEID","OMG YOLO",MediaPath("http://placekitten.com/350/350"))
     template("Example Img Upload","Basic User/Password form")(imgForm,"Wurt",default) {
       val gameMediaSection = {

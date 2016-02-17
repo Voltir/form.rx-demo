@@ -1,7 +1,7 @@
 package example
 
 import rx._
-import Framework._
+import framework.Framework._
 import DemoImg.MediaPathLayout
 import org.scalajs.dom
 
