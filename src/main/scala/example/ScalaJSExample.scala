@@ -373,7 +373,7 @@ object ScalaJSExample {
   }
 
 
-  val demo1 = template("Example 1","Basic User/Password form")(Demo1.loginForm,"Bob",Demo1.default) {
+  val first = template("Example 1","Basic User/Password form")(Demo1.loginForm,"Bob",Demo1.default) {
     form(
       Demo1.loginForm.firstname,
       Demo1.loginForm.pass
@@ -385,7 +385,7 @@ object ScalaJSExample {
     import Ctx.Owner.Unsafe._
     content.innerHTML = ""
     content.appendChild(row(column("small-12 text-center")(h1("Formidable"))).render)
-    content.appendChild(Seq(demo1,hr).render)
+    content.appendChild(Seq(first,hr).render)
     content.appendChild(Seq(second,hr).render)
     content.appendChild(Seq(secondAlt,hr).render)
     content.appendChild(Seq(third,hr).render)

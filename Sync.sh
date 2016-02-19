@@ -1,15 +1,15 @@
 #!/bin/bash
 
 echo "Starting..."
-mkdir /tmp/formidable_demo/
-cp target/scala-2.11/formidable-demo-fastopt.js /tmp/formidable_demo/
+mkdir /tmp/formrx_demo/
+cp target/scala-2.11/formrx-demo-fastopt.js /tmp/formrx_demo/
 git checkout gh-pages
 if [ $? -eq 0 ]; then
-  mv /tmp/formidable_demo/* .
+  mv /tmp/formrx_demo/* .
   echo "Syncing gh-pages"
   git commit -am "Sync to gh-pages"
   git push origin gh-pages
-  rm -rf /tmp/formidable_demo/
+  rm -rf /tmp/formrx_demo/
   echo "Done"
 else 
   echo "FAILED TO CHECKOUT GH-PAGES!"

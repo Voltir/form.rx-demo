@@ -5,7 +5,7 @@ enablePlugins(ScalaJSPlugin)
 workbenchSettings
 //URL: http://localhost:12345/target/scala-2.11/classes/index-dev.html
 
-name := "Formidable Demo"
+name := "Form.rx Demo"
 
 version := "0.1.0-SNAPSHOT"
 
