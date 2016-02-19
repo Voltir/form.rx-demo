@@ -20,39 +20,35 @@ object Demo1 {
   }
 
   //The form instance
-  val form = FormRx[UserPass,UserPassLayout]
+  val loginForm = FormRx[UserPass,UserPassLayout]
 
-  //The Html
   val default = UserPass("Bob!","supersecretbob")
 
+  //Example, unused
+  import scalatags.JsDom.all._
+  val loginTag: HtmlTag =
+    form(
+      loginForm.firstname,
+      loginForm.pass
+    )(
+      input(`type`:="Submit"),
+      onsubmit := {() =>
+      loginForm.current.now match {
+        case Success(usrPass) => println(s"$usrPass")
+        case Failure(err) => println(s"FAILED!: ${err.getMessage}")
+      }
+      false
+    }
+  )
 }
 
 object Demo2 {
-  case class User(id: String) extends AnyVal
-  object User {
-    implicit val like = likelib.like[String,User]
-  }
   case class Inner(foo: String, bar: Int)
-  case class Nested(top: String, uid: User, inner: Inner, other: Inner)
-  class InnerLayout(implicit ctx: Ctx.Owner) {
-    val foo = input(`type`:="text").render
-    val bar = SelectionRx[Int]()(
-      Opt(1)(value:="One","One"),
-      Opt(2)(value:="Two","twwo"),
-      Opt(42)(value:="Life","Fizzle"),
-      Opt(5)(value:="Five","5ive")
-    )(Ctx.Owner.Unsafe)
-  }
-  class NestedLayout(implicit ctx: Ctx.Owner) {
-    val top = input(`type`:="text").render
-    val uid = input(`type`:="text").render
-    val inner = FormRx[Inner,InnerLayout]
-    val other = FormRx[Inner,InnerLayout]
-  }
+
+  case class Nested(top: String, inner: Inner, other: Inner)
 }
 
 object Demo3 {
-
   sealed trait Color
   case object Red extends Color
   case object Green extends Color
@@ -61,47 +57,26 @@ object Demo3 {
   case class FakeId(id: Long)
 
   case class Info(fid: FakeId, doit: Boolean, title: String, colors: Set[Color])
-
-  trait InfoLayout {
-    val fid = Ignored(FakeId(-1))(Ctx.Owner.Unsafe)
-    val doit = CheckboxRx.bool(false)(Ctx.Owner.Unsafe)
-    val title = input(`type`:="text").render
-    val colors = CheckboxRx.set[Color]("color")(
-      Chk(Red)(value:="Red"),
-      Chk(Green)(value:="Grn"),
-      Chk(Blue)(value:="Blue")
-    )(Ctx.Owner.Unsafe)
-  }
 }
 
 object Demo4 {
-  //Example of a Typesafe values that can be used on both client and server
+  //Example of typesafe values that can be used on both client and server (eg if this is defined in "shared")
   case class OnlyA private (value: String) extends AnyVal
 
   object OnlyA {
-
     private def valid(inp: String): Boolean = { inp.forall(_ == 'A') }
-
-    implicit val like: StringTryLike[OnlyA] = new StringTryLike[OnlyA] {
-      override def to(inp: OnlyA) = inp.value
-      override def from(str: String): Try[OnlyA] = {
-        if(valid(str)) { Success(new OnlyA(str)) }
-        else Failure(new IllegalArgumentException("Requries only A!"))
-      }
+    implicit val like = likelib.validate[String,OnlyA] { str =>
+      if(valid(str)) { Success(new OnlyA(str)) }
+      else Failure(new IllegalArgumentException("Requries only A!"))
     }
   }
-
-
 
   case class Size5 private (value: String) extends AnyVal
 
   object Size5 {
-    implicit val like: StringTryLike[Size5] = new StringTryLike[Size5] {
-      override def to(inp: Size5) = inp.value
-      override def from(str: String): Try[Size5] = {
-        if (str.length == 5) Success(new Size5(str))
-        else Failure(new IllegalArgumentException("Requires exactly 5 characters!"))
-      }
+    implicit val like = likelib.validate[String,Size5] { str =>
+      if (str.length == 5) Success(new Size5(str))
+      else Failure(new IllegalArgumentException("Requires exactly 5 characters!"))
     }
   }
 
@@ -152,7 +127,7 @@ object DemoImg {
 }
 
 
-object todosparkle {
+object Sparkle {
   def row: HtmlTag = div(cls:="row")
   def row(classes: String): HtmlTag = div(cls:=s"row $classes")
 
@@ -163,28 +138,25 @@ object todosparkle {
     val failedColor = "#a94442"
     val normalColor = "#4d4d4d"
 
-    val awt = implicitly[StyleValue[String]]
-    println(awt)
-
     def colorize = {
       color := field.current.map {
-        case Success(_)           => successColor
+        case Success(_) => successColor
         case Failure(FormidableUninitialized) => normalColor
-        case _                    => failedColor
+        case _ => failedColor
       }
     }
 
     def icon = {
       field.current.map {
-        case Success(_)           => span(cls:="fa fa-check postfix", color := successColor)
+        case Success(_) => span(cls:="fa fa-check postfix", color := successColor)
         case Failure(FormidableUninitialized) => span(cls:="fa fa-beer postfix", color := normalColor)
-        case _                    => span(cls:="fa fa-close postfix", color := failedColor)
+        case _ => span(cls:="fa fa-close postfix", color := failedColor)
       }
     }
 
     def labelrx = {
       field.current.map {
-        case Failure(FormidableUninitialized) => { labelTxt }
+        case Failure(FormidableUninitialized) => labelTxt
         case Failure(err) => s"$labelTxt (${err.getMessage})"
         case Success(_) => labelTxt
       }
@@ -237,37 +209,81 @@ object ScalaJSExample {
     )
   }
 
-  def second(implicit ctx: Ctx.Owner): HtmlTag = {
+  object Demo2Layouts {
     import Demo2._
-
     class InnerLayout(implicit ctx: Ctx.Owner) {
       val foo = input(`type`:="text").render
       val bar = SelectionRx[Int]()(
         Opt(1)(value:="One","One"),
         Opt(2)(value:="Two","twwo"),
-        Opt(42)(value:="Life","Fizzle"),
+        Opt(42)(value:="Life","What is?"),
         Opt(5)(value:="Five","5ive")
-      )(Ctx.Owner.Unsafe)
+      )
     }
     class NestedLayout(implicit ctx: Ctx.Owner) {
       val top = input(`type`:="text").render
-      val uid = input(`type`:="text").render
       val inner = FormRx[Inner,InnerLayout]
       val other = FormRx[Inner,InnerLayout]
     }
+  }
 
-    val form2 = FormRx[Nested,NestedLayout]
-    val default = Nested("This is top",User("fiz@foo.com"),Inner("This is foo",2),Inner("Other foo",5))
-    template("Example 2", "Formidable can nest")(form2,"Default",default) {
+  def second(implicit ctx: Ctx.Owner): HtmlTag = {
+    import Demo2._
+    import Demo2Layouts._
+
+    val nestedForm = FormRx[Nested,NestedLayout]
+    val default = Nested("This is top", Inner("This is foo",2),Inner("Other foo",5))
+    template("Example 2", "Formidable can nest")(nestedForm,"Default",default) {
       form(
-        form2.top,
-        form2.uid,
+        nestedForm.top,
         label("Inner:"),
-        form2.inner.foo,
-        form2.inner.bar.select,
+        nestedForm.inner.foo,
+        nestedForm.inner.bar.select,
         label("Other:"),
-        form2.other.foo,
-        form2.other.bar.select
+        nestedForm.other.foo,
+        nestedForm.other.bar.select
+      )
+    }
+  }
+
+  object Demo2Alternative {
+    import Demo2._
+    class InnerLayout(implicit ctx: Ctx.Owner) {
+      val foo = input(`type`:="text").render
+      val bar = Var(0)
+    }
+    class NestedLayout(implicit ctx: Ctx.Owner) {
+      val top = input(`type`:="text").render
+      val inner = FormRx[Inner,InnerLayout]
+      val other = FormRx[Inner,InnerLayout]
+    }
+  }
+
+  def secondAlt(implicit ctx: Ctx.Owner): HtmlTag = {
+    import Demo2._
+    import Demo2Alternative._
+
+    def buttons(inp: Var[Int]): Rx[HtmlTag] = Rx {
+      div(
+        label("Current Value: " + inp()),
+        ul(cls:="button-group")(
+          li(a(cls:="button", onclick:={ () => inp() = inp.now + 1 })("Inc")),
+          li(a(cls:="button", onclick:={ () => inp() = inp.now - 1 })("Dec"))
+        )
+      )
+    }
+
+    val nestedForm = FormRx[Nested,NestedLayout]
+    val default = Nested("This is top", Inner("This is foo",2),Inner("Other foo",5))
+    template("Example 2", "Formidable can nest")(nestedForm,"Default",default) {
+      form(
+        nestedForm.top,
+        label("Inner:"),
+        nestedForm.inner.foo,
+        buttons(nestedForm.inner.bar),
+        label("Other:"),
+        nestedForm.other.foo,
+        buttons(nestedForm.other.bar)
       )
     }
   }
@@ -283,7 +299,7 @@ object ScalaJSExample {
         Chk(Red)(value:="Red"),
         Chk(Green)(value:="Grn"),
         Chk(Blue)(value:="Blue")
-      )(Ctx.Owner.Unsafe)
+      )
     }
 
     val form3 = FormRx[Info,InfoLayout]
@@ -299,7 +315,7 @@ object ScalaJSExample {
 
   val fourth: HtmlTag = {
     import Demo4._
-    import todosparkle._
+    import Sparkle._
     class LayoutExample(implicit ctx: Ctx.Owner) {
       val a = InputRx.validate[OnlyA](true)(placeholder:="a")
       val b = InputRx.validate[Size5](true)(placeholder:="b")
@@ -357,10 +373,10 @@ object ScalaJSExample {
   }
 
 
-  val demo1 = template("Example 1","Basic User/Password form")(Demo1.form,"Bob",Demo1.default) {
+  val demo1 = template("Example 1","Basic User/Password form")(Demo1.loginForm,"Bob",Demo1.default) {
     form(
-      Demo1.form.firstname,
-      Demo1.form.pass
+      Demo1.loginForm.firstname,
+      Demo1.loginForm.pass
     )
   }
 
@@ -371,6 +387,7 @@ object ScalaJSExample {
     content.appendChild(row(column("small-12 text-center")(h1("Formidable"))).render)
     content.appendChild(Seq(demo1,hr).render)
     content.appendChild(Seq(second,hr).render)
+    content.appendChild(Seq(secondAlt,hr).render)
     content.appendChild(Seq(third,hr).render)
     content.appendChild(Seq(fourth,hr).render)
     content.appendChild(Seq(imgRx,hr).render)

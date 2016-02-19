@@ -16,8 +16,8 @@ libraryDependencies ++= Seq(
   "com.lihaoyi" %%% "scalarx" % "0.3.1",
   "com.lihaoyi" %%% "scalatags" % "0.5.4",
   "com.stabletechs" %%% "likelib" % "0.1.1",
-  "com.stabletechs" %%% "frameworkrx" % "0.1.0-SNAPSHOT",
-  "com.stabletechs" %%% "formrx" % "1.1.0-SNAPSHOT"
+  "com.stabletechs" %%% "frameworkrx" % "0.1.0",
+  "com.stabletechs" %%% "formrx" % "1.1.0"
 )
 
 bootSnippet := "ScalaJSExample().main(document.getElementById('content'));"
