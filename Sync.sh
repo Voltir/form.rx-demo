@@ -2,7 +2,7 @@
 
 echo "Starting..."
 mkdir /tmp/formrx_demo/
-cp target/scala-2.11/formrx-demo-fastopt.js /tmp/formrx_demo/
+cp target/scala-2.11/form-rx-demo-fastopt.js /tmp/formrx_demo/
 git checkout gh-pages
 if [ $? -eq 0 ]; then
   mv /tmp/formrx_demo/* .
