@@ -83,6 +83,17 @@ object Demo4 {
   case class Example(a: OnlyA, b: Size5, c: Int)
 }
 
+object Demo5 {
+  sealed trait SkillLevel
+  case object Average extends SkillLevel
+  case object Intermediate extends SkillLevel
+  case object Expert extends SkillLevel
+
+  case class Skill(name: String, level: SkillLevel)
+
+  case class Profile(foo: String, bar: Int, skills: List[Skill])
+}
+
 object DemoImg {
   import scalajs.js.Dynamic.{global => g}
 
@@ -275,7 +286,7 @@ object ScalaJSExample {
 
     val nestedForm = FormRx[Nested,NestedLayout]
     val default = Nested("This is top", Inner("This is foo",2),Inner("Other foo",5))
-    template("Example 2", "Formidable can nest")(nestedForm,"Default",default) {
+    template("Example 2a", "Formidable can nest")(nestedForm,"Default",default) {
       form(
         nestedForm.top,
         label("Inner:"),
@@ -333,7 +344,76 @@ object ScalaJSExample {
     }
   }
 
+  object fifth {
+    import Demo5._
 
+    class SkillLayout(implicit ctx: Ctx.Owner) {
+      val name = input(`type`:="text").render
+      val level = SelectionRx[SkillLevel]()(
+        Opt(Average)("Average"),
+        Opt(Intermediate)("Intermediate"),
+        Opt(Expert)("Expert")
+      )
+    }
+
+    class ProfileLayout(implicit ctx: Ctx.Owner) {
+      val foo = input(`type`:="text").render
+      val bar = Var(-1)
+
+      //Skills List
+      def newSkill(txt: String): Skill = Skill(txt,Average)
+
+      val skills = InputRx
+        .list(input(`type`:="text", placeholder:="New Skill*"))(newSkill)(() => FormRx[Skill,SkillLayout])
+    }
+
+    val default = Profile("Foo!",42,List(
+      Skill("numchuku", Average),
+      Skill("bow hunting", Intermediate),
+      Skill("computer hacking", Expert)
+    ))
+
+    val profileForm = FormRx[Profile,ProfileLayout]
+
+    def skillTag(skill: Skill): HtmlTag = {
+      val clsTxt = skill.level match {
+        case Average => "round label success"
+        case Intermediate => "round label warning"
+        case Expert => "round label alert"
+      }
+      li(marginRight:=10.px,cls:=clsTxt,skill.name)
+    }
+
+    val skillsTag: Rx[HtmlTag] = profileForm.skills.current.filter(_.isSuccess).map(_.get).map { skills =>
+      ul(cls:="padLeft", skills.map(skillTag))
+    }
+
+    val outputTag = template("Example 5", "A List example")(profileForm,"Default",default) {
+      form(
+        label("Foo:"),
+        profileForm.foo,
+        label("Skills:"),
+        profileForm.skills.input,
+        skillsTag,
+        Rx {
+          val skills = profileForm.skills.values()
+          div(profileForm.skills.values().zipWithIndex.map { case (skillForm,idx) =>
+            ul(cls:="button-group")(
+              li(skillForm.name),
+              li(skillForm.level.select),
+              li(a(paddingLeft:=10.px))(
+                onclick:={ () =>
+                  skills.remove(idx)
+                  profileForm.skills.values.propagate()
+                }
+              )(raw("&times"))
+            )
+          })
+        }
+      )
+    }
+  }
+  
   val imgRx: HtmlTag = {
     import DemoImg._
     val imgForm  = FormRx[Game,GameLayout]
@@ -372,7 +452,6 @@ object ScalaJSExample {
     }
   }
 
-
   val first = template("Example 1","Basic User/Password form")(Demo1.loginForm,"Bob",Demo1.default) {
     form(
       Demo1.loginForm.firstname,
@@ -390,6 +469,7 @@ object ScalaJSExample {
     content.appendChild(Seq(secondAlt,hr).render)
     content.appendChild(Seq(third,hr).render)
     content.appendChild(Seq(fourth,hr).render)
-    content.appendChild(Seq(imgRx,hr).render)
+    content.appendChild(Seq(fifth.outputTag,hr).render)
+    //content.appendChild(Seq(imgRx,hr).render)
   }
 }

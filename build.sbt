@@ -20,7 +20,7 @@ libraryDependencies ++= Seq(
   "com.stabletechs" %%% "formrx" % "1.1.0"
 )
 
-bootSnippet := "ScalaJSExample().main(document.getElementById('content'));"
+bootSnippet := "example.ScalaJSExample().main(document.getElementById('content'));"
 
 updateBrowsers <<= updateBrowsers.triggeredBy(fastOptJS in Compile)
 
